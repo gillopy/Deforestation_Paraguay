@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>El bosque retrocede | Deforestación del Chaco paraguayo</title>
+
+  <meta name="description"
+    content="Una exploración visual de la pérdida de cobertura forestal en Boquerón y Alto Paraguay entre 2001 y 2025.">
+  <meta name="theme-color" content="#0A0E14">
+
+  <!-- Favicon: assets/icons/favicon.svg -->
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg?v=1">
+
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Roboto+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+
+  <!-- Scrollama -->
+  <script defer src="https://unpkg.com/scrollama"></script>
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="assets/css/styles.css?v=11">
+</head>
+
+
+<body>
+
+  <!-- ============================================================
+       FOLIO SUPERIOR
+       ============================================================ -->
+
+  <div class="folio-bar">
+    <span>Atlas de la pérdida forestal · Paraguay</span>
+    <span>Hansen GFC 2025 · v1.13</span>
+  </div>
+
+
+  <!-- ============================================================
+       MASTHEAD
+       ============================================================ -->
+
+  <header class="masthead">
+
+    <div class="masthead-copy">
+
+      <h1 class="masthead-title">
+        Pérdida de Cobertura Forestal Paraguay
+      </h1>
+
+      <p class="masthead-lede">
+        En el Chaco paraguayo, la transformación del territorio se
+        vuelve visible cuando se observa desde el espacio. Año tras
+        año, las imágenes satelitales permiten seguir la huella de
+        la pérdida forestal y reconstruir cómo avanza la transformación
+        del paisaje. Boquerón y Alto Paraguay ofrecen dos perspectivas
+        de este proceso.
+      </p>
+
+      <dl class="masthead-folio">
+        <div>
+          <dt>Autor</dt>
+          <dd>Guillermo Cabrera · Periodismo de datos</dd>
+        </div>
+        <div>
+          <dt>Fuente</dt>
+          <dd>Hansen Global Forest Change 2025 v1.13</dd>
+        </div>
+        <div>
+          <dt>Periodo</dt>
+          <dd>2001–2025 · Boquerón y Alto Paraguay</dd>
+        </div>
+      </dl>
+
+    </div>
+
+    <figure class="masthead-evidence" aria-hidden="true">
+      <img
+        src="images/map_export_Alto_Paraguay_Boquer%C3%B3n_combined_forest_change_year_25_high_res.png"
+        alt=""
+        loading="lazy"
+      >
+      <figcaption class="evidence-tag">
+        <span>Placa 01 · evidencia</span>
+        <span><strong>AÑO 2025</strong> · acumulado</span>
+      </figcaption>
+    </figure>
+
+  </header>
+
+
+  <!-- ============================================================
+       INTRODUCCIÓN
+       ============================================================ -->
+
+  <section class="article">
+
+    <p>
+
+      El Chaco paraguayo ocupa una enorme extensión del territorio
+      nacional. Su paisaje, sin embargo, no permanece estático.
+      Durante las últimas décadas, la expansión de la frontera
+      agropecuaria ha transformado grandes superficies de bosque,
+      especialmente en los departamentos de Boquerón y Alto Paraguay.
+
+    </p>
+
+    <p>
+
+      La magnitud de este proceso resulta difícil de observar
+      cuando se mira solamente un año. Pero cuando las imágenes
+      se ordenan cronológicamente, aparece otra historia: la de
+      una frontera que avanza gradualmente sobre el bosque.
+
+    </p>
+
+    <p>
+
+      Esta visualización reconstruye esa transformación utilizando
+      datos de pérdida de cobertura forestal y mapas exportados
+      para los departamentos del país. El objetivo no es solamente
+      mostrar cuánto bosque desapareció, sino observar
+      <strong>cómo cambia espacialmente el territorio a través del tiempo</strong>.
+
+    </p>
+
+    <p>
+
+      Para comenzar, nos concentramos en dos departamentos del
+      Chaco: <strong>Boquerón</strong> y <strong>Alto Paraguay</strong>.
+      El mapa siguiente muestra ambos territorios y permite seguir
+      la expansión de la pérdida forestal desde el comienzo de
+      la serie hasta 2025.
+
+    </p>
+
+  </section>
+
+  <!-- ============================================================
+       BANDA FOLIO DE DATOS
+       ============================================================ -->
+
+  <section class="folio-stats" aria-label="Datos generales del análisis">
+
+    <dl class="folio-stats-inner">
+
+      <div class="folio-stat">
+        <dt>Periodo analizado</dt>
+        <dd>2001–2025</dd>
+      </div>
+
+      <div class="folio-stat">
+        <dt>Pérdida en Boquerón + Alto Paraguay</dt>
+        <dd id="statConcentration">—</dd>
+      </div>
+
+      <div class="folio-stat">
+        <dt>Conjunto de datos</dt>
+        <dd>GFC v1.13 · 30 m/px</dd>
+      </div>
+
+    </dl>
+
+  </section>
+
+  <!-- ============================================================
+       PLACA 01 · SERIE TEMPORAL (SCROLLYTELLING)
+       ============================================================ -->
+
+  <section class="plate plate-bleed" aria-labelledby="plate01Title">
+
+    <header class="plate-marg">
+      <span class="plate-no">Placa 01 · Serie temporal</span>
+      <span class="plate-meta">Alto Paraguay + Boquerón · 2002 / 2010 / 2025</span>
+    </header>
+
+    <h2 id="plate01Title" class="sr-only">
+      La serie temporal: tres lecturas del mismo territorio
+    </h2>
+
+    <section id="scrolly">
+
+      <article>
+
+        <!-- AÑO 2002 -->
+
+        <div class="step" data-step="1">
+
+          <div class="step-inner">
+
+            <div class="step-number">
+              Punto 01 de 03 · Comienzo
+            </div>
+
+            <h2>
+              El cambio apenas comienza a hacerse visible
+            </h2>
+
+            <p>
+
+              En el <span class="year">año 2002</span> de la secuencia,
+              las áreas de pérdida todavía aparecen relativamente
+              dispersas. El territorio chaqueño conserva una
+              continuidad forestal mucho mayor que la que veremos
+              posteriormente.
+
+            </p>
+
+            <p>
+
+              Esta primera imagen funciona como punto de referencia:
+              antes de observar la magnitud acumulada, necesitamos
+              entender cómo se veía el territorio al comienzo del
+              proceso.
+
+            </p>
+
+          </div>
+
+          <div class="step-image">
+
+            <img
+              src="images/map_export_Alto_Paraguay_Boquer%C3%B3n_combined_forest_change_year_2_high_res.png"
+              alt="Mapa de cambio de cobertura forestal en Alto Paraguay y Boquerón, año 2002"
+            >
+
+            <div class="step-image-caption">
+              Año 2002 · Alto Paraguay + Boquerón
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- AÑO 2010 -->
+
+        <div class="step" data-step="2">
+
+          <div class="step-inner">
+
+            <div class="step-number">
+              Punto 02 de 03 · Aceleración
+            </div>
+
+            <h2>
+              Diez años después, el patrón cambia
+            </h2>
+
+            <p>
+
+              Al llegar al <span class="year">año 2010</span>,
+              la pérdida deja de aparecer como eventos aislados.
+              Las áreas transformadas comienzan a adquirir una
+              estructura espacial más evidente.
+
+            </p>
+
+            <p>
+
+              El mapa permite observar algo que un único indicador
+              nacional no puede mostrar: la deforestación no ocurre
+              de manera uniforme. Se concentra y se expande siguiendo
+              patrones territoriales específicos.
+
+            </p>
+
+          </div>
+
+          <div class="step-image">
+
+            <img
+              src="images/map_export_Alto_Paraguay_Boquer%C3%B3n_combined_forest_change_year_10_high_res.png"
+              alt="Mapa de cambio de cobertura forestal en Alto Paraguay y Boquerón, año 2010"
+              loading="lazy"
+            >
+
+            <div class="step-image-caption">
+              Año 2010 · Alto Paraguay + Boquerón
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- AÑO 2025 -->
+
+        <div class="step" data-step="3">
+
+          <div class="step-inner">
+
+            <div class="step-number">
+              Punto 03 de 03 · 2025
+            </div>
+
+            <h2>
+              Veinticinco años después, el paisaje es otro
+            </h2>
+
+            <p>
+
+              En el <span class="year">año 2025</span>, la acumulación
+              temporal permite observar con claridad la dimensión
+              del cambio.
+
+            </p>
+
+            <p>
+
+              Lo que comenzó como pequeñas áreas de transformación
+              se convierte en un patrón mucho más extendido.
+              La comparación entre las tres imágenes permite seguir
+              visualmente la expansión de la frontera sobre el
+              territorio chaqueño.
+
+            </p>
+
+          </div>
+
+          <div class="step-image">
+
+            <img
+              src="images/map_export_Alto_Paraguay_Boquer%C3%B3n_combined_forest_change_year_25_high_res.png"
+              alt="Mapa de cambio de cobertura forestal en Alto Paraguay y Boquerón, año 2025"
+              loading="lazy"
+            >
+
+            <div class="step-image-caption">
+              Año 2025 · Alto Paraguay + Boquerón
+            </div>
+
+          </div>
+
+        </div>
+
+      </article>
+
+      <figure>
+
+        <div class="image-frame">
+
+          <img
+            id="storyImage"
+            src="images/map_export_Alto_Paraguay_Boquer%C3%B3n_combined_forest_change_year_2_high_res.png"
+            alt="Mapa de cambio de cobertura forestal en Alto Paraguay y Boquerón"
+          >
+
+          <div
+            class="image-overlay"
+            id="imageYear">
+            Año 2002 · Alto Paraguay + Boquerón
+          </div>
+
+          <div class="progress-rail" aria-hidden="true">
+            <span class="rail-dash" data-rail="1"></span>
+            <span class="rail-dash" data-rail="2"></span>
+            <span class="rail-dash" data-rail="3"></span>
+            <span class="rail-caption" id="railCaption">2002 · 2010 · 2025</span>
+          </div>
+
+        </div>
+
+      </figure>
+
+    </section>
+
+    <footer class="colophon">
+      <span>Fuente · UMD/hansen/global_forest_change_2025_v1_13</span>
+      <span>Pixel 30 m · copa 2000 ≥ 30 %</span>
+      <span>Exportación 1600 px</span>
+    </footer>
+
+  </section>
+
+  <!-- ============================================================
+       TEXTO POST-SCROLL
+       ============================================================ -->
+
+  <section class="article">
+    <h2>
+      El cambio no ocurre de la misma manera en todo el país
+    </h2>
+
+    <p>
+
+      La secuencia anterior permite observar la dimensión temporal
+      del fenómeno. Pero existe otra pregunta: ¿cómo se distribuye
+      la presión forestal entre los diferentes departamentos?
+
+    </p>
+
+    <p>
+
+      Para responderla, el mapa interactivo del explorador reúne
+      los 18 departamentos del país en una sola vista: el color de
+      cada uno indica su porcentaje de pérdida de cobertura forestal
+      desde 2001, calculado sobre la base de bosque que existía en
+      el año 2000. Así es posible comparar territorios muy distintos
+      entre sí — desde el Chaco, extenso y poco poblado, hasta la
+      Región Oriental, donde la frontera agrícola avanza sobre
+      superficies mucho más pequeñas.
+
+    </p>
+
+    <p>
+
+      <strong>Boquerón</strong> encabeza el ranking nacional de
+      pérdida relativa, mientras que <strong>Alto Paraguay</strong>
+      se ubica en un rango más moderado. Pero por la enorme
+      extensión de ambos departamentos, juntos concentran la mayor
+      parte de las hectáreas de bosque perdidas en el país — de ahí
+      que este artículo se detenga especialmente en ellos.
+
+    </p>
+
+  </section>
+
+  <!-- ============================================================
+       PLACA 02 · DOS TERRITORIOS (COMPARACIÓN)
+       ============================================================ -->
+
+  <section class="plate" aria-labelledby="plate02Title">
+
+    <header class="plate-marg">
+      <span class="plate-no">Placa 02 · Dos territorios</span>
+      <span class="plate-meta">Boquerón / Alto Paraguay · capa combinada</span>
+    </header>
+
+    <h2 id="plate02Title">
+      Boquerón y Alto Paraguay
+    </h2>
+
+    <p class="plate-intro">
+
+      Las dos imágenes permiten comparar visualmente la estructura
+      territorial de ambos departamentos.
+
+    </p>
+
+    <div class="department-grid">
+
+      <article class="department-card">
+
+        <h3 data-dept-code="BOQ · 7.070.870 HA BOSQUE 2000">
+          Boquerón
+        </h3>
+
+        <div class="card-image-frame">
+          <img
+            src="images/boqueron_combined.png"
+            alt="Mapa completo de deforestación de Boquerón"
+            loading="lazy"
+          >
+        </div>
+
+        <p>
+          Cobertura y pérdida forestal acumulada del departamento
+          de Boquerón.
+        </p>
+
+      </article>
+
+      <article class="department-card">
+
+        <h3 data-dept-code="ALP · 6.862.216 HA BOSQUE 2000">
+          Alto Paraguay
+        </h3>
+
+        <div class="card-image-frame">
+          <img
+            src="images/alto_paraguay_combined.png"
+            alt="Mapa completo de deforestación de Alto Paraguay"
+            loading="lazy"
+          >
+        </div>
+
+        <p>
+          Cobertura y pérdida forestal acumulada del departamento
+          de Alto Paraguay.
+        </p>
+
+      </article>
+
+    </div>
+
+    <footer class="colophon">
+      <span>Combinada · cobertura + pérdida + ganancia 2000–2012</span>
+      <span>Cifras · data/paraguay_deforestacion.json</span>
+    </footer>
+
+  </section>
+
+  <!-- ============================================================
+       PLACA 03 · PÉRDIDA Y EMISIONES (GRÁFICOS)
+       ============================================================ -->
+
+  <section class="plate" aria-labelledby="plate03Title">
+
+    <header class="plate-marg">
+      <span class="plate-no">Placa 03 · Pérdida y emisiones</span>
+      <span class="plate-meta">Series anuales · 2001–2025</span>
+    </header>
+
+    <h2 id="plate03Title">
+      Cuánto bosque se perdió y cuánto carbono salió
+    </h2>
+
+    <div class="department-charts">
+
+      <article class="chart-box">
+
+        <h3>
+          Boquerón
+        </h3>
+
+        <ul class="chart-legend">
+
+          <li>
+            <span class="dot dot--bar"></span>
+            Pérdida anual (ha)
+          </li>
+
+          <li>
+            <span class="dot dot--line"></span>
+            Emisiones brutas CO₂e (Mg)
+          </li>
+
+        </ul>
+
+        <div class="chart-block">
+
+          <h4>
+            Pérdida de cobertura arbórea
+          </h4>
+
+          <p class="chart-block-subtitle">
+            BARRAS: HECTÁREAS PERDIDAS · LÍNEA: Mg CO₂e · 2001–2025
+          </p>
+
+          <svg
+            class="chart-svg"
+            data-chart-src="data/boqueron_tree_cover_loss.csv"
+            role="img"
+            aria-label="Pérdida anual de cobertura arbórea y emisiones brutas de CO₂e en Boquerón">
+          </svg>
+
+          <div class="chart-context">
+            <p>
+              Desde 2001 hasta 2025, <strong>Boquerón</strong> perdió <strong>2,9 Mha</strong> de cobertura arbórea, equivalente al <strong>42%</strong> de su extensión del año 2000, y <strong>525 Mt CO₂e</strong> en emisiones brutas. Esto no contabiliza ganancias de cobertura en el mismo periodo.
+            </p>
+            <p class="chart-context-meta">
+              2000 extensión &gt;30% dosel arbóreo · estas estimaciones no toman en cuenta la ganancia de cubierta arbórea · ticks ’01 · ’04 · ’07 · ’09 · ’11 · ’13 · ’15 · ’17 · ’19 · ’21 · ’25
+            </p>
+            <p class="chart-context-disclaimer">
+              Los métodos en los que se basan estos datos han cambiado con el tiempo. Tenga cuidado al comparar los datos antiguos con los nuevos, especialmente antes y después de 2015. <a href="https://www.globalforestwatch.org/help/map/guides" target="_blank" rel="noopener">Más información aquí</a>.
+            </p>
+          </div>
+
+        </div>
+
+        <div class="chart-block">
+
+          <h4>
+            Pérdida de bosque primario
+          </h4>
+
+          <p class="chart-block-subtitle">
+            BARRAS: HECTÁREAS PERDIDAS · LÍNEA: Mg CO₂e · 2001–2025
+          </p>
+
+          <svg
+            class="chart-svg"
+            data-chart-src="data/boqueron_primary_forest_loss.csv"
+            role="img"
+            aria-label="Pérdida anual de bosque primario y emisiones brutas de CO₂e en Boquerón">
+          </svg>
+
+          <div class="chart-context">
+            <p>
+              Desde 2001 hasta 2025, <strong>Boquerón</strong> perdió <strong>7,8 kha</strong> de bosque primario húmedo, lo que representa <strong>0,26%</strong> de su pérdida total de cobertura arbórea en el mismo periodo. El área total de bosque primario húmedo disminuyó <strong>23%</strong> en este periodo.
+            </p>
+            <p class="chart-context-meta">
+              Superficie de pérdida dentro de la extensión de bosque primario de 2001 · porcentaje de superficie restante de 2001 · ticks ’01 · ’04 · ’07 · ’09 · ’11 · ’13 · ’15 · ’17 · ’19 · ’21 · ’25
+            </p>
+            <p class="chart-context-disclaimer">
+              Los métodos en los que se basan estos datos han cambiado con el tiempo. Tenga cuidado al comparar los datos antiguos con los nuevos, especialmente antes y después de 2015. <a href="https://www.globalforestwatch.org/help/map/guides" target="_blank" rel="noopener">Más información aquí</a>.
+            </p>
+            <p class="chart-context-meta">
+              Extensión restante de bosque primario del 2001 · &gt;30% dosel arbóreo
+            </p>
+          </div>
+
+        </div>
+
+      </article>
+
+      <article class="chart-box">
+
+        <h3>
+          Alto Paraguay
+        </h3>
+
+        <ul class="chart-legend">
+
+          <li>
+            <span class="dot dot--bar"></span>
+            Pérdida anual (ha)
+          </li>
+
+          <li>
+            <span class="dot dot--line"></span>
+            Emisiones brutas CO₂e (Mg)
+          </li>
+
+        </ul>
+
+        <div class="chart-block">
+
+          <h4>
+            Pérdida de cobertura arbórea
+          </h4>
+
+          <p class="chart-block-subtitle">
+            BARRAS: HECTÁREAS PERDIDAS · LÍNEA: Mg CO₂e · 2001–2025
+          </p>
+
+          <svg
+            class="chart-svg"
+            data-chart-src="data/alto_paraguay_tree_cover_loss.csv"
+            role="img"
+            aria-label="Pérdida anual de cobertura arbórea y emisiones brutas de CO₂e en Alto Paraguay">
+          </svg>
+
+          <div class="chart-context">
+            <p>
+              Desde 2001 hasta 2025, <strong>Alto Paraguay</strong> perdió <strong>1,9 Mha</strong> de cobertura arbórea, equivalente al <strong>28%</strong> de su extensión del año 2000, y <strong>487 Mt CO₂e</strong> en emisiones brutas. Esto no contabiliza ganancias de cobertura en el mismo periodo.
+            </p>
+            <p class="chart-context-meta">
+              2000 extensión &gt;30% dosel arbóreo · estas estimaciones no toman en cuenta la ganancia de cubierta arbórea · ticks ’01 · ’04 · ’07 · ’09 · ’11 · ’13 · ’15 · ’17 · ’19 · ’21 · ’25
+            </p>
+            <p class="chart-context-disclaimer">
+              Los métodos en los que se basan estos datos han cambiado con el tiempo. Tenga cuidado al comparar los datos antiguos con los nuevos, especialmente antes y después de 2015. <a href="https://www.globalforestwatch.org/help/map/guides" target="_blank" rel="noopener">Más información aquí</a>.
+            </p>
+          </div>
+
+        </div>
+
+        <div class="chart-block">
+
+          <h4>
+            Pérdida de bosque primario
+          </h4>
+
+          <p class="chart-block-subtitle">
+            BARRAS: HECTÁREAS PERDIDAS · LÍNEA: Mg CO₂e · 2001–2025
+          </p>
+
+          <svg
+            class="chart-svg"
+            data-chart-src="data/alto_paraguay_primary_forest_loss.csv"
+            role="img"
+            aria-label="Pérdida anual de bosque primario y emisiones brutas de CO₂e en Alto Paraguay">
+          </svg>
+
+          <div class="chart-context">
+            <p>
+              Desde 2001 hasta 2025, <strong>Alto Paraguay</strong> perdió <strong>347 kha</strong> de bosque primario húmedo, lo que representa <strong>17,9%</strong> de su pérdida total de cobertura arbórea en el mismo periodo. La pérdida anual de bosque primario se concentra entre 2002–2016 con picos en 2003 y 2012.
+            </p>
+            <p class="chart-context-meta">
+              Superficie de pérdida dentro de la extensión de bosque primario de 2001 · porcentaje de superficie restante de 2001 · ticks ’01 · ’04 · ’07 · ’09 · ’11 · ’13 · ’15 · ’17 · ’19 · ’21 · ’25
+            </p>
+            <p class="chart-context-disclaimer">
+              Los métodos en los que se basan estos datos han cambiado con el tiempo. Tenga cuidado al comparar los datos antiguos con los nuevos, especialmente antes y después de 2015. <a href="https://www.globalforestwatch.org/help/map/guides" target="_blank" rel="noopener">Más información aquí</a>.
+            </p>
+            <p class="chart-context-meta">
+              Extensión restante de bosque primario del 2001 · &gt;30% dosel arbóreo
+            </p>
+          </div>
+
+        </div>
+
+      </article>
+
+    </div>
+
+    <footer class="colophon">
+      <span>Pérdida · UMD_TREE_COVER_LOSS (ha)</span>
+      <span>Emisiones · GFW_GROSS_EMISSIONS_CO2E_ALL_GASES (Mg)</span>
+      <span>CSV locales · data/</span>
+    </footer>
+
+  </section>
+
+  <!-- ============================================================
+       PLACA 04 · EXPLORADOR TERRITORIAL
+       ============================================================ -->
+
+  <section class="plate" aria-labelledby="plate04Title">
+
+    <header class="plate-marg">
+      <span class="plate-no">Placa 04 · Explorador territorial</span>
+      <span class="plate-meta">18 departamentos · selección por clic o teclado</span>
+    </header>
+
+    <h2 id="plate04Title">
+      El mapa completo de cada departamento
+    </h2>
+
+    <p class="plate-intro">
+
+      Elegí un departamento haciendo clic en el mapa o desde la
+      lista, para ver su mapa satelital completo y sus
+      estadísticas de pérdida forestal.
+
+    </p>
+
+    <div class="explorer-layout">
+
+      <div class="explorer-map">
+
+        <svg
+          id="departmentMap"
+          viewBox="0 0 520 560"
+          role="img"
+          aria-label="Mapa de Paraguay coloreado según el porcentaje de pérdida forestal por departamento">
+        </svg>
+
+        <div class="map-legend">
+          <span id="legendMin">0%</span>
+          <div class="map-legend-scale"></div>
+          <span id="legendMax">100%</span>
+        </div>
+
+        <p class="map-hint" id="mapHint">
+          Pasá el cursor o hacé clic sobre un departamento.
+        </p>
+
+      </div>
+
+      <div class="explorer-panel">
+
+        <div class="explorer-controls">
+
+          <label class="sr-only" for="departmentSelect">Departamento</label>
+          <select id="departmentSelect">
+            <option value="">
+              Seleccionar departamento
+            </option>
+          </select>
+
+          <label class="sr-only" for="layerSelect">Capa del mapa</label>
+          <select id="layerSelect">
+            <option value="combined">
+              Capa combinada
+            </option>
+            <option value="cover">
+              Cobertura 2000
+            </option>
+            <option value="loss">
+              Pérdida anual
+            </option>
+          </select>
+
+        </div>
+
+        <figure class="explorer-image">
+
+          <img
+            id="departmentImage"
+            src=""
+            alt="Mapa departamental"
+          >
+
+          <figcaption
+            id="departmentCaption"
+            class="image-caption">
+          </figcaption>
+
+        </figure>
+
+      </div>
+
+    </div>
+
+    <footer class="colophon">
+      <span>Geometría · data/py.json</span>
+      <span>Estadísticas · data/paraguay_deforestacion.json</span>
+    </footer>
+
+  </section>
+
+  <!-- ============================================================
+       PLACA 05 · FUENTES Y MÉTODO
+       ============================================================ -->
+
+  <section class="plate" aria-labelledby="plate05Title">
+
+    <header class="plate-marg">
+      <span class="plate-no">Placa 05 · Fuentes y método</span>
+      <span class="plate-meta">Hansen GFC 2025 v1.13 · Earth Engine</span>
+    </header>
+
+    <h2 id="plate05Title" class="sr-only">
+      Datos y metodología
+    </h2>
+
+    <div class="methodology methodology-inner">
+
+      <div>
+
+        <p>
+
+          La visualización utiliza información local almacenada y mapas
+          PNG generados previamente a partir del pipeline de análisis.
+
+        </p>
+
+        <p>
+
+          La fuente principal de información sobre pérdida de cobertura
+          forestal es Hansen Global Forest Change 2025 v1.13.
+
+        </p>
+
+        <p>
+
+          Los mapas no representan una medición de propiedad,
+          productividad agropecuaria ni uso específico del suelo.
+          Representan cambios detectados en la cobertura forestal
+          de acuerdo con la metodología y resolución del conjunto
+          de datos utilizado.
+
+        </p>
+
+        <p>
+
+          El proyecto está pensado para ampliarse: nuevos años o
+          departamentos pueden incorporarse agregando
+          las imágenes correspondientes.
+
+        </p>
+
+      </div>
+
+      <aside class="methodology-aside">
+        <h3>Descarga de datos</h3>
+
+        <p>
+          Los datos completos, departamento por departamento y año
+          por año, están disponibles para descarga.
+        </p>
+
+        <p style="margin-top:16px">
+          <a class="stamp" href="data/paraguay_deforestacion.csv" download>
+            Descargar CSV
+          </a>
+        </p>
+      </aside>
+
+    </div>
+
+    <footer class="colophon">
+      <span>Estadísticas vía Google Earth Engine</span>
+      <span>Pipeline · hansen_export_pipeline.py</span>
+    </footer>
+
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+
+  <footer>
+
+    <span>Fuente: Hansen Global Forest Change 2025 v1.13</span>
+
+    <span>Visualización estática · JavaScript vanilla · Datos locales</span>
+
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="assets/js/main.js?v=6"></script>
+
+</body>
+
+</html>
