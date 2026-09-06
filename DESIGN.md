@@ -1,22 +1,29 @@
 ---
 name: Atlas de la Pérdida Forestal
-description: Láminas de atlas nacional sobre fondo nocturno cálido; los mapas satelitales son islas negras que se integran sin costura.
+description: Láminas de atlas nacional sobre fondo Kanagawa Dragon; los mapas satelitales son islas negras que se integran sin costura.
 colors:
-  primary: "#E2553E"
-  expedition-ochre: "#D6A92E"
-  forest-canopy: "#6FAD78"
-  link-sky: "#6FB8DE"
-  neutral-bg: "#0A0E14"
-  neutral-bg-soft: "#121823"
-  neutral-panel: "#0E1420"
-  ink: "#E7E3DA"
-  ink-soft: "#B8BCC4"
-  ink-muted: "#8A919E"
+  primary: "#c4746e"
+  dragon-yellow: "#c4b28a"
+  dragon-green: "#87a987"
+  link-blue: "#8ba4b0"
+  neutral-bg: "#0d0c0c"
+  neutral-bg-soft: "#181616"
+  neutral-panel: "#1D1C19"
+  ink: "#c5c9c5"
+  ink-soft: "#a6a69c"
+  ink-muted: "#7a8382"
   plate-black: "#000000"
-  plate-text: "#E9E2D2"
-  plate-muted: "#A79E8B"
-  chart-bar: "#F06A52"
-  chart-line: "#FFC94A"
+  plate-text: "#c5c9c5"
+  plate-muted: "#737c73"
+  chart-bar: "#c4746e"
+  chart-line: "#c4b28a"
+  annex-paper-deep: "#E8E4D8"
+  marker-hot-edge: "#DFA9A2"
+  marker-ctl-edge: "#B3C4B1"
+  marker-cmp-edge: "#AEBFC7"
+  report-dept: "#12120f"
+  print-ink: "#14202E"
+  print-vermilion: "#9C2E1B"
 typography:
   display:
     fontFamily: "Source Serif 4, Georgia, 'Times New Roman', serif"
@@ -48,6 +55,35 @@ typography:
     lineHeight: 1.4
     letterSpacing: "0.14em"
     fontFeature: "\"tnum\" 1"
+  plate-sub:
+    fontFamily: "Source Serif 4, Georgia, serif"
+    fontSize: "1.3rem"
+    fontWeight: 600
+    lineHeight: 1.25
+    letterSpacing: "-0.015em"
+  annex-caption:
+    fontFamily: "Roboto Mono, ui-monospace, Menlo, monospace"
+    fontSize: "10px"
+    fontWeight: 500
+    lineHeight: 1.6
+    letterSpacing: "0.08em"
+    fontFeature: "\"tnum\" 1"
+  annex-note:
+    fontFamily: "Inter, Arial, sans-serif"
+    fontSize: "0.84rem"
+    fontWeight: 400
+    lineHeight: 1.65
+  table-data:
+    fontFamily: "Roboto Mono, ui-monospace, Menlo, monospace"
+    fontSize: "12px"
+    fontWeight: 400
+    lineHeight: 1.6
+    fontFeature: "\"tnum\" 1"
+  refs:
+    fontFamily: "Roboto Mono, ui-monospace, Menlo, monospace"
+    fontSize: "10.5px"
+    fontWeight: 400
+    lineHeight: 1.75
 rounded:
   sharp: "0px"
   sm: "8px"
@@ -94,14 +130,14 @@ components:
 
 ## Overview
 
-**Creative North Star: "The Darkroom Cartographer — Modern Night Desk"**
+**Creative North Star: "The Darkroom Cartographer — Kanagawa Dragon Desk"**
 
-The article is a portfolio of national-atlas plates mounted on a warm nocturnal ground, the kind a surveyor pins to a light table after a long field season. Nothing glows: the interface is archival ink rendered in reverse — light strokes on a dark field — while the satellite evidence sits on islands of pure black (`#000000`), exactly the background the Earth Engine PNGs already carry, so the raster maps mount without a seam. The 2026 update keeps that thesis but lifts it into a modern dark desk: subtle card radii (12px), soft depth, and backdrop-blurred overlays that feel like a contemporary data workspace, never like neon data-noir. The base remains warm charcoal (`#0A0E14`) for reading comfort over long-form.
+The article is a portfolio of national-atlas plates mounted on Kanagawa Dragon blacks, the kind a surveyor pins to a light table after a long field season. Nothing glows: the interface is archival ink rendered in reverse — light strokes on a dark field — while the satellite evidence sits on islands of pure black (`#000000`), exactly the background the Earth Engine PNGs already carry, so the raster maps mount without a seam. The 2026 update keeps that thesis but lifts it into a modern dark desk: subtle card radii (12px), soft depth, and backdrop-blurred overlays that feel like a contemporary data workspace, never like neon data-noir. The base is `dragonBlack0` (`#0d0c0c`) with panels on `dragonBlack2` (`#1D1C19`) for reading comfort over long-form.
 
-Density is editorial: every section is a numbered **Placa** (01–05) framed by a plate marginal band and closed by a dense monospaced **colophon**. Accents are rationed like ink on a map — ochre marks the frame, vermilion marks loss, canopy marks surviving forest.
+Density is editorial: every section is a numbered **Placa** (01–05) framed by a plate marginal band and closed by a dense monospaced **colophon**. Accents are rationed like ink on a map — dragonYellow marks the frame, dragonRed marks loss, dragonGreen marks surviving forest.
 
 **Key Characteristics:**
-- Warm dark ground (never pure black UI), light cartographic ink + modern card depth
+- Kanagawa Dragon ground (never pure black UI), light ink + modern card depth
 - Raster evidence on `#000` islands; interactive UI on 12px cards with whisper shadow
 - Plate-marginalia furniture: numbered plates, colophon bands, folio strips
 - Monospace tabular numerals for every measured value; backdrop-blurred badges on evidence
@@ -109,27 +145,28 @@ Density is editorial: every section is a numbered **Placa** (01–05) framed by 
 
 ## Colors
 
-The palette splits into a warm nocturnal ground with light "ink" text, and a set of expedition accents that carry meaning rather than decoration. Accents are applied as frames, strokes, and data marks — never as large fills.
+The palette is Kanagawa Dragon: near-black warm grounds with muted light ink, and a set of desaturated accents that carry meaning rather than decoration. Accents are applied as frames, strokes, and data marks — never as large fills.
 
 ### Primary
-- **Signal Vermilion** (#E2553E): loss and exclamation. Plate numbers, the active step's top band, year-change flags on the progress rail, selected-map outline, chart bars for hectares lost. Reserved for data urgency; never decorative.
+- **Dragon Red** (#c4746e, ex-vermilion): loss and exclamation. Plate numbers, the active step's top band, year-change flags on the progress rail, selected-map outline, chart bars for hectares lost. Reserved for data urgency; never decorative.
 
 ### Secondary
-- **Expedition Ochre** (#D6A92E): the expedition frame. Top band of resting step cards, the map legend's middle stop, link accent on dark. Its deep text-safe sibling **Ochre Ink** (#E5C158) is used for small ochre labels and the CSV stamp.
+- **Dragon Yellow** (#c4b28a, ex-ochre): the frame. Top band of resting step cards, the map legend's middle stop, link accent on dark. Dragon's yellow is already text-safe on black, so the old two-tier (base + ink) system collapses into a single canonical color, used for small labels and the CSV stamp alike.
 
 ### Tertiary
-- **Forest Canopy** (#6FAD78): surviving forest and cover. The choropleth ramp's low end, the map legend's left stop.
+- **Dragon Green** (#87a987, ex-canopy): surviving forest and cover. The choropleth ramp's low end, the map legend's left stop.
+- **Dragon Blue** (#8ba4b0, ex-sky): comparison and links. Report comparison markers, reference links.
 
 ### Neutral
-- **Nocturnal Ground** (#0A0E14): page background — warm charcoal, not pure black, chosen so long-form text does not fatigue the eye.
-- **Raised Ground** (#121823): secondary surfaces (scrollbar track, hover states).
-- **Panel** (#0E1420): cards, selects, and the department grid.
-- **Ink** (#E7E3DA): primary text — warm light, not clinical white.
-- **Ink Soft** (#B8BCC4): secondary text (lede, step body).
-- **Ink Muted** (#8A919E): labels, captions, colophon text (≥4.5:1 on ground).
-- **Plate Black** (#000000): the satellite evidence islands — matches the PNG's native black background so rasters mount seamlessly.
-- **Plate Text** (#E9E2D2) / **Plate Muted** (#A79E8B): caption and label text drawn on top of the plate islands.
-- **Chart Bar** (#F06A52) / **Chart Line** (#FFC94A): high-luminance data marks chosen for dark plates.
+- **dragonBlack0** (#0d0c0c, ex-ground): page background — warm near-black, chosen so long-form text does not fatigue the eye.
+- **dragonBlack3** (#181616): secondary surfaces (scrollbar track, hover states).
+- **dragonBlack2** (#1D1C19): cards, selects, and the department grid.
+- **dragonWhite** (#c5c9c5, ex-ink): primary text — soft light, not clinical white.
+- **dragonGray** (#a6a69c): secondary text (lede, step body).
+- **dragonGray3** (#7a8382): labels, captions, colophon text.
+- **Plate Black** (#000000): the satellite evidence islands — matches the PNG's native black background so rasters mount seamlessly. Unchanged by the Dragon migration (No-Seam Rule).
+- **Plate Text** (#c5c9c5) / **Dragon Ash** (#737c73): caption and label text drawn on top of the plate islands.
+- **Chart Bar** (#c4746e) / **Chart Line** (#c4b28a): muted Dragon data marks on dark plates.
 
 ### Named Rules
 **The No-Seam Rule.** Every raster must sit on `plate-black` (`#000000`), never on a near-black. The PNGs export with a pure-black background; any other value shows a seam where the image ends.
@@ -155,9 +192,9 @@ The palette splits into a warm nocturnal ground with light "ink" text, and a set
 - **Label** (500, 10px, uppercase, `0.10–0.16em`, tabular numerals): folio bar, plate numbers, colophons, captions, axis labels, map hints.
 
 ### Named Rules
-**The Measure Rule.** Body copy is set at `68ch` max width (`--measure`); the intro column may widen to `var(--measure) + 8ch`.
+**The Measure Rule.** Body copy is set at `68ch` max width (`--measure`); las columnas editoriales (introducción y Placas 06–10) se leen a `--measure-wide: 88ch`, centradas para ocupar la placa sin dejar grandes vacíos laterales, con interlineado `2.2` y margen entre párrafos de `2.5rem`.
 
-**The Drop Cap Rule.** The first paragraph after the masthead opens with a vermilion serif drop cap — a single editorial flourish, used once, not per-section.
+**The Drop Cap Rule.** The first paragraph after the masthead opens with a dragonRed serif drop cap — a single editorial flourish, used once, not per-section.
 
 ## Layout
 
@@ -180,7 +217,7 @@ The system is layered, not flat: tonal steps (ground → raised → panel) plus 
 
 ## Shapes
 
-The form language is cartographic with a modern lift: evidence plates stay sharp (`0px`) — maps and rasters cut like paper — while interactive UI uses refined radii (`card 12px`, `control 10px`, `pill 999px`) per craft-floor 12–16px guidance. The map legend keeps its 8px/ pill pill, badges and rails are pills. Lines are hairline (1px) except the two structural 2px rules (`plate-marg` / `colophon` / footer) and the scrolly step's 3px ochre→vermilion top band.
+The form language is cartographic with a modern lift: evidence plates stay sharp (`0px`) — maps and rasters cut like paper — while interactive UI uses refined radii (`card 12px`, `control 10px`, `pill 999px`) per craft-floor 12–16px guidance. The map legend keeps its 8px/ pill pill, badges and rails are pills. Lines are hairline (1px) except the two structural 2px rules (`plate-marg` / `colophon` / footer) and the scrolly step's 3px dragonYellow→dragonRed top band.
 
 ## Components
 
@@ -191,29 +228,44 @@ Top rule band, monospaced 10px uppercase, split left/right, `1px` bottom rule, `
 Two-column grid (`1.35fr 1fr`, gap 48px) at ≥1040px, single column below (gap 32px). Left: display title (clamp 2.5→4.4rem, -0.03em), lede, and a `dl` **folio** strip (Autor / Fuente / Periodo) as a 3-col hairline grid (`12px` card radius, panel bg, tabular numerals). Right: the **evidence plate** — black island (`12px` radius) with `44px` graticule and mono tag ("Placa 01 · evidencia / AÑO 2025 · acumulado"), image `cover` with inner radius. Lazy-loaded, only ≥1040px. Entrance: `plate-enter 0.7s` (title→lede→folio staggered).
 
 ### Plate Margin + Colophon (Placa furniture)
-- **Plate margin:** flex, `2px` ink top, `1px` bottom; left vermilion mono plate number; right muted mono meta. Max-width `var(--content-width)` with `24px` side padding, `box-sizing: border-box`.
+- **Plate margin:** flex, `2px` ink top, `1px` bottom; left dragonRed mono plate number; right muted mono meta. Max-width `var(--content-width)` with `24px` side padding, `box-sizing: border-box`.
 - **Colophon:** flex-wrap, `1px` top, `2px` bottom; dense muted uppercase meta.
 
 ### Step Card (scrolly)
-Panel bg (`#0E1420`), `12px` radius, `1px` rule, `3px` top band — ochre at rest, vermilion when `is-active`. Hover lifts to `shadow-card-hover`. Contains vermilion mono step number, serif headline, body; `.year` ochre-ink on faint ochre. Scrolly uses `gap 40px` between 42% article / 58% figure (both `min-width:0`), `is-active` snap (`0.45s` cubic) replaces the old tight padding.
+Panel bg (`#1D1C19`), `12px` radius, `1px` rule, `3px` top band — dragonYellow at rest, dragonRed when `is-active`. Hover lifts to `shadow-card-hover`. Contains dragonRed mono step number, serif headline, body; `.year` dragonYellow on faint yellow. Scrolly uses `gap 40px` between 42% article / 58% figure (both `min-width:0`), `is-active` snap (`0.45s` cubic) replaces the old tight padding.
 
 ### Sticky Evidence Island (scrolly figure)
-Full-height black plate (`#000` + `44px` graticule, `12px` radius, `1px` plate-edge, `shadow-plate`). Holds `#storyImage` (`contain`, inner radius), top-left **image overlay** badge (pill, `overlay-bg` + `blur(10px)`, mono uppercase + yellow dot), bottom-left **progress rail** (pill, same glass, three `34px` dashes, traversed = chart-line yellow; stopped frame flagged vermilion notch via `sessionStorage`). Year change snaps (`0.18s` opacity + `0.4s` transform), not crossfade.
+Full-height black plate (`#000` + `44px` graticule, `12px` radius, `1px` plate-edge, `shadow-plate`). Holds `#storyImage` (`contain`, inner radius), top-left **image overlay** badge (pill, `overlay-bg` + `blur(10px)`, mono uppercase + dragonYellow dot), bottom-left **progress rail** (pill, same glass, three `34px` dashes, traversed = chart-line yellow; stopped frame flagged dragonRed notch via `sessionStorage`). Year change snaps (`0.18s` opacity + `0.4s` transform), not crossfade.
 
 ### Department Card (Placa 02)
 Panel card (`12px` radius, `1px` rule, `overflow:hidden`, `min-width:0`). Hover: `rule-strong` + `shadow-whisper` + `translateY(-2px)`. Header `flex-wrap` (name + mono code `BOQ · …` nowrap), `12px 16px`, `1px` bottom rule; map `16/10` `cover` on `#000`; footer `12px 16px` muted. Grid `repeat(2, minmax(0,1fr))` gap 28px, `align-items:start`.
 
 ### Chart Block (Placa 03)
-Black plate island (`12px` radius, `1px` plate-edge, `100% 60px` graticule, `overflow:hidden`). Bars in `chart-bar` (vermilion-high) with `rx 2`, line in `chart-line` yellow, grid `12%` alpha, axis labels `plate-muted` mono 9px (`9.5px` subtitle).
+Black plate island (`12px` radius, `1px` plate-edge, `100% 60px` graticule, `overflow:hidden`). Bars in `chart-bar` (dragonRed) with `rx 2`, line in `chart-line` (dragonYellow), grid `12%` alpha, axis labels `plate-muted` mono 9px (`9.5px` subtitle).
 
 ### Explorer (Placa 04)
-- **Map:** panel card `12px` radius, `16px` padding, `overflow:hidden`; dept paths `0.7px` `rule-strong`, hover `1.6px` ink, selected **vermilion 2.4px stroke overlay never repaints fill**. Ramp canopy→ochre→vermilion, legend scale `pill` with `overflow:hidden`.
+- **Map:** panel card `12px` radius, `16px` padding, `overflow:hidden`; dept paths `0.7px` `rule-strong`, hover `1.6px` ink, selected **dragonRed 2.4px stroke overlay never repaints fill**. Ramp dragonGreen→dragonYellow→dragonRed, legend scale `pill` with `overflow:hidden`.
 - **Select:** `10px` radius, `1px` rule-strong, `panel` bg, light chevron SVG, `transition` border/bg, hover `ink-2`/`panel`.
 - **Image panel:** black plate `12px` radius + `44px` graticule + `shadow-whisper`, `14px` padding, `overflow:hidden`; `#departmentImage` `contain` inner radius, `opacity 0.22s` crossfade; caption `plate-muted` mono tabular.
-- **Stamp button:** pill, `1.5px` ochre-ink border, mono uppercase 11px, `panel` bg; hover inverts to ochre fill + `translateY(-1px)` + `0 8px 20px rgba(214,169,46,0.25)`.
+- **Stamp button:** pill, `1.5px` dragonYellow border, mono uppercase 11px, `panel` bg; hover inverts to yellow fill + `translateY(-1px)` + `0 8px 20px rgba(196,178,138,0.25)`.
 
 ### Footer
 `2px` ink top rule, mono uppercase 10px, split source/tagline, flex-wrap.
+
+### Anexo Documental (Placas 06–10, informe Planet 2016–2026)
+Figuras originales del informe (PNG de fondo blanco): se montan sobre la **misma isla negra de evidencia que `.explorer-image`** — `--plate` + graticule 44px, `plate-edge`, `12px` radius, `shadow-whisper`, padding `14px`, imagen `contain` con borde interior. Caption mono `10px`: tag `Figura N · informe Planet` en `chart-line` (uppercase) y descripción en `plate-text` (`plate-muted` para el contenedor). Fuente de imágenes: `images/informe/`.
+
+### Lectura de las Placas 06–10
+A partir de la Placa 06 el texto editorial se centra en una columna `--measure-wide: 88ch` con `margin-inline: auto` (intros `.plate-intro--wide`, `.article-clip`, `.report-note`, `.findings`, `.refs`, `.plate-sub`), con interlineado `2.2` y párrafos separados por `2.5rem`. La introducción (`section.article`) comparte la misma medida y espaciado. Los títulos `h2` y los elementos de datos (grillas, tabla, mapa) conservan el ancho de placa.
+
+### Pares Foto-Evidencia (PlanetScope)
+Fotografías satelitales 3 m (800×450): van sobre isla `#000` con graticule igual que las placas, `aspect-ratio 16/9`, caption mono `--muted`. Grid `1fr 1fr` gap 28px, apilado <850px.
+
+### Mapa de Sitios del Informe (Placa 08)
+Segundo SVG (id `reportMap`) sobre `data/py.json` reutilizando `projectPoints`/`ringToPath`. Departamentos en neutro (`#12120f`, `0.7px` rule-strong — sin coropleta, el dato son los puntos). Marcadores `r 6.5`: hotspot dragonRed, control dragonGreen, comparación dragonBlue, alerta dragonYellow punteado; `tabindex/role=img/aria-label/title`, hint mono compartido (`.map-hint`). Leyenda mono con swatches circulares.
+
+### Componentes de texto del anexo
+`.report-note` (nota de fidelidad/limitación: `--bg-soft`, banda dragonYellow 3px izquierda, sans 0.84rem), `.cell-table` (mono tabular en panel con `caption` mono), `.findings` (lista con marca cuadrada dragonRed, serif `--ink-2`), `.refs` (mono 10.5px, links dragonBlue), `.plate-sub` (serif 1.3rem sobre `1px` rule).
 
 ## Do's and Don'ts
 

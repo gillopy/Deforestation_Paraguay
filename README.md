@@ -1,22 +1,26 @@
-# Web estatica de deforestacion en Paraguay (Vanilla JS + GSAP)
+# Web estatica de deforestacion en Paraguay (Vanilla JS + Scrollama)
 
 Este proyecto ahora esta enfocado en una pagina web estatica tipo articulo:
 
 - JavaScript vanilla (sin frameworks)
-- Animaciones con GSAP + ScrollTrigger por CDN
-- Datos desde `data/paraguay_deforestacion.csv`
+- Scrollytelling con Scrollama por CDN (el `#scrolly` de Placa 01)
+- Datos desde `data/paraguay_deforestacion.json` (+ CSV para descarga)
 - Imagenes PNG por departamento desde `images/`
+- Placas 06-10: anexo documental del informe Planet "Gran Chaco
+  2016-2026" (figuras originales en `images/informe/` y mapa de
+  sitios replicado sobre `data/py.json`)
 
 No hace falta ejecutar `hansen_export_pipeline.py` para esta etapa (ya tenes los datos).
 
 ## Estructura
 
-- `index.html`: estructura principal del articulo
+- `index.html`: estructura principal del articulo (Placas 01-10)
 - `assets/css/styles.css`: diseno, layout y responsive
-- `assets/js/main.js`: carga de datos, metricas, ranking, grafico y explorador
-- `data/paraguay_deforestacion.csv`: base para estadisticas
+- `assets/js/main.js`: carga de datos, metricas, ranking, grafico y explorador; `renderReportMap()` replica los sitios del informe
+- `data/paraguay_deforestacion.csv`: base para estadisticas y descarga
 - `data/paraguay_deforestacion.json`: copia de `paraguay_deforestacion.partial.json` para compatibilidad
 - `images/*`: mapas exportados por departamento y capa (`cover`, `loss`, `combined`)
+- `images/informe/*`: figuras y pares PlanetScope descargados del informe Planet 2016-2026 (anexo documental, Placas 06-10)
 
 ## Preparativos realizados
 

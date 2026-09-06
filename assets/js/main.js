@@ -763,17 +763,17 @@
     }
 
     /*
-      Escala de color de 3 puntos (dosel -> ocre de expedición ->
-      bermellón de pérdida), luminancia elevada para el fondo oscuro,
-      la misma rampa que declara la leyenda en styles.css.
+      Escala de color de 3 puntos (dragonGreen -> dragonYellow ->
+      dragonRed de Kanagawa Dragon), la misma rampa que declara
+      la leyenda en styles.css.
     */
 
     function lossColor(pct, minPct, maxPct) {
 
       const stops = [
-        [111, 173, 120],
-        [214, 169, 46],
-        [226, 85, 62]
+        [135, 169, 135],
+        [196, 178, 138],
+        [196, 116, 110]
       ];
 
       const range = maxPct - minPct;
@@ -864,7 +864,7 @@
           const fill =
             Number.isFinite(pct)
               ? lossColor(pct, minPct, maxPct)
-              : "#1A2332";
+              : "#282727";
 
           const path =
             document.createElementNS(
@@ -1450,6 +1450,260 @@
 
 
     /* ============================================================
+       MAPA DE SITIOS DEL INFORME (Placa 08 · datos del §6)
+       ============================================================ */
+
+    /*
+      Replica sobre la propia geometría de data/py.json los puntos de
+      verificación del informe Planet 2016–2026: cinco focos de
+      pérdida (60–71 %), el control protegido de Defensores del Chaco,
+      dos sitios transfronterizos y la celda con discrepancia declarada.
+      Reutiliza projectPoints() y ringToPath() ya existentes.
+    */
+
+    const REPORT_SITES = [
+
+      {
+        kind: "hotspot",
+        lon: -60.175,
+        lat: -21.025,
+        name: "Foco A · 21,025° S 60,175° O",
+        detail: "71,5 % del bosque del 2000 perdido · Boquerón · verificado ago 2017 → ago 2026"
+      },
+
+      {
+        kind: "hotspot",
+        lon: -60.675,
+        lat: -20.775,
+        name: "Foco B · 20,775° S 60,675° O",
+        detail: "70,0 % perdido · Boquerón · verificado ago 2017 → ago 2024"
+      },
+
+      {
+        kind: "hotspot",
+        lon: -59.675,
+        lat: -21.275,
+        name: "Foco C · 21,275° S 59,675° O",
+        detail: "64,9 % perdido · Boquerón"
+      },
+
+      {
+        kind: "hotspot",
+        lon: -60.925,
+        lat: -22.525,
+        name: "Foco D · 22,525° S 60,925° O",
+        detail: "63,9 % perdido · Presidente Hayes"
+      },
+
+      {
+        kind: "hotspot",
+        lon: -60.425,
+        lat: -21.775,
+        name: "Foco E · 21,775° S 60,425° O",
+        detail: "63,9 % perdido · Boquerón"
+      },
+
+      {
+        kind: "control",
+        lon: -61.675,
+        lat: -20.275,
+        name: "Control · Parque Nacional Defensores del Chaco",
+        detail: "0,075 % de pérdida acumulada · dosel continuo 2017 → 2024"
+      },
+
+      {
+        kind: "compare",
+        lon: -62.2595,
+        lat: -22.555,
+        name: "Verificación · llanura del Río Bermejo (Argentina)",
+        detail: "8,8 % de pérdida en la franja argentina del AOI (solo 548 km²)"
+      },
+
+      {
+        kind: "compare",
+        lon: -59.3,
+        lat: -19.6,
+        name: "Verificación · Chiquitania (Bolivia)",
+        detail: "cicatrices de incendio 2019 · salto de pérdida 2018 → 2019"
+      },
+
+      {
+        kind: "alert",
+        lon: -58.925,
+        lat: -19.525,
+        name: "Celda con discrepancia · norte de Alto Paraguay",
+        detail: "Hansen marca ~60 % perdido, pero PlanetScope muestra cubierta continua · excluida del relato de focos"
+      }
+
+    ];
+
+    async function renderReportMap() {
+
+      const reportMapSvg =
+        document.getElementById("reportMap");
+
+      if (!reportMapSvg) return;
+
+      const reportHint =
+        document.getElementById("reportMapHint");
+
+      const defaultHint =
+        reportHint ? reportHint.textContent : "";
+
+      try {
+
+        const response =
+          await fetch(MAP_CONFIG.geoPath);
+
+        if (!response.ok) {
+
+          throw new Error(`HTTP ${response.status}`);
+
+        }
+
+        const geo =
+          await response.json();
+
+        const features =
+          (geo.features || []).filter(
+            feature => feature.geometry?.type === "Polygon"
+          );
+
+        if (!features.length) return;
+
+        const project = projectPoints(features);
+
+        reportMapSvg.setAttribute(
+          "viewBox",
+          `0 0 ${MAP_CONFIG.width} ${MAP_CONFIG.height}`
+        );
+
+        reportMapSvg.innerHTML = "";
+
+        /*
+          Fondo: los 18 departamentos en neutro, sin coropleta —
+          acá el dato son los puntos, no el fill.
+        */
+
+        features.forEach(feature => {
+
+          const path =
+            document.createElementNS(
+              "http://www.w3.org/2000/svg",
+              "path"
+            );
+
+          path.setAttribute(
+            "d",
+            ringToPath(feature.geometry.coordinates[0], project)
+          );
+
+          path.classList.add("report-dept");
+
+          const title =
+            document.createElementNS(
+              "http://www.w3.org/2000/svg",
+              "title"
+            );
+
+          title.textContent =
+            feature.properties?.name || "";
+
+          path.appendChild(title);
+
+          reportMapSvg.appendChild(path);
+
+        });
+
+        /*
+          Marcadores del informe: foco, control, comparación, alerta.
+        */
+
+        REPORT_SITES.forEach(site => {
+
+          const [x, y] = project([site.lon, site.lat]);
+
+          const circle =
+            document.createElementNS(
+              "http://www.w3.org/2000/svg",
+              "circle"
+            );
+
+          circle.setAttribute("cx", x.toFixed(1));
+          circle.setAttribute("cy", y.toFixed(1));
+          circle.setAttribute("r", 6.5);
+          circle.classList.add(
+            "report-marker",
+            `report-marker--${site.kind}`
+          );
+          circle.setAttribute("tabindex", "0");
+          circle.setAttribute("role", "img");
+          circle.setAttribute(
+            "aria-label",
+            `${site.name}. ${site.detail}`
+          );
+
+          const title =
+            document.createElementNS(
+              "http://www.w3.org/2000/svg",
+              "title"
+            );
+
+          title.textContent =
+            `${site.name} · ${site.detail}`;
+
+          circle.appendChild(title);
+
+          const showHint = () => {
+
+            if (reportHint) {
+
+              reportHint.textContent =
+                `${site.name} — ${site.detail}`;
+
+            }
+
+          };
+
+          circle.addEventListener("mouseenter", showHint);
+          circle.addEventListener("focus", showHint);
+
+          reportMapSvg.appendChild(circle);
+
+        });
+
+        reportMapSvg.addEventListener("mouseleave", () => {
+
+          if (reportHint) {
+
+            reportHint.textContent = defaultHint;
+
+          }
+
+        });
+
+      }
+
+      catch (error) {
+
+        console.error(
+          "No se pudo cargar el mapa del informe:",
+          error
+        );
+
+        if (reportHint) {
+
+          reportHint.textContent =
+            "No fue posible cargar el mapa del informe.";
+
+        }
+
+      }
+
+    }
+
+
+    /* ============================================================
        INICIALIZACIÓN
        ============================================================ */
 
@@ -1520,4 +1774,15 @@
         loadLossCharts();
 
       }
+    );
+
+
+    /*
+      Mapa de sitios del informe (Placa 08): listener propio,
+      sin interferir con la inicialización existente.
+    */
+
+    document.addEventListener(
+      "DOMContentLoaded",
+      renderReportMap
     );

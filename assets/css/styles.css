@@ -1,42 +1,42 @@
     /* ============================================================
-       ATLAS DE LA PÉRDIDA FORESTAL · SISTEMA PLACA (TEMA OSCURO)
+       ATLAS DE LA PÉRDIDA FORESTAL · SISTEMA PLACA (KANAGAWA DRAGON)
        Rediseño editorial: portafolio de láminas de atlas nacional
-       sobre fondo nocturno cálido. Los PNG satelitales (negros)
+       sobre fondo dragonBlack0. Los PNG satelitales (negros)
        se integran sin costura sobre las islas #000. Tokens: DESIGN.md
        ============================================================ */
 
     :root {
 
-      /* fondo nocturno (cálido, no negro puro: no cansa la vista) */
-      --bg: #0A0E14;
-      --bg-soft: #121823;
-      --panel: #0E1420;
+      /* fondo Dragon (negros cálidos del tema, no negro puro: no cansa) */
+      --bg: #0d0c0c;
+      --bg-soft: #181616;
+      --panel: #1D1C19;
 
-      /* tinta clara cartográfica */
-      --ink: #E7E3DA;
-      --ink-2: #B8BCC4;
-      --muted: #8A919E;
+      /* tinta clara Dragon */
+      --ink: #c5c9c5;
+      --ink-2: #a6a69c;
+      --muted: #7a8382;
 
-      --rule: rgba(231, 227, 218, 0.14);
-      --rule-strong: rgba(231, 227, 218, 0.30);
+      --rule: rgba(197, 201, 197, 0.14);
+      --rule-strong: rgba(197, 201, 197, 0.30);
 
-      /* acentos de expedición (luminancia elevada para oscuro) */
-      --ochre: #D6A92E;
-      --ochre-text: #E5C158;
-      --vermilion: #E2553E;
-      --canopy: #6FAD78;
-      --sky: #6FB8DE;
+      /* acentos Dragon (luminancia contenida, mate) */
+      --ochre: #c4b28a;
+      --ochre-text: #c4b28a;
+      --vermilion: #c4746e;
+      --canopy: #87a987;
+      --sky: #8ba4b0;
 
       /* isla Plate: negro exacto de los PNG (sin costura) */
       --plate: #000000;
-      --plate-edge: rgba(231, 227, 218, 0.22);
-      --plate-text: #E9E2D2;
-      --plate-muted: #A79E8B;
-      --plate-grid: rgba(231, 227, 218, 0.06);
+      --plate-edge: rgba(197, 201, 197, 0.22);
+      --plate-text: #c5c9c5;
+      --plate-muted: #737c73;
+      --plate-grid: rgba(197, 201, 197, 0.06);
 
-      /* datos sobre Plate (brillo alto en oscuro) */
-      --chart-bar: #F06A52;
-      --chart-line: #FFC94A;
+      /* datos sobre Plate (Dragon sobre negro) */
+      --chart-bar: #c4746e;
+      --chart-line: #c4b28a;
 
       /* tipografía */
       --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
@@ -57,9 +57,23 @@
       --radius-control: 10px;
       --radius-pill: 999px;
 
-      /* vidrio nocturno para overlays */
-      --overlay-bg: rgba(11, 21, 36, 0.78);
+      /* vidrio Dragon para overlays */
+      --overlay-bg: rgba(13, 12, 12, 0.78);
       --overlay-blur: 10px;
+
+      /* medida de lectura de introducción y Placas 06–10: columna ancha
+         centrada que ocupa la mayor parte de la placa */
+      --measure-wide: 88ch;
+
+      /* anexo del informe (Placas 06–10): las figuras ajenas se montan
+         sobre la misma isla negra de evidencia (--plate), no en papel */
+      --paper-deep: #E8E4D8;
+      --marker-hot-edge: #DFA9A2;
+      --marker-ctl-edge: #B3C4B1;
+      --marker-cmp-edge: #AEBFC7;
+      --report-dept: #12120f;
+      --print-ink: #14202E;
+      --print-vermilion: #9C2E1B;
     }
 
 
@@ -96,7 +110,7 @@
     }
 
     ::selection {
-      background: rgba(199, 154, 27, 0.32);
+      background: rgba(196, 178, 138, 0.32);
       color: var(--ink);
     }
 
@@ -274,7 +288,7 @@
         object-fit: contain;
         object-position: center;
         background: transparent;
-        border: 1px solid rgba(233, 226, 210, 0.12);
+        border: 1px solid rgba(197, 201, 197, 0.12);
         border-radius: calc(var(--radius-card) - 4px);
         display: block;
       }
@@ -303,16 +317,16 @@
        ============================================================ */
 
     .article {
-      max-width: calc(var(--measure) + 8ch);
+      max-width: calc(var(--measure-wide) + 48px);
       margin: 0 auto;
       padding: 24px 24px 40px;
     }
 
     .article p {
-      max-width: var(--measure);
-      margin: 0 auto 1.5rem;
+      max-width: var(--measure-wide);
+      margin: 0 auto 2.5rem;
       font-size: 1.0625rem;
-      line-height: 1.8;
+      line-height: 2.2;
       color: var(--ink-2);
       text-wrap: pretty;
     }
@@ -323,8 +337,8 @@
     }
 
     .article h2 {
-      max-width: var(--measure);
-      margin: 64px auto 20px;
+      max-width: var(--measure-wide);
+      margin: 80px auto 32px;
       font-size: clamp(1.6rem, 3vw, 2.1rem);
       font-weight: 600;
       line-height: 1.2;
@@ -444,10 +458,10 @@
 
     .plate-intro {
       max-width: var(--measure);
-      padding: 4px 2px 28px;
+      padding: 4px 2px 36px;
       font-family: var(--serif);
       font-size: 1.0625rem;
-      line-height: 1.8;
+      line-height: 2.2;
       color: var(--ink-2);
       text-wrap: pretty;
     }
@@ -580,7 +594,7 @@
       font-size: 0.92em;
       font-weight: 500;
       color: var(--ochre-text);
-      background: rgba(199, 154, 27, 0.14);
+      background: rgba(196, 178, 138, 0.14);
       padding: 1px 6px;
       white-space: nowrap;
     }
@@ -633,7 +647,7 @@
       width: auto;
       height: auto;
       object-fit: contain;
-      border: 1px solid rgba(233, 226, 210, 0.12);
+      border: 1px solid rgba(197, 201, 197, 0.12);
       border-radius: calc(var(--radius-card) - 4px);
       transition:
         opacity 0.18s linear,
@@ -693,7 +707,7 @@
     .rail-dash {
       width: 34px;
       height: 3px;
-      background: rgba(233, 226, 210, 0.28);
+      background: rgba(197, 201, 197, 0.28);
       position: relative;
     }
 
@@ -804,7 +818,7 @@
       object-fit: contain;
       object-position: center;
       background: transparent;
-      border: 1px solid rgba(233, 226, 210, 0.12);
+      border: 1px solid rgba(197, 201, 197, 0.12);
       border-radius: calc(var(--radius-card) - 4px);
       display: block;
     }
@@ -917,7 +931,7 @@
     .chart-context {
       margin-top: 16px;
       padding-top: 14px;
-      border-top: 1px solid rgba(231, 227, 218, 0.12);
+      border-top: 1px solid rgba(197, 201, 197, 0.12);
     }
 
     .chart-context p {
@@ -996,12 +1010,12 @@
     }
 
     .chart-grid-line {
-      stroke: rgba(233, 226, 210, 0.12);
+      stroke: rgba(197, 201, 197, 0.12);
       stroke-width: 1;
     }
 
     .chart-axis-line {
-      stroke: rgba(233, 226, 210, 0.4);
+      stroke: rgba(197, 201, 197, 0.4);
       stroke-width: 1;
     }
 
@@ -1163,7 +1177,7 @@
       max-height: 760px;
       object-fit: contain;
       margin: auto;
-      border: 1px solid rgba(233, 226, 210, 0.12);
+      border: 1px solid rgba(197, 201, 197, 0.12);
       border-radius: calc(var(--radius-card) - 4px);
       transition: opacity 0.22s ease;
       display: block;
@@ -1240,7 +1254,7 @@
       background: var(--ochre-text);
       color: var(--bg);
       transform: translateY(-1px);
-      box-shadow: 0 8px 20px rgba(214, 169, 46, 0.25);
+      box-shadow: 0 8px 20px rgba(196, 178, 138, 0.25);
     }
 
 
@@ -1523,4 +1537,534 @@
       .step-image img {
         background: white !important;
       }
+    }
+
+
+    /* ============================================================
+       PLACAS 06–10 · ANEXO DEL INFORME PLANET (aditivo)
+       Las figuras del informe se montan sobre las mismas islas
+       negras de evidencia que el resto del atlas (--plate).
+       ============================================================ */
+
+    /* desde la Placa 06 el texto se centra y se ensancha para lectura */
+    .article-clip {
+      max-width: var(--measure-wide);
+      margin-inline: auto;
+    }
+
+    .article-clip p {
+      max-width: none;
+      margin-bottom: 2.5rem;
+      font-size: 1.0625rem;
+      line-height: 2.2;
+      color: var(--ink-2);
+      text-wrap: pretty;
+    }
+
+    .article-clip strong {
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    .article-clip em {
+      color: var(--ink);
+    }
+
+    .plate-sub {
+      margin: 56px auto 0;
+      max-width: var(--measure-wide);
+      padding: 12px 2px 0;
+      border-top: 1px solid var(--rule);
+      font-family: var(--serif);
+      font-size: 1.3rem;
+      font-weight: 600;
+      line-height: 1.25;
+      letter-spacing: -0.015em;
+      color: var(--ink);
+      text-wrap: balance;
+    }
+
+    .stamp-row {
+      margin-top: 24px;
+    }
+
+    /* intros de las Placas 06–10: misma columna centrada y ancha */
+    .plate-intro--wide {
+      max-width: var(--measure-wide);
+      margin-inline: auto;
+    }
+
+    /* ---- anexo: figuras originales del informe (formato explorer-image) ---- */
+
+    .anexo-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 28px;
+      margin-top: 28px;
+    }
+
+    .anexo-grid--wide {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .anexo-frame {
+      min-width: 0;
+      margin: 0;
+      background:
+        linear-gradient(var(--plate-grid) 1px, transparent 1px),
+        linear-gradient(90deg, var(--plate-grid) 1px, transparent 1px),
+        var(--plate);
+      background-size: 44px 44px;
+      border: 1px solid var(--plate-edge);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow-whisper); /* impeccable-disable-line gpt-thin-border-wide-shadow — isla de evidencia idéntica a .explorer-image */
+      padding: 14px;
+      overflow: hidden;
+    }
+
+    .anexo-frame img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      background: transparent;
+      border: 1px solid rgba(197, 201, 197, 0.12);
+      border-radius: calc(var(--radius-card) - 4px);
+      display: block;
+    }
+
+    .anexo-frame figcaption {
+      padding-top: 12px;
+      font-family: var(--mono);
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      color: var(--plate-muted);
+      font-variant-numeric: tabular-nums;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .anexo-tag {
+      font-family: var(--mono);
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--chart-line);
+    }
+
+    .anexo-caption {
+      font-family: var(--mono);
+      font-size: 10px;
+      line-height: 1.6;
+      letter-spacing: 0.08em;
+      color: var(--plate-text);
+      text-wrap: pretty;
+    }
+
+    /* ---- pares de evidencia satelital (PlanetScope) ---- */
+
+    .photo-pair {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 28px;
+      margin-top: 28px;
+    }
+
+    .photo-evidence {
+      min-width: 0;
+      margin: 0;
+    }
+
+    .photo-evidence-frame {
+      background:
+        linear-gradient(var(--plate-grid) 1px, transparent 1px),
+        linear-gradient(90deg, var(--plate-grid) 1px, transparent 1px),
+        var(--plate);
+      background-size: 44px 44px;
+      border: 1px solid var(--plate-edge);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow-whisper); /* impeccable-disable-line gpt-thin-border-wide-shadow — isla de evidencia igual que las placas */
+      padding: 10px;
+      overflow: hidden;
+    }
+
+    .photo-evidence-frame img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      background: var(--plate);
+      border: 1px solid rgba(197, 201, 197, 0.12);
+      border-radius: calc(var(--radius-card) - 4px);
+      display: block;
+    }
+
+    .photo-evidence figcaption {
+      margin-top: 8px;
+      font-family: var(--mono);
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* ---- mapa de sitios del informe (sobre data/py.json) ---- */
+
+    .report-map-card {
+      margin-top: 28px;
+      background: var(--panel);
+      border: 1px solid var(--rule);
+      border-radius: var(--radius-card);
+      padding: 16px;
+      overflow: hidden;
+    }
+
+    #reportMap {
+      width: 100%;
+      height: auto;
+      display: block;
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
+    .report-dept {
+      fill: var(--report-dept);
+      stroke: var(--rule-strong);
+      stroke-width: 0.7;
+    }
+
+    .report-marker {
+      stroke-width: 1.8;
+      cursor: help;
+      transition: stroke-width 0.15s ease;
+    }
+
+    .report-marker--hotspot {
+      fill: var(--vermilion);
+      stroke: var(--marker-hot-edge);
+    }
+
+    .report-marker--control {
+      fill: var(--canopy);
+      stroke: var(--marker-ctl-edge);
+    }
+
+    .report-marker--compare {
+      fill: var(--sky);
+      stroke: var(--marker-cmp-edge);
+    }
+
+    .report-marker--alert {
+      fill: var(--bg);
+      stroke: var(--ochre-text);
+      stroke-dasharray: 3.2 3.2;
+    }
+
+    .report-marker:hover,
+    .report-marker:focus-visible {
+      stroke-width: 2.8;
+    }
+
+    .report-marker:focus-visible {
+      outline: none;
+    }
+
+    .report-legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 20px;
+      margin-top: 16px;
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .report-legend span {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .swatch {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      display: inline-block;
+    }
+
+    .swatch--hotspot { background: var(--vermilion); }
+    .swatch--control { background: var(--canopy); }
+    .swatch--compare { background: var(--sky); }
+    .swatch--alert { background: var(--bg); border: 1.5px dashed var(--ochre-text); }
+
+    /* ---- tabla de celdas ---- */
+
+    .table-wrap {
+      margin-top: 28px;
+      padding: 6px;
+      overflow-x: auto;
+      border: 1px solid var(--rule);
+      border-radius: var(--radius-card);
+      background: var(--panel);
+    }
+
+    .cell-table {
+      width: 100%;
+      min-width: 560px;
+      border-collapse: collapse;
+    }
+
+    .cell-table caption {
+      caption-side: top;
+      text-align: left;
+      padding: 13px 16px;
+      border-bottom: 1px solid var(--rule);
+      font-family: var(--mono);
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .cell-table th,
+    .cell-table td {
+      padding: 10px 16px;
+      border-bottom: 1px solid var(--rule);
+      text-align: left;
+      white-space: nowrap;
+    }
+
+    .cell-table thead th {
+      font-family: var(--mono);
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .cell-table tbody td {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--ink);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .cell-table tbody tr:last-child td {
+      border-bottom: none;
+    }
+
+    .cell-table .num { text-align: right; }
+    .cell-table .hot { color: var(--chart-bar); }
+
+    /* ---- nota de fidelidad / lecturas del anexo ---- */
+
+    .report-note {
+      margin: 40px auto 0;
+      /* ancho absoluto: ch es relativo a la fuente (0.84rem) y quedaría angosto */
+      max-width: 48rem;
+      padding: 22px 24px;
+      border: 1px solid var(--rule);
+      border-left: 3px solid var(--ochre);
+      border-radius: var(--radius-control);
+      background: var(--bg-soft);
+      font-family: var(--sans);
+      font-size: 0.84rem;
+      line-height: 2;
+      color: var(--ink-2);
+      text-wrap: pretty;
+    }
+
+    .report-note strong {
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    .report-note em {
+      color: var(--ink);
+      font-style: italic;
+    }
+
+    .report-note code {
+      font-family: var(--mono);
+      font-size: 0.92em;
+      color: var(--ochre-text);
+    }
+
+    /* ---- hallazgos y referencias ---- */
+
+    .findings {
+      list-style: none;
+      margin: 24px auto 0;
+      display: grid;
+      gap: 20px;
+      /* ancho absoluto para igualar la columna serif (la fuente 1.02rem achica el ch) */
+      max-width: 48rem;
+    }
+
+    .findings li {
+      position: relative;
+      padding-left: 24px;
+      font-size: 1.02rem;
+      line-height: 2.2;
+      color: var(--ink-2);
+      text-wrap: pretty;
+    }
+
+    .findings li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.68em;
+      width: 9px;
+      height: 9px;
+      background: var(--vermilion);
+    }
+
+    .findings strong {
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    .refs {
+      margin: 18px auto 0;
+      /* ancho absoluto: en mono 10.5px el ch colapsa la columna */
+      max-width: 48rem;
+      display: grid;
+      gap: 16px;
+      font-family: var(--mono);
+      font-size: 10.5px;
+      line-height: 2;
+      letter-spacing: 0.03em;
+      color: var(--muted);
+    }
+
+    .refs li {
+      padding-left: 26px;
+      text-indent: -26px;
+    }
+
+    .refs a {
+      color: var(--sky);
+      text-underline-offset: 2px;
+    }
+
+    .refs a:hover {
+      color: var(--chart-line);
+    }
+
+
+    /* ---- responsive del anexo (bloque aditivo) ---- */
+
+    @media (max-width: 850px) {
+
+      .anexo-grid,
+      .photo-pair {
+        grid-template-columns: 1fr;
+      }
+    }
+
+
+    /* ---- impresión del anexo (bloque aditivo) ---- */
+
+    @media print {
+
+      .anexo-frame,
+      .anexo-frame figcaption,
+      .anexo-tag,
+      .anexo-caption,
+      .plate-sub,
+      .article-clip p,
+      .article-clip strong,
+      .article-clip em,
+      .report-note,
+      .report-note strong,
+      .report-note em,
+      .report-note code,
+      .findings li,
+      .findings strong,
+      .refs,
+      .refs a,
+      .report-legend,
+      .cell-table caption,
+      .cell-table th,
+      .cell-table td,
+      #reportMapHint {
+        color: var(--print-ink) !important;
+        background: white !important;
+        border-color: var(--print-ink) !important;
+      }
+
+      .anexo-frame,
+      .table-wrap,
+      .report-map-card,
+      .report-note,
+      .folio-stat {
+        box-shadow: none !important;
+      }
+
+      /* la banda folio (propia y del anexo) imprime en papel, no en panel */
+      .folio-stat {
+        background: white !important;
+      }
+
+      .table-wrap,
+      .report-map-card {
+        background: white !important;
+        border-color: var(--print-ink) !important;
+      }
+
+      .cell-table td,
+      .cell-table th {
+        border-bottom: 1px solid var(--print-ink) !important;
+      }
+
+      .anexo-frame img {
+        border: none !important;
+      }
+
+      .photo-evidence-frame {
+        background: white !important;
+        border: 1px solid var(--print-ink) !important;
+        box-shadow: none !important;
+      }
+
+      .photo-evidence-frame img {
+        border: none !important;
+      }
+
+      .photo-evidence figcaption {
+        color: var(--print-ink) !important;
+      }
+
+      .report-dept {
+        fill: var(--paper-deep) !important;
+        stroke: var(--print-ink) !important;
+      }
+
+      .report-marker--hotspot,
+      .report-marker--control,
+      .report-marker--compare,
+      .report-marker--alert {
+        stroke: var(--print-ink) !important;
+      }
+
+      .report-marker--alert {
+        fill: white !important;
+      }
+
+      .swatch--hotspot { background: var(--print-vermilion) !important; }
+      .swatch--control { background: #2F6B3D !important; }
+      .swatch--compare { background: #1F5F86 !important; }
+      .swatch--alert { background: white !important; border: 1.5px dashed var(--print-ink) !important; }
+
+      .cell-table .hot { color: var(--print-vermilion) !important; }
     }
