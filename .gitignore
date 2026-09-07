@@ -2,6 +2,7 @@
 .venv/
 venv/
 env/
+.impeccable/
 
 # Configuración de GitHub (workflows, templates, etc.)
 .github/

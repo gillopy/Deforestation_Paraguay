@@ -1112,7 +1112,7 @@
       height: 8px;
       border: 1px solid var(--rule);
       border-radius: var(--radius-pill);
-      background: linear-gradient(90deg, var(--canopy), var(--ochre), var(--vermilion));
+      background: linear-gradient(90deg, #3aa655, #ffcf3f, #e5484d);
       overflow: hidden;
     }
 

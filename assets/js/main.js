@@ -763,17 +763,16 @@
     }
 
     /*
-      Escala de color de 3 puntos (dragonGreen -> dragonYellow ->
-      dragonRed de Kanagawa Dragon), la misma rampa que declara
-      la leyenda en styles.css.
+      Escala de color de 3 puntos (verde -> amarillo -> rojo,
+      saturados), la misma rampa que declara la leyenda en styles.css.
     */
 
     function lossColor(pct, minPct, maxPct) {
 
       const stops = [
-        [135, 169, 135],
-        [196, 178, 138],
-        [196, 116, 110]
+        [58, 166, 85],
+        [255, 207, 63],
+        [229, 72, 77]
       ];
 
       const range = maxPct - minPct;
