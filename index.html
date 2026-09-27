@@ -8,7 +8,7 @@
   <title>El Chaco perdió un tercio de su bosque en 25 años | Deforestación del Chaco paraguayo</title>
 
   <meta name="description"
-    content="Entre 2001 y 2025, Boquerón perdió 2,9 Mha de bosque (42 %) y Alto Paraguay 1,9 Mha (28 %). Mapas año por año, datos abiertos y un informe satelital independiente sobre la deforestación del Chaco paraguayo.">
+    content="Entre 2001 y 2025 Boquerón perdió 3,25 millones de hectáreas de bosque —el 45,9 % de lo que tenía en 2000— y Alto Paraguay 2,17 millones (31,5 %). Mapas año por año, la serie anual de pérdida y emisiones, y un informe complementario sobre la deforestación del Chaco paraguayo.">
   <meta name="theme-color" content="#0d0c0c">
 
   <!-- Favicon: assets/icons/favicon.svg -->
@@ -27,6 +27,40 @@
 
   <!-- Estilos -->
   <link rel="stylesheet" href="assets/css/styles.css?v=23">
+
+  <!-- ============================================================
+       PROCEDENCIA Y CRITERIOS DE CIFRAS · revisión editorial 2026-09
+       ------------------------------------------------------------
+       En esta página conviven dos agregaciones distintas de la MISMA
+       serie (Hansen Global Forest Change 2025 v1.13). No son
+       intercambiables y el texto nunca las suma ni las mezcla:
+
+         1. CÁLCULO PROPIO  →  data/paraguay_deforestacion.json
+            Es el que colorea el mapa (Placa 04), fija la leyenda
+            (2,5 %–45,9 %), ordena el ranking, alimenta el CSV
+            descargable y sostiene el titular: Boquerón 45,9 %,
+            Alto Paraguay 31,5 % y 65,3 % de la pérdida nacional.
+            Pipeline: hansen_export_pipeline.py.
+
+         2. SERIE PUBLICADA POR GLOBAL FOREST WATCH  →  data/*.csv
+            Alimenta los cuatro gráficos de la Placa 03. Rinde entre
+            9 % y 11 % menos que el cálculo propio en estos dos
+            departamentos (Boquerón 41,5 %, Alto Paraguay 28,2 %).
+            La diferencia es de método, se explica una sola vez al
+            pie de la Placa 03 y no se repite en cada sección.
+
+         3. INFORME ANEXO  →  Planet Labs AI, Hansen v1.11 (Placa 06)
+            Fuente secundaria: misma familia de datos, otra ventana
+            temporal y otro autor. Se reproduce con sus límites.
+
+       SERIE TEMPORAL ACUMULADA: cada archivo
+       images/map_export_*_year_N_high_res.png (N = 0…25) representa
+       el año 2000 + N acumulado, y el corte year_0 es la línea de
+       base de cobertura del año 2000, sin pérdida. Verificado por
+       muestreo de píxeles sobre year_0 / year_2 / year_25: la
+       pérdida pasa de 0 % del encuadre en year_0 a 0,9 % en year_2
+       y 22,5 % en year_25.
+       ============================================================ -->
 </head>
 
 
@@ -55,12 +89,12 @@
       </h1>
 
       <p class="masthead-lede">
-        Entre 2001 y 2025, Boquerón perdió 2,9 millones de hectáreas
-        de bosque —el 42 % de lo que tenía— y Alto Paraguay otros
-        1,9 millones. Entre los dos concentran casi dos tercios de
-        toda la deforestación del país. Este atlas reconstruye, año
-        por año y píxel por píxel, cómo avanzó esa frontera sobre
-        el Chaco paraguayo.
+        Los tres departamentos del Chaco —Boquerón, Alto Paraguay y
+        Presidente Hayes— perdieron el 35,7 % del bosque que tenían
+        en el año 2000. Los dos primeros concentran la mayor parte:
+        Boquerón 3,25 millones de hectáreas (45,9 %) y Alto Paraguay
+        2,17 millones (31,5 %). Juntos suman 5,41 millones de
+        hectáreas, el 65,3 % del desmonte de todo el país.
       </p>
 
       <dl class="masthead-folio">
@@ -105,37 +139,43 @@
 
       El Chaco ocupa más de la mitad del territorio paraguayo y
       guarda el bosque seco continuo más extenso de Sudamérica.
-      Pero su paisaje no está quieto: en las últimas décadas, la
-      frontera agropecuaria redibujó el mapa, sobre todo en
-      Boquerón y Alto Paraguay.
+      La serie de Hansen Global Forest Change registra, píxel a
+      píxel, cuánta cobertura arbórea había en el año 2000 y cuánta
+      se perdió en cada uno de los 25 años siguientes. Este atlas la
+      aplica a <strong>Boquerón</strong> y <strong>Alto Paraguay</strong>,
+      los dos departamentos que concentran casi dos tercios del
+      desmonte del país.
 
     </p>
 
     <p>
 
-      La magnitud del cambio es difícil de captar mirando un solo
-      año. Pero cuando ordenás las imágenes cronológicamente,
-      aparece otra historia: la de una frontera que avanza, año
-      tras año, sobre el bosque.
+      Antes de leer los mapas conviene mirar el punto de partida.
+      Para contar un píxel como bosque, la serie exige al menos
+      30 % de cobertura de copa en el año 2000, y solo mide lo que
+      se perdió a partir de ahí: la vegetación natural que nunca
+      alcanzó ese umbral, y todo lo que ya se había desmontado antes
+      de 2001, quedan fuera de la cuenta. En el primer fotograma,
+      casi la mitad del encuadre está en esa zona ciega.
 
     </p>
 
     <p>
 
-      Esta visualización reconstruye esa transformación con datos
-      de pérdida de cobertura forestal y mapas exportados para
-      los departamentos del país. La pregunta no es solo cuánto
-      bosque desapareció, sino
-      <strong>cómo y dónde cambió el territorio con el tiempo</strong>.
+      La secuencia tiene 26 cortes anuales y se lee en orden. Vista
+      así, la pérdida deja de ser una cifra y se vuelve una
+      geometría: cuadros rectangulares que se multiplican en el
+      borde de los desmontes anteriores, franjas de vegetación que
+      quedan en pie entre potrero y potrero, y una malla de caminos
+      que crece junto con ellos.
 
     </p>
 
     <p>
 
-      Empezamos por donde el proceso pegó más fuerte: el mapa
-      siguiente muestra <strong>Boquerón</strong> y
-      <strong>Alto Paraguay</strong> y permite seguir la expansión
-      de la pérdida desde el comienzo de la serie hasta 2025.
+      El primer bloque compara tres cortes sobre el mismo encuadre
+      y a la misma escala: <strong>2002</strong>,
+      <strong>2010</strong> y <strong>2025</strong>.
 
     </p>
 
@@ -198,22 +238,26 @@
             </div>
 
             <h2>
-              2002: el bosque todavía parece intacto
+              2002: la línea de base ya no era virgen
             </h2>
 
             <p>
 
-              En el <span class="year">año 2002</span> de la secuencia,
-              las manchas de pérdida aparecen dispersas, casi
-              anecdóticas. El Chaco conserva una continuidad forestal
-              que, vista desde hoy, cuesta imaginar.
+              En el corte del <span class="year">año 2002</span> la
+              pérdida acumulada no llega al 1 % del encuadre. Lo que
+              domina la imagen no es bosque intacto, sino una malla de
+              bloques oscuros —sin dosel cerrado— que ya existía en el
+              año 2000: sabanas y humedales, pero también cuadros de
+              bordes rectos y caminos, rastro de desmontes anteriores
+              al arranque de la serie.
 
             </p>
 
             <p>
 
-              Esta primera imagen es el punto de partida: el "antes"
-              contra el que se mide todo lo que sigue.
+              Los puntos rojos son la pérdida detectada en 2001 y
+              2002: escasos frente a lo que viene, y repartidos sobre
+              todo por el centro y el este del encuadre.
 
             </p>
 
@@ -245,24 +289,24 @@
             </div>
 
             <h2>
-              2010: los puntos se vuelven patrón
+              2010: los bloques se conectan
             </h2>
 
             <p>
 
-              Al llegar al <span class="year">año 2010</span>,
-              la pérdida ya no son eventos aislados. Las áreas
-              transformadas se ordenan en una estructura espacial
-              visible a simple vista.
+              Ocho años después, la pérdida acumulada deja de ser una
+              serie de puntos: cada cuadro nuevo aparece pegado al
+              borde de uno anterior, y el resultado es una franja
+              continua que cruza el centro del mapa.
 
             </p>
 
             <p>
 
-              El mapa muestra lo que ningún promedio nacional puede:
-              la deforestación no avanza pareja. Se concentra y se
-              expande por corredores, siguiendo la lógica del
-              territorio.
+              La forma también es un dato. Los desmontes son
+              rectángulos, no manchas: es la geometría de la ganadería
+              mecanizada, que trabaja por potreros y conserva franjas
+              de vegetación entre ellos.
 
             </p>
 
@@ -295,21 +339,26 @@
             </div>
 
             <h2>
-              2025: un paisaje redibujado
+              2025: 25 años acumulados en un solo encuadre
             </h2>
 
             <p>
 
-              En el <span class="year">año 2025</span>, la serie
-              acumulada deja ver la dimensión completa del cambio.
+              En el <span class="year">año 2025</span> el bosque que
+              estos dos departamentos tenían en el año 2000 había
+              perdido el 38,8 % de su superficie. En la imagen, la
+              marca de pérdida ocupa cerca de una quinta parte del
+              encuadre, contra menos del 1 % en 2002.
 
             </p>
 
             <p>
 
-              Lo que empezó como claros dispersos es hoy un frente
-              extendido. Pasá de una imagen a otra y seguí, con tus
-              propios ojos, cómo la frontera se movió sobre el Chaco.
+              Dos rasgos no estaban en 2010: el frente se ensancha
+              desde los bordes de cada cuadro, y en el norte de Alto
+              Paraguay aparece un núcleo tardío que los cortes
+              anteriores no registraban. Los cauces y los humedales
+              siguen enteros: la pérdida los rodea, no los cruza.
 
             </p>
 
@@ -364,8 +413,8 @@
 
     <footer class="colophon">
       <span>Fuente · UMD/hansen/global_forest_change_2025_v1_13</span>
-      <span>Pixel 30 m · copa 2000 ≥ 30 %</span>
-      <span>Exportación 1600 px</span>
+      <span>Píxel 30 m · copa 2000 ≥ 30 % · 26 cortes (2000–2025)</span>
+      <span>Encuadre 2841 × 2900 px · misma escala en los tres cortes</span>
     </footer>
 
   </section>
@@ -376,34 +425,40 @@
 
   <section class="article">
     <h2>
-      La pérdida no golpea parejo: el mapa del país
+      Dónde se pierde más, en proporción
     </h2>
 
     <p>
 
-      La serie muestra el cuándo. Falta el dónde: ¿cómo se reparte
-      la presión forestal entre los departamentos?
+      La serie temporal ordena la pérdida en el tiempo. El explorador
+      la ordena en el espacio: 17 departamentos y Asunción, cada uno
+      coloreado según qué porcentaje de su bosque del año 2000 perdió
+      desde 2001.
 
     </p>
 
     <p>
 
-      El explorador reúne a los 18 departamentos en una sola vista:
-      el color de cada uno marca su porcentaje de pérdida desde
-      2001, calculado sobre el bosque que tenía en el año 2000.
-      Compará territorios opuestos —el Chaco extenso y poco poblado
-      frente a la Región Oriental, donde la frontera agrícola muerde
-      superficies mucho más chicas.
+      Leído así, el ranking no sigue el sentido común. El Chaco pierde
+      más hectáreas porque tenía mucho más bosque, pero en proporción
+      la Región Oriental compite de igual a igual: detrás de
+      <strong>Boquerón</strong> (45,9 %) aparecen
+      <strong>San Pedro</strong> (43,1 %) y
+      <strong>Canindeyú</strong> (43,1 %), departamentos pequeños que
+      perdieron cerca de la mitad de superficies mucho menores.
+      <strong>Alto Paraguay</strong>, con 6,86 millones de hectáreas
+      de bosque en el año 2000 —casi tanto como Boquerón—, queda
+      sexto con 31,5 %.
 
     </p>
 
     <p>
 
-      <strong>Boquerón</strong> lidera el ranking nacional de
-      pérdida relativa (45,9 %) y <strong>Alto Paraguay</strong>
-      lo sigue en el sexto puesto. Pero por su enorme extensión,
-      entre los dos reúnen casi dos tercios de las hectáreas
-      deforestadas del país —por eso este atlas se detiene en ellos.
+      La distinción importa para leer el mapa: un departamento puede
+      encabezar la pérdida absoluta sin acercarse al tope relativo, y
+      al revés. El panel del explorador muestra las dos cifras a la
+      vez —hectáreas y porcentaje— para no confundir magnitud con
+      intensidad.
 
     </p>
 
@@ -417,17 +472,32 @@
 
     <header class="plate-marg">
       <span class="plate-no">Placa 02 · Dos territorios</span>
-      <span class="plate-meta">Boquerón / Alto Paraguay · capa combinada</span>
+      <span class="plate-meta">Boquerón / Alto Paraguay · recorte por departamento de la misma capa</span>
     </header>
 
     <h2 id="plate02Title">
-      Dos departamentos, dos velocidades
+      Boquerón y Alto Paraguay, lado a lado
     </h2>
 
     <p class="plate-intro">
 
-      La misma frontera, distinta intensidad: mirá cómo cada
-      territorio absorbe la presión.
+      Los dos departamentos arrancan de una base comparable: 7,07
+      millones de hectáreas de bosque en el año 2000 en Boquerón y
+      6,86 millones en Alto Paraguay. Terminan en lugares distintos:
+      3,25 millones de hectáreas perdidas en el primero (45,9 %) y
+      2,17 millones en el segundo (31,5 %), catorce puntos
+      porcentuales de diferencia.
+
+    </p>
+
+    <p class="plate-intro">
+
+      El ritmo tampoco coincide. Boquerón toca su techo en 2012
+      —243.141 hectáreas en doce meses— y Alto Paraguay en 2010
+      (156.092 hectáreas). La serie de Alto Paraguay guarda además un
+      salto tardío: 176.042 hectáreas en 2019, casi el triple que en
+      2018. Ese pico también aparece en la serie publicada por Global
+      Forest Watch, un 19 % más abajo.
 
     </p>
 
@@ -435,7 +505,7 @@
 
       <article class="department-card">
 
-        <h3 data-dept-code="BOQ · 7.070.870 HA BOSQUE 2000">
+        <h3 data-dept-code="BOQ · 7.070.871 HA BOSQUE 2000">
           Boquerón
         </h3>
 
@@ -448,8 +518,8 @@
         </div>
 
         <p>
-          Pérdida acumulada en Boquerón: 2,9 Mha, una superficie
-          equivalente a Bélgica.
+          Pérdida acumulada: 3.245.165 ha · 45,9 % de su bosque del
+          año 2000 · peor año 2012 (243.141 ha)
         </p>
 
       </article>
@@ -469,8 +539,8 @@
         </div>
 
         <p>
-          Pérdida acumulada en Alto Paraguay: 1,9 Mha, el 28 % de
-          su bosque del año 2000.
+          Pérdida acumulada: 2.165.089 ha · 31,5 % de su bosque del
+          año 2000 · peor año 2010 (156.092 ha)
         </p>
 
       </article>
@@ -478,7 +548,7 @@
     </div>
 
     <footer class="colophon">
-      <span>Combinada · cobertura + pérdida + ganancia 2000–2012</span>
+      <span>Capa combinada · ganancia 2000–2012 · misma paleta que la Placa 01</span>
       <span>Cifras · data/paraguay_deforestacion.json</span>
     </footer>
 
@@ -540,13 +610,13 @@
 
           <div class="chart-context">
             <p>
-              Entre 2001 y 2025, <strong>Boquerón</strong> perdió <strong>2,9 Mha</strong> de cobertura arbórea —el <strong>42 %</strong> de su bosque del año 2000— y liberó <strong>525 Mt de CO₂e</strong>. El peor año fue 2012, con 227.000 hectáreas en doce meses. Sin descontar la regeneración posterior.
+              La serie de Global Forest Watch para <strong>Boquerón</strong> suma <strong>2,93 millones de hectáreas</strong> en 25 años —el <strong>41,5 %</strong> de su bosque del año 2000— y <strong>525 Mt de CO₂e</strong> brutas. Su máximo es 2012, con 227.485 hectáreas en doce meses. El agregado propio del proyecto, que es el que colorea el mapa, es más alto: 3,25 millones de hectáreas (45,9 %).
             </p>
             <p class="chart-context-meta">
-              Bosque 2000: dosel arbóreo &gt;30 % · sin descontar ganancias · ticks ’01 · ’04 · ’07 · ’09 · ’11 · ’13 · ’15 · ’17 · ’19 · ’21 · ’25
+              Pérdida bruta, sin descontar ganancia · bosque 2000: dosel arbóreo &gt;30 % · años rotulados: ’01 · ’06 · ’11 · ’16 · ’21 · ’25
             </p>
             <p class="chart-context-disclaimer">
-              Los métodos de Global Forest Watch cambiaron con el tiempo: compará con cautela los datos previos y posteriores a 2015. <a href="https://www.globalforestwatch.org/help/map/guides" target="_blank" rel="noopener">Más información aquí</a>.
+              Global Forest Watch cambió su método de cálculo en 2015: la serie anterior y la posterior no son estrictamente comparables. <a href="https://www.globalforestwatch.org/help/map/guides" target="_blank" rel="noopener">Más información aquí</a>.
             </p>
           </div>
 
@@ -571,16 +641,16 @@
 
           <div class="chart-context">
             <p>
-              <strong>Boquerón</strong> perdió <strong>7,5 kha</strong> de bosque primario húmedo —el <strong>0,26 %</strong> de su pérdida total de cobertura en el mismo periodo—, mientras el área total de ese bosque primario se redujo <strong>23 %</strong>.
+              Dentro de la extensión de bosque primario húmedo que tenía en 2001, <strong>Boquerón</strong> perdió <strong>7.527 hectáreas</strong> en 25 años: el <strong>0,26 %</strong> de toda su pérdida de cobertura arbórea, frente a 2,93 millones de hectáreas en el mismo periodo. Los picos son tardíos —2016 y 2018—, no los años de mayor desmonte.
             </p>
             <p class="chart-context-meta">
-              Pérdida dentro de la extensión de bosque primario de 2001 · superficie restante en % de 2001 · ticks ’01 · ’04 · ’07 · ’09 · ’11 · ’13 · ’15 · ’17 · ’19 · ’21 · ’25
+              Pérdida dentro de la extensión de bosque primario de 2001 · años rotulados: ’01 · ’06 · ’11 · ’16 · ’21 · ’25
             </p>
             <p class="chart-context-disclaimer">
-              Misma advertencia metodológica que arriba: los métodos cambiaron, con corte en 2015. <a href="https://www.globalforestwatch.org/help/map/guides" target="_blank" rel="noopener">Más información aquí</a>.
+              Misma advertencia metodológica que arriba: el método cambió en 2015. <a href="https://www.globalforestwatch.org/help/map/guides" target="_blank" rel="noopener">Más información aquí</a>.
             </p>
             <p class="chart-context-meta">
-              Bosque primario 2001 restante · dosel arbóreo &gt;30 %
+              Bosque primario de 2001 · dosel arbóreo &gt;30 % · sin descontar ganancia
             </p>
           </div>
 
@@ -627,13 +697,13 @@
 
           <div class="chart-context">
             <p>
-              <strong>Alto Paraguay</strong> perdió <strong>1,9 Mha</strong> —el <strong>28 %</strong> de su bosque del 2000— y emitió <strong>487 Mt de CO₂e</strong>, también sin descontar regeneración. Su año más duro fue 2010, con 156.000 hectáreas.
+              La serie de Global Forest Watch para <strong>Alto Paraguay</strong> suma <strong>1,93 millones de hectáreas</strong> —el <strong>28,2 %</strong> de su bosque del año 2000— y <strong>487 Mt de CO₂e</strong> brutas. Su año más alto es 2010, con 156.092 hectáreas. El agregado propio del proyecto es 2,17 millones (31,5 %).
             </p>
             <p class="chart-context-meta">
-              Bosque 2000: dosel arbóreo &gt;30 % · sin descontar ganancias · ticks ’01 · ’04 · ’07 · ’09 · ’11 · ’13 · ’15 · ’17 · ’19 · ’21 · ’25
+              Pérdida bruta, sin descontar ganancia · bosque 2000: dosel arbóreo &gt;30 % · años rotulados: ’01 · ’06 · ’11 · ’16 · ’21 · ’25
             </p>
             <p class="chart-context-disclaimer">
-              Misma advertencia metodológica: corte en 2015, comparar con cautela. <a href="https://www.globalforestwatch.org/help/map/guides" target="_blank" rel="noopener">Más información aquí</a>.
+              Misma advertencia metodológica que arriba: el método cambió en 2015. <a href="https://www.globalforestwatch.org/help/map/guides" target="_blank" rel="noopener">Más información aquí</a>.
             </p>
           </div>
 
@@ -658,16 +728,16 @@
 
           <div class="chart-context">
             <p>
-              <strong>Alto Paraguay</strong> perdió <strong>347 kha</strong> de bosque primario húmedo —el <strong>17,9 %</strong> de su pérdida total—, concentrada entre 2002 y 2016, con picos en 2003 y 2012.
+              <strong>Alto Paraguay</strong> concentra <strong>347.276 hectáreas</strong> de pérdida de bosque primario húmedo —el <strong>18,0 %</strong> de toda su pérdida de cobertura arbórea—, repartidas entre 2002 y 2016, con máximos en 2012 (35.139 ha) y 2003 (32.680 ha). Es el 98 % del bosque primario perdido en los dos departamentos: Boquerón aporta 7.527 hectáreas.
             </p>
             <p class="chart-context-meta">
-              Pérdida dentro de la extensión de bosque primario de 2001 · superficie restante en % de 2001 · ticks ’01 · ’04 · ’07 · ’09 · ’11 · ’13 · ’15 · ’17 · ’19 · ’21 · ’25
+              Pérdida dentro de la extensión de bosque primario de 2001 · años rotulados: ’01 · ’06 · ’11 · ’16 · ’21 · ’25
             </p>
             <p class="chart-context-disclaimer">
-              Misma advertencia metodológica: corte en 2015, comparar con cautela. <a href="https://www.globalforestwatch.org/help/map/guides" target="_blank" rel="noopener">Más información aquí</a>.
+              Misma advertencia metodológica que arriba: el método cambió en 2015. <a href="https://www.globalforestwatch.org/help/map/guides" target="_blank" rel="noopener">Más información aquí</a>.
             </p>
             <p class="chart-context-meta">
-              Bosque primario 2001 restante · dosel arbóreo &gt;30 %
+              Bosque primario de 2001 · dosel arbóreo &gt;30 % · sin descontar ganancia
             </p>
           </div>
 
@@ -677,10 +747,23 @@
 
     </div>
 
+    <p class="report-note">
+
+      <strong>Dos denominadores, un mismo territorio.</strong> Los
+      cuatro gráficos de esta placa reproducen la serie publicada por
+      Global Forest Watch. El mapa, el ranking, la leyenda y el archivo
+      descargable usan el cálculo propio del proyecto, que aplica un
+      criterio de agregación más amplio y rinde entre 9 % y 11 % más en
+      estos dos departamentos. Cada cifra es válida dentro de su
+      método; lo que no corresponde es sumarlas entre sí. Por eso todo
+      número de este sitio se cita con su fuente.
+
+    </p>
+
     <footer class="colophon">
-      <span>Pérdida · UMD_TREE_COVER_LOSS (ha)</span>
+      <span>Pérdida · UMD_TREE_COVER_LOSS (ha) · serie publicada por Global Forest Watch</span>
       <span>Emisiones · GFW_GROSS_EMISSIONS_CO2E_ALL_GASES (Mg)</span>
-      <span>CSV locales · data/</span>
+      <span>Cifras del proyecto · data/paraguay_deforestacion.json</span>
     </footer>
 
   </section>
@@ -693,7 +776,7 @@
 
     <header class="plate-marg">
       <span class="plate-no">Placa 04 · Explorador territorial</span>
-      <span class="plate-meta">18 departamentos · selección por clic o teclado</span>
+      <span class="plate-meta">17 departamentos + Asunción · selección por clic o teclado</span>
     </header>
 
     <h2 id="plate04Title">
@@ -702,8 +785,10 @@
 
     <p class="plate-intro">
 
-      Elegí un departamento en el mapa o en la lista y mirá su
-      imagen satelital completa con sus estadísticas de pérdida.
+      El mapa colorea cada unidad según el porcentaje de su bosque del
+      año 2000 que perdió desde 2001. La lista y el selector de capa
+      abren su imagen completa, con la cobertura inicial y la pérdida
+      acumulada en hectáreas y en porcentaje.
 
     </p>
 
@@ -803,33 +888,47 @@
 
         <p>
 
-          Todo lo que ves acá se calculó en local: mapas PNG
-          exportados por un pipeline propio y estadísticas servidas
-          desde archivos del proyecto, sin consultas en vivo.
+          Las cifras de este sitio no se consultan en vivo: se
+          calcularon una vez en Google Earth Engine y quedaron en
+          archivos locales. Los mapas son exportaciones PNG del mismo
+          proceso; los gráficos leen cuatro CSV publicados por Global
+          Forest Watch.
 
         </p>
 
         <p>
 
           La fuente primaria es Hansen Global Forest Change 2025
-          v1.13, la serie de referencia mundial para medir pérdida
-          de cobertura forestal.
+          v1.13, la serie de referencia mundial para pérdida de
+          cobertura arbórea. El proyecto la procesa con su propio
+          pipeline (hansen_export_pipeline.py) y Global Forest Watch
+          publica su propia agregación de la misma serie. Las dos
+          cifras no coinciden, y el sitio las presenta por separado
+          (Placa 03).
 
         </p>
 
         <p>
 
-          Un aviso necesario: estos mapas detectan cambios en la
-          cobertura, no miden propiedad, rindes ni uso del suelo.
-          Lo que ves es bosque que estaba y ya no está —nada más,
-          nada menos.
+          Tres advertencias sobre el alcance. Primero: estos mapas
+          detectan cambios en la cobertura arbórea, no propiedad,
+          rindes ni uso del suelo, y no distinguen un desmonte de un
+          incendio o de una muerte de dosel por sequía. Segundo: solo
+          cuentan los píxeles que tenían al menos 30 % de copa en el
+          año 2000, así que la vegetación natural por debajo de ese
+          umbral y todo lo desmontado antes de 2001 quedan fuera de la
+          serie. Tercero: el cálculo propio del proyecto y la serie
+          publicada por Global Forest Watch difieren en torno al 10 %
+          en estos departamentos; la diferencia es de método y está
+          señalada donde corresponde.
 
         </p>
 
         <p>
 
           El proyecto crece por agregación: cada año o departamento
-          nuevo entra sumando sus imágenes y sus filas de datos.
+          nuevo entra sumando sus imágenes y sus filas de datos, sin
+          volver a procesar lo anterior.
 
         </p>
 
@@ -839,8 +938,8 @@
         <h3>Descarga de datos</h3>
 
         <p>
-          Los números completos —departamento por departamento,
-          año por año— se descargan acá.
+          17 departamentos y Asunción × 25 años, en hectáreas: la
+          serie completa, unidad por unidad.
         </p>
 
         <p style="margin-top:16px">
@@ -871,16 +970,21 @@
     </header>
 
     <h2 id="plate06Title">
-      La misma historia, con otras fuentes
+      Un informe complementario, con sus propios límites
     </h2>
 
     <p class="plate-intro plate-intro--wide">
 
-      Para cerrar el recorrido, este atlas suma la evidencia de
-      un informe satelital independiente de Planet Labs: pérdida,
-      degradación y fragmentación del bosque en el Gran Chaco
-      entre 2016 y 2026, sobre 171.263 km² delimitados por un
-      polígono de 29 vértices.
+      El recorrido cierra con un documento de otra naturaleza: un
+      informe generado por la herramienta de análisis con inteligencia
+      artificial de Planet Labs, publicado el 5 de septiembre de 2026,
+      sobre pérdida, degradación y fragmentación del Gran Chaco entre
+      2016 y 2026 en un área de 171.263 km² delimitada por un polígono
+      de 29 vértices. Sus cifras salen de fuentes verificables
+      —Hansen, Landsat, CHIRPS—, pero el documento es un análisis
+      automático: no es un trabajo arbitrado ni una investigación
+      periodística. Se reproduce como fuente secundaria y con los
+      límites que él mismo declara.
 
     </p>
 
@@ -888,13 +992,13 @@
 
       <p>
 
-        El propio informe ordena la lectura con un dato geométrico:
+        El propio informe acota el alcance con un dato geométrico:
         aunque se presenta como transfronterizo, el
         <strong>98,1 % del área analizada está en Paraguay</strong>
-        (168.060 km²); Bolivia, Brasil y Argentina aportan apenas
-        franjas de borde. Es, en los hechos, una radiografía del
-        Chaco paraguayo: los Boquerón, Presidente Hayes y Alto
-        Paraguay que recorre este artículo.
+        (168.060 km²). Bolivia, Brasil y Argentina aportan franjas de
+        borde que pesan entre 0,3 % y 1,1 % del total. En la práctica,
+        el documento es una radiografía de Boquerón, Presidente Hayes
+        y Alto Paraguay.
 
       </p>
 
@@ -902,11 +1006,23 @@
 
         El informe cruza Hansen Global Forest Change
         <strong>v1.11</strong> (pérdida anual 2001–2023) con
-        compuestos Landsat 8/9 de estación seca (NDVI, NBR, BSI),
-        lluvia CHIRPS de 12 meses y verificaciones puntuales con
-        PlanetScope de 3 m. Cada gráfico que sigue es una
-        <strong>figura original del informe</strong>, reproducida
-        aquí como anexo documental.
+        compuestos Landsat 8/9 de estación seca (índices NDVI, NBR y
+        BSI), lluvia CHIRPS de 12 meses y verificaciones puntuales con
+        imágenes PlanetScope de 3 metros. Cada figura que sigue es una
+        <strong>figura original del informe</strong>, reproducida como
+        anexo documental.
+
+      </p>
+
+      <p>
+
+        Conviene separar dos capas del documento. Los números
+        —hectáreas, porcentajes, años— provienen de las fuentes
+        citadas y son contrastables contra ellas. Las lecturas —qué
+        significa un par de imágenes, cuánto pesa la sequía frente al
+        desmonte, qué conclusión deja una celda aislada— son del
+        sistema que redactó el informe. En cada figura se indica cuál
+        de las dos cosas se está leyendo.
 
       </p>
 
@@ -937,13 +1053,15 @@
 
     <p class="report-note">
 
-      <strong>Nota de fidelidad.</strong> Los datos propios de este sitio
-      provienen de Hansen GFC <strong>v1.13</strong> (serie 2001–2025,
-      exportados por <code>hansen_export_pipeline.py</code>). El informe
+      <strong>Nota de fidelidad.</strong> Las cifras propias de este
+      sitio salen de Hansen GFC <strong>v1.13</strong> (serie 2001–2025,
+      exportada por <code>hansen_export_pipeline.py</code>). El informe
       adjunto usa Hansen <strong>v1.11</strong>, cuya contabilidad de
-      pérdida llega solo hasta 2023; sus lecturas 2024–2026 se apoyan
-      en Landsat y PlanetScope, no en un conteo de hectáreas. Las dos
-      fuentes se complementan pero no son numéricamente idénticas.
+      pérdida llega hasta 2023; sus lecturas de 2024 a 2026 se apoyan
+      en Landsat y PlanetScope, no en un conteo de hectáreas. Son tres
+      agregaciones de la misma familia de datos —proyecto, Global
+      Forest Watch e informe—, con ventanas temporales y criterios
+      distintos, y ninguna reemplaza a las otras.
 
     </p>
 
@@ -979,11 +1097,10 @@
 
     <p class="plate-intro plate-intro--wide">
 
-      Entre 2016 y 2023 —el tramo con conteo de hectáreas
-      verificado— el área perdió casi un tercio de su bosque del
-      año 2000 y <strong>ningún año revirtió la curva</strong>.
-      La tasa anual se movió entre 1.300 y 2.600 km² por año, sin
-      una caída sostenida.
+      Entre 2016 y 2023 —el último tramo con conteo de hectáreas del
+      informe— el área perdió <strong>12.484 km²</strong> y
+      <strong>ningún año revirtió la tendencia</strong>. La tasa anual
+      se movió entre 1.300 y 2.600 km², sin una caída sostenida.
 
     </p>
 
@@ -1047,10 +1164,10 @@
 
     <p class="report-note">
 
-      <strong>Lectura:</strong> la pérdida es un presente continuo,
-      no una historia cerrada. Por eso el informe pide vigilar las
-      celdas de bosque conservado que bordean el corredor de focos
-      (Placa 08), en lugar de limitarse a medir lo ya desmontado.
+      <strong>Lectura.</strong> El informe no cierra la serie:
+      propone usar las celdas de bosque conservado que bordean el
+      corredor de focos (Placa 08) como indicador temprano, en lugar
+      de medir solo lo que ya se desmontó.
 
     </p>
 
@@ -1078,15 +1195,15 @@
 
     <p class="plate-intro plate-intro--wide">
 
-      El análisis por celdas de 0,25° revela el patrón: la
-      deforestación se aprieta en una faja continua sobre el centro
-      de <strong>Boquerón</strong> y <strong>Presidente Hayes</strong>,
-      con celdas que perdieron entre el 60 % y el 71 % de su bosque
-      del año 2000. En cambio, alrededor del Parque Nacional
-      Defensores del Chaco y la reserva Médanos del Chaco la pérdida
-      no llega al 3 %: lo intacto coincide con <strong>protección
-      formal, no con lejanía</strong>. Los puntos del mapa replican
-      los sitios que el informe verificó uno por uno.
+      El análisis por celdas de 0,25° (≈ 27 × 27 km) muestra que la
+      pérdida no se reparte: se aprieta en una faja continua sobre el
+      centro de <strong>Boquerón</strong> y <strong>Presidente
+      Hayes</strong>, con celdas que perdieron entre el 60 % y el 71 %
+      de su bosque del año 2000. Alrededor del Parque Nacional
+      Defensores del Chaco y de la reserva Médanos del Chaco la
+      pérdida no llega al 3 %: lo que queda en pie coincide con
+      <strong>protección formal, no con lejanía</strong>. Los puntos
+      del mapa replican los sitios que el informe verificó uno por uno.
 
     </p>
 
@@ -1271,13 +1388,13 @@
 
     <p class="plate-intro plate-intro--wide">
 
-      Los índices de vegetación se leen con el pluviómetro en la
-      mano: las caídas de NDVI/NBR y los picos de suelo expuesto
-      (BSI) en 2020, 2022 y 2024 coinciden con años secos del
-      CHIRPS, no con picos de desmonte. Mirá 2022: el peor año
-      espectral de la serie y, a la vez, uno de los incrementos de
-      pérdida <em>más chicos</em> del registro Hansen (1.386 km²
-      en el AOI). Acá, el verde avisa sequía.
+      Los índices de vegetación se leen junto con el pluviómetro: las
+      caídas de NDVI/NBR y los picos de suelo expuesto (BSI) de 2020,
+      2022 y 2024 coinciden con años secos del CHIRPS, no con picos de
+      desmonte. El caso más claro es 2022: es el peor año espectral de
+      la serie y, a la vez, uno de los incrementos de pérdida
+      <em>más chicos</em> del registro Hansen (1.386 km² en el área de
+      interés). Un valle de verdor, acá, avisa sequía.
 
     </p>
 
@@ -1414,15 +1531,15 @@
 
     <p class="report-note">
 
-      <strong>Lo que el informe no resuelve, lo dice:</strong> una
-      celda del norte de Alto Paraguay (19,525° S · 58,925° O)
-      figura con ~60 % de pérdida en Hansen, pero tres
-      verificaciones PlanetScope (2017, 2024, 2026) muestran
-      cobertura continua. O es un error de clasificación sobre
-      humedales estacionales tipo Pantanal, o el desmonte real está
-      en otro rincón no muestreado de esa celda de 27 × 27 km. La
-      celda queda fuera del relato de focos y deja una moraleja:
-      el porcentaje de una sola celda es un indicio, no una prueba.
+      <strong>Lo que el informe no resuelve, lo declara.</strong> Una
+      celda del norte de Alto Paraguay (19,525° S · 58,925° O) figura
+      con ~60 % de pérdida en Hansen, pero tres verificaciones
+      PlanetScope (2017, 2024 y 2026) muestran cobertura continua. O es
+      un error de clasificación sobre humedales estacionales tipo
+      Pantanal, o el desmonte real está en otro rincón no muestreado de
+      esa celda de 27 × 27 km. La celda queda fuera del relato de focos
+      y el caso deja algo útil: el porcentaje de una sola celda es un
+      indicio, no una prueba.
 
     </p>
 
@@ -1453,47 +1570,47 @@
       <p>
 
         En la Región Oriental, la Ley 2524/04 de "Deforestación Cero"
-        prohíbe abrir nuevos cambios de uso. <strong>En el Chaco,
-        esa ley no rige.</strong> Las fincas de más de 20 hectáreas
-        operan bajo la Ley 422/73: conservan entre 40 % y 45 % de
-        vegetación nativa —las cortinas que ves en cada imagen de
+        prohíbe abrir nuevos cambios de uso. <strong>En el Chaco esa
+        ley no rige.</strong> Las fincas de más de 20 hectáreas operan
+        bajo la Ley 422/73: deben conservar entre 40 % y 45 % de
+        vegetación nativa —las cortinas que aparecen en cada imagen de
         la Placa 08— y pueden desmontar el resto con permiso del
-        INFONA. Extender la protección al Chaco se intentó y se
-        perdió en el Congreso en 2009 y de nuevo en 2019.
+        INFONA. Extender la protección al Chaco se intentó en el
+        Congreso en 2009 y en 2019; las dos veces se perdió.
 
       </p>
 
       <p>
 
-        El sistema de permisos es, en los números, parte del
-        problema: entre agosto de 2017 y agosto de 2018 se
-        desmontaron 255.000 ha en el Chaco; 194.000 tenían
-        autorización y unas
-        <strong>61.000 ha (24 %) fueron "posiblemente ilegales"</strong>,
-        según datos del INFONA citados por Earthsight. Ese mismo año,
-        el Decreto 7702 llegó a habilitar el desmonte total de la
-        finca, hasta que la administración siguiente lo derogó. Los
-        reportes citados describen una agencia ambiental con
-        "solo 11 empleados y dos autos" para millones de hectáreas.
-        Del otro lado, la sociedad civil compensa: Guyra Paraguay,
-        con IDEA y WWF, cruza mes a mes las alertas satelitales con
-        el registro de permisos.
+        El sistema de permisos, en los números, es parte del problema:
+        entre agosto de 2017 y agosto de 2018 se desmontaron 255.000
+        hectáreas en el Chaco, de las cuales 194.000 tenían
+        autorización y unas <strong>61.000 (24 %) fueron "posiblemente
+        ilegales"</strong>, según datos del INFONA citados por
+        Earthsight. Ese mismo año el Decreto 7702 llegó a habilitar el
+        desmonte total de la finca, hasta que la administración
+        siguiente lo derogó. Los reportes citados describen una agencia
+        ambiental con "once empleados y dos autos" para millones de
+        hectáreas. Guyra Paraguay, con IDEA y WWF, cruza mes a mes las
+        alertas satelitales con el registro de permisos: la
+        fiscalización que el Estado no cubre.
 
       </p>
 
       <p>
 
-        Y hay una dimensión humana que este atlas no puede ignorar:
-        dentro y junto al corredor de focos de la Placa 08 está el
-        territorio restante de los <strong>Ayoreo-Totobiegosode</strong>,
-        el único pueblo fuera del Amazonas con miembros confirmados en
-        aislamiento voluntario. Su núcleo territorial reportado ronda
-        las 550.000 ha frente a un rango histórico superior al millón,
-        y organizaciones de derechos humanos y conservación documentan
-        que cinco operaciones agropecuarias nominadas avanzan sobre él
-        con ganadería. El informe reproduce esa documentación con una
-        salvedad importante: <em>no verifica él mismo la titularidad ni
-        la legalidad de ninguna parcela</em>.
+        El atlas no puede dejar afuera una dimensión que no aparece en
+        los píxeles. Dentro y junto al corredor de focos de la Placa 08
+        está el territorio restante de los
+        <strong>Ayoreo-Totobiegosode</strong>, el único pueblo fuera
+        del Amazonas con miembros confirmados en aislamiento
+        voluntario. Su núcleo territorial reportado ronda las 550.000
+        hectáreas, frente a un rango histórico superior al millón, y
+        organizaciones de derechos humanos y de conservación documentan
+        que cinco operaciones agropecuarias avanzan sobre él con
+        ganadería. El informe reproduce esa documentación con una
+        salvedad importante: <em>no verifica por sí mismo la titularidad
+        ni la legalidad de ninguna parcela</em>.
 
       </p>
 
@@ -1504,13 +1621,14 @@
     </h3>
 
     <ul class="findings">
-      <li><strong>Pérdida continua, sin reversión.</strong> 32,7 % del bosque del año 2000 perdido al 2023 en el AOI.</li>
-      <li><strong>Es un caso de Chaco paraguayo.</strong> El 98,1 % del área analizada está en Paraguay; las franjas de Argentina, Bolivia y Brasil son porciones pequeñas de frontera.</li>
-      <li><strong>La pérdida se concentra.</strong> Un cinturón de celdas con 60–71 % perdido en el centro de Boquerón y Presidente Hayes; menos de 3 % en el núcleo protegido Defensores del Chaco / Médanos del Chaco.</li>
-      <li><strong>El verde cae por sequía, no solo por motosierra.</strong> Los valles de NDVI/NBR/BSI de 2020, 2022 y 2024 siguen la señal de lluvia del CHIRPS.</li>
-      <li><strong>El bosque convertido no vuelve.</strong> r = −0,03 entre años desde el desmonte y verdor 2024: conversión permanente a pastura.</li>
-      <li><strong>La fragmentación se duplicó en siete años.</strong> Bosque original en celdas fuertemente fragmentadas: 20,2 % → 41,9 %.</li>
-      <li><strong>El problema es de aplicación, no de leyes.</strong> Paraguay (permisos INFONA) y Argentina (Ley 26.331 con reclasificaciones administrativas documentadas) comparten el mismo patrón: norma protectoria, fiscalización insuficiente.</li>
+      <li><strong>Pérdida continua, sin reversión.</strong> En el área de interés, el 32,7 % del bosque del año 2000 estaba perdido al 2023 (46.282 km²). Ningún año de la serie revirtió la tendencia.</li>
+      <li><strong>Es, en los hechos, un caso paraguayo.</strong> El 98,1 % del área analizada está en Paraguay. Las franjas de Bolivia, Brasil y Argentina pesan entre 0,3 % y 1,1 % del total: sirven como control, no como comparación entre países.</li>
+      <li><strong>La pérdida se concentra.</strong> Un cinturón de celdas con 60–71 % de su bosque perdido en el centro de Boquerón y Presidente Hayes, contra menos de 3 % en el núcleo protegido Defensores del Chaco / Médanos del Chaco. La protección formal separa lo que la distancia no separa.</li>
+      <li><strong>El verdor cae por sequía antes que por desmonte.</strong> Los valles de NDVI/NBR/BSI de 2020, 2022 y 2024 siguen la señal de lluvia del CHIRPS. Leerlos como deforestación nueva es un error de interpretación.</li>
+      <li><strong>El bosque convertido no vuelve.</strong> La correlación entre años transcurridos desde el desmonte y verdor de 2024 es r = −0,03, indistinguible de cero: dentro de la ventana analizada, la conversión es permanente.</li>
+      <li><strong>La fragmentación se duplicó en siete años.</strong> La porción del bosque original en celdas fuertemente fragmentadas pasó de 20,2 % a 41,9 %, y la de celdas intactas cayó de 29,0 % a 17,7 %.</li>
+      <li><strong>El patrón es de fiscalización, no de normas ausentes.</strong> Paraguay (permisos del INFONA) y Argentina (Ley 26.331, con reclasificaciones administrativas documentadas) comparten el mismo desenlace: norma protectora, control insuficiente.</li>
+      <li><strong>Lo que el informe no puede sostener.</strong> Es un análisis automático: sus cifras se contrastan contra las fuentes, pero sus lecturas de imágenes y sus conclusiones por celda son interpretación, y su conteo de pérdida termina en 2023.</li>
     </ul>
 
     <p class="report-note">
