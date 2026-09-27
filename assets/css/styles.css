@@ -61,9 +61,9 @@
       --overlay-bg: rgba(13, 12, 12, 0.78);
       --overlay-blur: 10px;
 
-      /* medida de lectura de introducción y Placas 06–10: columna ancha
-         centrada que ocupa la mayor parte de la placa */
-      --measure-wide: 88ch;
+      /* medida de lectura de introducción y placas: columna centrada
+         con el mismo margen del cover (ancho de placa menos padding) */
+      --measure-wide: 1072px;
 
       /* anexo del informe (Placas 06–10): las figuras ajenas se montan
          sobre la misma isla negra de evidencia (--plate), no en papel */
@@ -1200,19 +1200,20 @@
 
     .methodology-inner {
       display: grid;
-      grid-template-columns: minmax(0, var(--measure)) minmax(220px, 300px);
-      justify-content: space-between;
-      gap: 40px;
+      grid-template-columns: minmax(0, 1fr);
+      max-width: var(--measure-wide);
+      margin-inline: auto;
+      gap: 28px;
       padding: 8px 2px 32px;
     }
 
     .methodology p {
       font-family: var(--serif);
-      font-size: 0.98rem;
-      line-height: 1.8;
+      font-size: 1.0625rem;
+      line-height: 2.2;
       color: var(--ink-2);
       margin-bottom: 1.1rem;
-      max-width: var(--measure);
+      max-width: none;
     }
 
     .methodology a {
@@ -1906,8 +1907,8 @@
       margin: 24px auto 0;
       display: grid;
       gap: 20px;
-      /* ancho absoluto para igualar la columna serif (la fuente 1.02rem achica el ch) */
-      max-width: 48rem;
+      /* mismo margen del cover y del texto centrado */
+      max-width: var(--measure-wide);
     }
 
     .findings li {
@@ -1936,8 +1937,8 @@
 
     .refs {
       margin: 18px auto 0;
-      /* ancho absoluto: en mono 10.5px el ch colapsa la columna */
-      max-width: 48rem;
+      /* mismo margen del cover y del texto centrado */
+      max-width: var(--measure-wide);
       display: grid;
       gap: 16px;
       font-family: var(--mono);
