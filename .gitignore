@@ -29,6 +29,8 @@ desktop.ini
 # Editores / IDEs
 .vscode/
 .idea/
+odd/
+.atl/
 
 .agents/
 .impeccable/review/
