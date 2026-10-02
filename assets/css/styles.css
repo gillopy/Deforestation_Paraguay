@@ -1415,6 +1415,8 @@
 
       #scrolly {
         display: block;
+        padding-left: 0;
+        padding-right: 0;
         padding-bottom: 56px;
         gap: 0;
       }
@@ -1437,7 +1439,10 @@
       }
 
       .step-inner {
+        /* mismo margen lateral que el resto de las placas (24px del .plate),
+           para que la tarjeta no quede comprimida por el padding doble */
         max-width: 100%;
+        padding: 22px 20px 24px;
         margin-bottom: 20px;
       }
 
