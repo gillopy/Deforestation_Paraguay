@@ -1,0 +1,235 @@
+territory,year,woody_ha
+Paraguay,1985,29566415
+Paraguay,1986,29496874
+Paraguay,1987,29347917
+Paraguay,1988,29204695
+Paraguay,1989,28987452
+Paraguay,1990,28756827
+Paraguay,1991,28568141
+Paraguay,1992,28303486
+Paraguay,1993,28175307
+Paraguay,1994,27969929
+Paraguay,1995,27659174
+Paraguay,1996,27453972
+Paraguay,1997,27345133
+Paraguay,1998,27184280
+Paraguay,1999,27028979
+Paraguay,2000,26735274
+Paraguay,2001,26562710
+Paraguay,2002,26390962
+Paraguay,2003,26080808
+Paraguay,2004,25863666
+Paraguay,2005,25675977
+Paraguay,2006,25491223
+Paraguay,2007,25392830
+Paraguay,2008,25095239
+Paraguay,2009,24837759
+Paraguay,2010,24657035
+Paraguay,2011,24223238
+Paraguay,2012,23945032
+Paraguay,2013,23596965
+Paraguay,2014,23424347
+Paraguay,2015,22916042
+Paraguay,2016,22616393
+Paraguay,2017,22386605
+Paraguay,2018,22203317
+Paraguay,2019,21912756
+Paraguay,2020,21698871
+Paraguay,2021,21333640
+Paraguay,2022,21181315
+Paraguay,2023,20875705
+Region Occidental,1985,23096820
+Region Occidental,1986,23026377
+Region Occidental,1987,22974780
+Region Occidental,1988,22939505
+Region Occidental,1989,22881741
+Region Occidental,1990,22863552
+Region Occidental,1991,22779968
+Region Occidental,1992,22704876
+Region Occidental,1993,22678539
+Region Occidental,1994,22579686
+Region Occidental,1995,22444338
+Region Occidental,1996,22373002
+Region Occidental,1997,22333185
+Region Occidental,1998,22294908
+Region Occidental,1999,22208675
+Region Occidental,2000,22129861
+Region Occidental,2001,22056193
+Region Occidental,2002,21981340
+Region Occidental,2003,21842127
+Region Occidental,2004,21740851
+Region Occidental,2005,21561539
+Region Occidental,2006,21425155
+Region Occidental,2007,21296278
+Region Occidental,2008,21076207
+Region Occidental,2009,20861373
+Region Occidental,2010,20657339
+Region Occidental,2011,20316393
+Region Occidental,2012,20130590
+Region Occidental,2013,19841227
+Region Occidental,2014,19646882
+Region Occidental,2015,19126365
+Region Occidental,2016,18832135
+Region Occidental,2017,18641381
+Region Occidental,2018,18434485
+Region Occidental,2019,18131362
+Region Occidental,2020,17954767
+Region Occidental,2021,17713500
+Region Occidental,2022,17598510
+Region Occidental,2023,17438907
+Region Oriental,1985,6469596
+Region Oriental,1986,6470497
+Region Oriental,1987,6373137
+Region Oriental,1988,6265190
+Region Oriental,1989,6105711
+Region Oriental,1990,5893276
+Region Oriental,1991,5788173
+Region Oriental,1992,5598610
+Region Oriental,1993,5496768
+Region Oriental,1994,5390243
+Region Oriental,1995,5214837
+Region Oriental,1996,5080970
+Region Oriental,1997,5011949
+Region Oriental,1998,4889372
+Region Oriental,1999,4820304
+Region Oriental,2000,4605414
+Region Oriental,2001,4506517
+Region Oriental,2002,4409623
+Region Oriental,2003,4238681
+Region Oriental,2004,4122815
+Region Oriental,2005,4114439
+Region Oriental,2006,4066068
+Region Oriental,2007,4096552
+Region Oriental,2008,4019032
+Region Oriental,2009,3976386
+Region Oriental,2010,3999696
+Region Oriental,2011,3906845
+Region Oriental,2012,3814442
+Region Oriental,2013,3755739
+Region Oriental,2014,3777466
+Region Oriental,2015,3789677
+Region Oriental,2016,3784258
+Region Oriental,2017,3745223
+Region Oriental,2018,3768832
+Region Oriental,2019,3781395
+Region Oriental,2020,3744103
+Region Oriental,2021,3620140
+Region Oriental,2022,3582805
+Region Oriental,2023,3436799
+Boqueron,1985,8362836
+Boqueron,1986,8328139
+Boqueron,1987,8316258
+Boqueron,1988,8303038
+Boqueron,1989,8254624
+Boqueron,1990,8209536
+Boqueron,1991,8177864
+Boqueron,1992,8156383
+Boqueron,1993,8119261
+Boqueron,1994,8046026
+Boqueron,1995,7989968
+Boqueron,1996,7983334
+Boqueron,1997,7978904
+Boqueron,1998,7950268
+Boqueron,1999,7929880
+Boqueron,2000,7894920
+Boqueron,2001,7870962
+Boqueron,2002,7817105
+Boqueron,2003,7742887
+Boqueron,2004,7689880
+Boqueron,2005,7595120
+Boqueron,2006,7549876
+Boqueron,2007,7471058
+Boqueron,2008,7369328
+Boqueron,2009,7235717
+Boqueron,2010,7107255
+Boqueron,2011,6905839
+Boqueron,2012,6819718
+Boqueron,2013,6681040
+Boqueron,2014,6574880
+Boqueron,2015,6216552
+Boqueron,2016,6060133
+Boqueron,2017,5993217
+Boqueron,2018,5849245
+Boqueron,2019,5606375
+Boqueron,2020,5482372
+Boqueron,2021,5373976
+Boqueron,2022,5318278
+Boqueron,2023,5221734
+Alto Paraguay,1985,7780139
+Alto Paraguay,1986,7770484
+Alto Paraguay,1987,7772034
+Alto Paraguay,1988,7777521
+Alto Paraguay,1989,7773520
+Alto Paraguay,1990,7768460
+Alto Paraguay,1991,7758364
+Alto Paraguay,1992,7751841
+Alto Paraguay,1993,7748864
+Alto Paraguay,1994,7720519
+Alto Paraguay,1995,7684203
+Alto Paraguay,1996,7657526
+Alto Paraguay,1997,7635528
+Alto Paraguay,1998,7630747
+Alto Paraguay,1999,7614150
+Alto Paraguay,2000,7579557
+Alto Paraguay,2001,7543770
+Alto Paraguay,2002,7513037
+Alto Paraguay,2003,7436114
+Alto Paraguay,2004,7398741
+Alto Paraguay,2005,7366232
+Alto Paraguay,2006,7316681
+Alto Paraguay,2007,7262138
+Alto Paraguay,2008,7221590
+Alto Paraguay,2009,7182045
+Alto Paraguay,2010,7110897
+Alto Paraguay,2011,6986511
+Alto Paraguay,2012,6929668
+Alto Paraguay,2013,6870824
+Alto Paraguay,2014,6768844
+Alto Paraguay,2015,6616373
+Alto Paraguay,2016,6508585
+Alto Paraguay,2017,6422267
+Alto Paraguay,2018,6395082
+Alto Paraguay,2019,6302458
+Alto Paraguay,2020,6283859
+Alto Paraguay,2021,6187043
+Alto Paraguay,2022,6122522
+Alto Paraguay,2023,6042262
+Presidente Hayes,1985,6953383
+Presidente Hayes,1986,6927292
+Presidente Hayes,1987,6886027
+Presidente Hayes,1988,6858485
+Presidente Hayes,1989,6853135
+Presidente Hayes,1990,6885094
+Presidente Hayes,1991,6843278
+Presidente Hayes,1992,6796191
+Presidente Hayes,1993,6809954
+Presidente Hayes,1994,6812680
+Presidente Hayes,1995,6769706
+Presidente Hayes,1996,6731682
+Presidente Hayes,1997,6718291
+Presidente Hayes,1998,6713433
+Presidente Hayes,1999,6664184
+Presidente Hayes,2000,6654923
+Presidente Hayes,2001,6641000
+Presidente Hayes,2002,6650736
+Presidente Hayes,2003,6662664
+Presidente Hayes,2004,6651769
+Presidente Hayes,2005,6599726
+Presidente Hayes,2006,6558138
+Presidente Hayes,2007,6562621
+Presidente Hayes,2008,6484828
+Presidente Hayes,2009,6443150
+Presidente Hayes,2010,6438727
+Presidente Hayes,2011,6423582
+Presidente Hayes,2012,6380743
+Presidente Hayes,2013,6288903
+Presidente Hayes,2014,6302697
+Presidente Hayes,2015,6292980
+Presidente Hayes,2016,6262956
+Presidente Hayes,2017,6225437
+Presidente Hayes,2018,6189698
+Presidente Hayes,2019,6222068
+Presidente Hayes,2020,6188076
+Presidente Hayes,2021,6152022
+Presidente Hayes,2022,6157250
+Presidente Hayes,2023,6174450

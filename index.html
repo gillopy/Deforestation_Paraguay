@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Roboto+Mono:wght@400;500&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Roboto+Mono:wght@400;500&display=optional"
     rel="stylesheet">
 
   <!-- Scrollama -->
@@ -36,7 +36,7 @@
        intercambiables y el texto nunca las suma ni las mezcla:
 
          1. CÁLCULO PROPIO  →  data/paraguay_deforestacion.json
-            Es el que colorea el mapa (Placa 04), fija la leyenda
+            Es el que colorea el mapa (Placa 05), fija la leyenda
             (2,5 %–45,9 %), ordena el ranking, alimenta el CSV
             descargable y sostiene el titular: Boquerón 45,9 %,
             Alto Paraguay 31,5 % y 65,3 % de la pérdida nacional.
@@ -49,7 +49,7 @@
             La diferencia es de método, se explica una sola vez al
             pie de la Placa 03 y no se repite en cada sección.
 
-         3. INFORME ANEXO  →  Planet Labs AI, Hansen v1.11 (Placa 06)
+         3. INFORME ANEXO  →  Planet Labs AI, Hansen v1.11 (Placa 07)
             Fuente secundaria: misma familia de datos, otra ventana
             temporal y otro autor. Se reproduce con sus límites.
 
@@ -121,9 +121,12 @@
 
     <figure class="masthead-evidence" aria-hidden="true">
       <img
-        src="images/map_export_Alto_Paraguay_Boquer%C3%B3n_combined_forest_change_year_25_high_res.png"
+        src="images/scrolly/alto_paraguay_boqueron_year_2025.webp"
         alt=""
+        width="2841"
+        height="2900"
         loading="lazy"
+        decoding="async"
       >
       <figcaption class="evidence-tag">
         <span>Placa 01 · evidencia</span>
@@ -267,8 +270,13 @@
           <div class="step-image">
 
             <img
-              src="images/map_export_Alto_Paraguay_Boquer%C3%B3n_combined_forest_change_year_2_high_res.png"
+              src="images/scrolly/alto_paraguay_boqueron_year_2002.webp"
               alt="Mapa de cambio de cobertura forestal en Alto Paraguay y Boquerón, año 2002"
+              width="2841"
+              height="2900"
+              loading="eager"
+              fetchpriority="high"
+              decoding="async"
             >
 
             <div class="step-image-caption">
@@ -317,9 +325,12 @@
           <div class="step-image">
 
             <img
-              src="images/map_export_Alto_Paraguay_Boquer%C3%B3n_combined_forest_change_year_10_high_res.png"
+              src="images/scrolly/alto_paraguay_boqueron_year_2010.webp"
               alt="Mapa de cambio de cobertura forestal en Alto Paraguay y Boquerón, año 2010"
+              width="2841"
+              height="2900"
               loading="lazy"
+              decoding="async"
             >
 
             <div class="step-image-caption">
@@ -369,9 +380,12 @@
           <div class="step-image">
 
             <img
-              src="images/map_export_Alto_Paraguay_Boquer%C3%B3n_combined_forest_change_year_25_high_res.png"
+              src="images/scrolly/alto_paraguay_boqueron_year_2025.webp"
               alt="Mapa de cambio de cobertura forestal en Alto Paraguay y Boquerón, año 2025"
+              width="2841"
+              height="2900"
               loading="lazy"
+              decoding="async"
             >
 
             <div class="step-image-caption">
@@ -390,8 +404,13 @@
 
           <img
             id="storyImage"
-            src="images/map_export_Alto_Paraguay_Boquer%C3%B3n_combined_forest_change_year_2_high_res.png"
+            src="images/scrolly/alto_paraguay_boqueron_year_2002.webp"
             alt="Mapa de cambio de cobertura forestal en Alto Paraguay y Boquerón"
+            width="2841"
+            height="2900"
+            loading="eager"
+            fetchpriority="high"
+            decoding="async"
           >
 
           <div
@@ -512,9 +531,10 @@
 
         <div class="card-image-frame">
           <img
-            src="images/boqueron_combined.png"
+            src="images/mapas/boqueron_combined.webp"
             alt="Mapa completo de deforestación de Boquerón"
             loading="lazy"
+            decoding="async"
           >
         </div>
 
@@ -534,9 +554,10 @@
 
         <div class="card-image-frame">
           <img
-            src="images/alto_paraguay_combined.png"
+            src="images/mapas/alto_paraguay_combined.webp"
             alt="Mapa completo de deforestación de Alto Paraguay"
             loading="lazy"
+            decoding="async"
           >
         </div>
 
@@ -571,6 +592,24 @@
     <h2 id="plate03Title">
       La cuenta, en hectáreas y en carbono
     </h2>
+
+    <div class="anexo-grid anexo-grid--wide">
+
+      <figure class="anexo-frame">
+        <img
+          src="images/globalnature/globalnature.webp"
+          alt="Logotipo de Global Nature"
+          width="2172"
+          height="724"
+          loading="lazy"
+          decoding="async"
+        >
+        <figcaption>
+          <span class="anexo-tag">Portada · Global Nature</span>
+        </figcaption>
+      </figure>
+
+    </div>
 
     <div class="department-charts">
 
@@ -778,17 +817,329 @@
   </section>
 
   <!-- ============================================================
-       PLACA 04 · EXPLORADOR TERRITORIAL
+       PLACA 04 · MAPBIOMAS PARAGUAY (SERIE LARGA 1985-2023)
        ============================================================ -->
 
   <section class="plate" aria-labelledby="plate04Title">
 
     <header class="plate-marg">
-      <span class="plate-no">Placa 04 · Explorador territorial</span>
+      <span class="plate-no">Placa 04 · MapBiomas Paraguay</span>
+      <span class="plate-meta">Colección 2 · cobertura y uso del suelo · 1985–2023</span>
+    </header>
+
+    <div class="anexo-grid anexo-grid--wide">
+
+      <figure class="anexo-frame">
+        <img
+          src="images/mapbiomas/mapbiomas_cover.jpg"
+          alt="Portada de MapBiomas Paraguay: mosaico de rombos azules y verdes con el logotipo del proyecto"
+          width="1847"
+          height="405"
+          loading="eager"
+          fetchpriority="high"
+          decoding="async"
+        >
+        <figcaption>
+          <span class="anexo-tag">Portada · MapBiomas Paraguay</span>
+        </figcaption>
+      </figure>
+
+    </div>
+
+    <h2 id="plate04Title">
+      La serie larga: qué había antes de Hansen
+    </h2>
+
+    <p class="plate-intro plate-intro--wide">
+
+      Los mapas anuales de MapBiomas Paraguay (Colección 2) comienzan en
+      1985, quince años antes de la línea de base de Hansen, y aportan la
+      pieza que la serie de pérdida anual no puede dar: el tramo anterior a
+      2000. Bajo una misma definición de vegetación arbórea natural, el Chaco
+      tenía en 1985 alrededor de 23,10 millones de hectáreas y en 2023 registra
+      17,44 millones: una pérdida acumulada de 5.657.913 hectáreas, el 24,5 %.
+
+    </p>
+
+    <p class="plate-intro plate-intro--wide">
+
+      El dato decisivo es temporal. Entre 1985 y 2000, antes de que Hansen
+      empezara a medir, el Chaco ya había perdido 966.959 hectáreas (4,19 %) y
+      la Región Oriental 1.864.182 hectáreas (28,8 %). En paralelo, la
+      superficie antrópica del Chaco pasó de 758.911 a 6.384.138 hectáreas:
+      casi toda pastura.
+
+    </p>
+
+    <figure class="mb-fig" id="mb-vegetacion">
+      <h4>Vegetación arbórea natural, 1985–2023</h4>
+      <p class="chart-block-subtitle">LÍNEAS · MILLONES DE HECTÁREAS · CHACO, REGIÓN ORIENTAL Y PARAGUAY</p>
+<svg class="chart-svg" viewBox="0 0 720 430" role="img" aria-labelledby="mbFig1T mbFig1D" preserveAspectRatio="xMidYMid meet" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
+<title id="mbFig1T">Vegetación arbórea natural en Paraguay, 1985-2023</title>
+<desc id="mbFig1D">Evolución anual de la vegetación arbórea natural (clases 1.1, 1.2 y 1.3 de MapBiomas Paraguay, Colección 2) en la Región Occidental (Chaco), la Región Oriental y el total del Paraguay, en millones de hectáreas.</desc>
+<rect x="62.0" y="44" width="217.1" height="328" fill="#c4b28a" fill-opacity="0.07"/>
+<text x="170.6" y="224.4" text-anchor="middle" font-size="11.5" font-style="italic" fill="#c4b28a">1985&#8211;2000</text>
+<text x="170.6" y="249.5" text-anchor="middle" font-size="10.5" fill="#a6a69c">invisible para Hansen</text>
+<line x1="62" y1="372.0" x2="612" y2="372.0" stroke="#c5c9c5" stroke-opacity="0.28" stroke-width="1"/>
+<text x="53" y="375.5" text-anchor="end" font-size="10.5" font-family="'Roboto Mono', ui-monospace, monospace" fill="#a6a69c">0</text>
+<line x1="62" y1="317.3" x2="612" y2="317.3" stroke="#c5c9c5" stroke-opacity="0.10" stroke-width="1"/>
+<text x="53" y="320.8" text-anchor="end" font-size="10.5" font-family="'Roboto Mono', ui-monospace, monospace" fill="#a6a69c">5</text>
+<line x1="62" y1="262.7" x2="612" y2="262.7" stroke="#c5c9c5" stroke-opacity="0.10" stroke-width="1"/>
+<text x="53" y="266.2" text-anchor="end" font-size="10.5" font-family="'Roboto Mono', ui-monospace, monospace" fill="#a6a69c">10</text>
+<line x1="62" y1="208.0" x2="612" y2="208.0" stroke="#c5c9c5" stroke-opacity="0.10" stroke-width="1"/>
+<text x="53" y="211.5" text-anchor="end" font-size="10.5" font-family="'Roboto Mono', ui-monospace, monospace" fill="#a6a69c">15</text>
+<line x1="62" y1="153.3" x2="612" y2="153.3" stroke="#c5c9c5" stroke-opacity="0.10" stroke-width="1"/>
+<text x="53" y="156.8" text-anchor="end" font-size="10.5" font-family="'Roboto Mono', ui-monospace, monospace" fill="#a6a69c">20</text>
+<line x1="62" y1="98.7" x2="612" y2="98.7" stroke="#c5c9c5" stroke-opacity="0.10" stroke-width="1"/>
+<text x="53" y="102.2" text-anchor="end" font-size="10.5" font-family="'Roboto Mono', ui-monospace, monospace" fill="#a6a69c">25</text>
+<line x1="62" y1="44.0" x2="612" y2="44.0" stroke="#c5c9c5" stroke-opacity="0.10" stroke-width="1"/>
+<text x="53" y="47.5" text-anchor="end" font-size="10.5" font-family="'Roboto Mono', ui-monospace, monospace" fill="#a6a69c">30</text>
+<text transform="translate(15 208) rotate(-90)" text-anchor="middle" font-size="10" font-family="'Roboto Mono', ui-monospace, monospace" fill="#7a8382">millones de ha</text>
+<line x1="279.1" y1="44" x2="279.1" y2="372" stroke="#c4746e" stroke-opacity="0.9" stroke-width="1.2" stroke-dasharray="4 3"/>
+<text x="62.0" y="390" text-anchor="middle" font-size="10.5" font-family="'Roboto Mono', ui-monospace, monospace" fill="#a6a69c">1985</text>
+<text x="134.4" y="390" text-anchor="middle" font-size="10.5" font-family="'Roboto Mono', ui-monospace, monospace" fill="#a6a69c">1990</text>
+<text x="206.7" y="390" text-anchor="middle" font-size="10.5" font-family="'Roboto Mono', ui-monospace, monospace" fill="#a6a69c">1995</text>
+<text x="279.1" y="390" text-anchor="middle" font-size="10.5" font-family="'Roboto Mono', ui-monospace, monospace" fill="#a6a69c">2000</text>
+<text x="351.5" y="390" text-anchor="middle" font-size="10.5" font-family="'Roboto Mono', ui-monospace, monospace" fill="#a6a69c">2005</text>
+<text x="423.8" y="390" text-anchor="middle" font-size="10.5" font-family="'Roboto Mono', ui-monospace, monospace" fill="#a6a69c">2010</text>
+<text x="496.2" y="390" text-anchor="middle" font-size="10.5" font-family="'Roboto Mono', ui-monospace, monospace" fill="#a6a69c">2015</text>
+<text x="568.6" y="390" text-anchor="middle" font-size="10.5" font-family="'Roboto Mono', ui-monospace, monospace" fill="#a6a69c">2020</text>
+<text x="612.0" y="390" text-anchor="middle" font-size="10.5" font-family="'Roboto Mono', ui-monospace, monospace" fill="#a6a69c">2023</text>
+<path d="M 62.0 48.7 L 76.5 49.5 L 90.9 51.1 L 105.4 52.7 L 119.9 55.1 L 134.4 57.6 L 148.8 59.7 L 163.3 62.5 L 177.8 63.9 L 192.3 66.2 L 206.7 69.6 L 221.2 71.8 L 235.7 73.0 L 250.2 74.8 L 264.6 76.5 L 279.1 79.7 L 293.6 81.6 L 308.1 83.5 L 322.5 86.8 L 337.0 89.2 L 351.5 91.3 L 365.9 93.3 L 380.4 94.4 L 394.9 97.6 L 409.4 100.4 L 423.8 102.4 L 438.3 107.2 L 452.8 110.2 L 467.3 114.0 L 481.7 115.9 L 496.2 121.5 L 510.7 124.7 L 525.2 127.2 L 539.6 129.2 L 554.1 132.4 L 568.6 134.8 L 583.1 138.8 L 597.5 140.4 L 612.0 143.8" fill="none" stroke="#c4b28a" stroke-opacity="0.85" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="62.0" cy="48.7" r="1.5" fill="#c4b28a" fill-opacity="0.85"/>
+<circle cx="76.5" cy="49.5" r="1.5" fill="#c4b28a" fill-opacity="0.85"/>
+<circle cx="90.9" cy="51.1" r="1.5" fill="#c4b28a" fill-opacity="0.85"/>
+<circle cx="105.4" cy="52.7" r="1.5" fill="#c4b28a" fill-opacity="0.85"/>
+<circle cx="119.9" cy="55.1" r="1.5" fill="#c4b28a" fill-opacity="0.85"/>
+<circle cx="134.4" cy="57.6" r="1.5" fill="#c4b28a" fill-opacity="0.85"/>
+<circle cx="148.8" cy="59.7" r="1.5" fill="#c4b28a" fill-opacity="0.85"/>
+<circle cx="163.3" cy="62.5" r="1.5" fill="#c4b28a" fill-opacity="0.85"/>
+<circle cx="177.8" cy="63.9" r="1.5" fill="#c4b28a" fill-opacity="0.85"/>
+<circle cx="192.3" cy="66.2" r="1.5" fill="#c4b28a" fill-opacity="0.85"/>
+<circle cx="206.7" cy="69.6" r="1.5" fill="#c4b28a" fill-opacity="0.85"/>
+<circle cx="221.2" cy="71.8" r="1.5" fill="#c4b28a" fill-opacity="0.85"/>
+<circle cx="235.7" cy="73.0" r="1.5" fill="#c4b28a" fill-opacity="0.85"/>
+<circle cx="250.2" cy="74.8" r="1.5" fill="#c4b28a" fill-opacity="0.85"/>
+<circle cx="264.6" cy="76.5" r="1.5" fill="#c4b28a" fill-opacity="0.85"/>
+<circle cx="279.1" cy="79.7" r="1.5" fill="#c4b28a" fill-opacity="0.85"/>
+<circle cx="293.6" cy="81.6" r="1.5" fill="#c4b28a" fill-opacity="0.85"/>
+<circle cx="308.1" cy="83.5" r="1.5" fill="#c4b28a" fill-opacity="0.85"/>
+<circle cx="322.5" cy="86.8" r="1.5" fill="#c4b28a" fill-opacity="0.85"/>
+<circle cx="337.0" cy="89.2" r="1.5" fill="#c4b28a" fill-opacity="0.85"/>
+<circle cx="351.5" cy="91.3" r="1.5" fill="#c4b28a" fill-opacity="0.85"/>
+<circle cx="365.9" cy="93.3" r="1.5" fill="#c4b28a" fill-opacity="0.85"/>
+<circle cx="380.4" cy="94.4" r="1.5" fill="#c4b28a" fill-opacity="0.85"/>
+<circle cx="394.9" cy="97.6" r="1.5" fill="#c4b28a" fill-opacity="0.85"/>
+<circle cx="409.4" cy="100.4" r="1.5" fill="#c4b28a" fill-opacity="0.85"/>
+<circle cx="423.8" cy="102.4" r="1.5" fill="#c4b28a" fill-opacity="0.85"/>
+<circle cx="438.3" cy="107.2" r="1.5" fill="#c4b28a" fill-opacity="0.85"/>
+<circle cx="452.8" cy="110.2" r="1.5" fill="#c4b28a" fill-opacity="0.85"/>
+<circle cx="467.3" cy="114.0" r="1.5" fill="#c4b28a" fill-opacity="0.85"/>
+<circle cx="481.7" cy="115.9" r="1.5" fill="#c4b28a" fill-opacity="0.85"/>
+<circle cx="496.2" cy="121.5" r="1.5" fill="#c4b28a" fill-opacity="0.85"/>
+<circle cx="510.7" cy="124.7" r="1.5" fill="#c4b28a" fill-opacity="0.85"/>
+<circle cx="525.2" cy="127.2" r="1.5" fill="#c4b28a" fill-opacity="0.85"/>
+<circle cx="539.6" cy="129.2" r="1.5" fill="#c4b28a" fill-opacity="0.85"/>
+<circle cx="554.1" cy="132.4" r="1.5" fill="#c4b28a" fill-opacity="0.85"/>
+<circle cx="568.6" cy="134.8" r="1.5" fill="#c4b28a" fill-opacity="0.85"/>
+<circle cx="583.1" cy="138.8" r="1.5" fill="#c4b28a" fill-opacity="0.85"/>
+<circle cx="597.5" cy="140.4" r="1.5" fill="#c4b28a" fill-opacity="0.85"/>
+<circle cx="612.0" cy="143.8" r="1.5" fill="#c4b28a" fill-opacity="0.85"/>
+<text x="621.0" y="144.8" font-size="11.5" font-weight="700" fill="#c4b28a">Paraguay</text>
+<text x="621.0" y="158.8" font-size="10" font-family="'Roboto Mono', ui-monospace, monospace" fill="#7a8382">20,9 M ha</text>
+<path d="M 62.0 301.3 L 76.5 301.3 L 90.9 302.3 L 105.4 303.5 L 119.9 305.2 L 134.4 307.6 L 148.8 308.7 L 163.3 310.8 L 177.8 311.9 L 192.3 313.1 L 206.7 315.0 L 221.2 316.4 L 235.7 317.2 L 250.2 318.5 L 264.6 319.3 L 279.1 321.6 L 293.6 322.7 L 308.1 323.8 L 322.5 325.7 L 337.0 326.9 L 351.5 327.0 L 365.9 327.5 L 380.4 327.2 L 394.9 328.1 L 409.4 328.5 L 423.8 328.3 L 438.3 329.3 L 452.8 330.3 L 467.3 330.9 L 481.7 330.7 L 496.2 330.6 L 510.7 330.6 L 525.2 331.1 L 539.6 330.8 L 554.1 330.7 L 568.6 331.1 L 583.1 332.4 L 597.5 332.8 L 612.0 334.4" fill="none" stroke="#8ba4b0" stroke-opacity="1" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="62.0" cy="301.3" r="1.5" fill="#8ba4b0" fill-opacity="1"/>
+<circle cx="76.5" cy="301.3" r="1.5" fill="#8ba4b0" fill-opacity="1"/>
+<circle cx="90.9" cy="302.3" r="1.5" fill="#8ba4b0" fill-opacity="1"/>
+<circle cx="105.4" cy="303.5" r="1.5" fill="#8ba4b0" fill-opacity="1"/>
+<circle cx="119.9" cy="305.2" r="1.5" fill="#8ba4b0" fill-opacity="1"/>
+<circle cx="134.4" cy="307.6" r="1.5" fill="#8ba4b0" fill-opacity="1"/>
+<circle cx="148.8" cy="308.7" r="1.5" fill="#8ba4b0" fill-opacity="1"/>
+<circle cx="163.3" cy="310.8" r="1.5" fill="#8ba4b0" fill-opacity="1"/>
+<circle cx="177.8" cy="311.9" r="1.5" fill="#8ba4b0" fill-opacity="1"/>
+<circle cx="192.3" cy="313.1" r="1.5" fill="#8ba4b0" fill-opacity="1"/>
+<circle cx="206.7" cy="315.0" r="1.5" fill="#8ba4b0" fill-opacity="1"/>
+<circle cx="221.2" cy="316.4" r="1.5" fill="#8ba4b0" fill-opacity="1"/>
+<circle cx="235.7" cy="317.2" r="1.5" fill="#8ba4b0" fill-opacity="1"/>
+<circle cx="250.2" cy="318.5" r="1.5" fill="#8ba4b0" fill-opacity="1"/>
+<circle cx="264.6" cy="319.3" r="1.5" fill="#8ba4b0" fill-opacity="1"/>
+<circle cx="279.1" cy="321.6" r="1.5" fill="#8ba4b0" fill-opacity="1"/>
+<circle cx="293.6" cy="322.7" r="1.5" fill="#8ba4b0" fill-opacity="1"/>
+<circle cx="308.1" cy="323.8" r="1.5" fill="#8ba4b0" fill-opacity="1"/>
+<circle cx="322.5" cy="325.7" r="1.5" fill="#8ba4b0" fill-opacity="1"/>
+<circle cx="337.0" cy="326.9" r="1.5" fill="#8ba4b0" fill-opacity="1"/>
+<circle cx="351.5" cy="327.0" r="1.5" fill="#8ba4b0" fill-opacity="1"/>
+<circle cx="365.9" cy="327.5" r="1.5" fill="#8ba4b0" fill-opacity="1"/>
+<circle cx="380.4" cy="327.2" r="1.5" fill="#8ba4b0" fill-opacity="1"/>
+<circle cx="394.9" cy="328.1" r="1.5" fill="#8ba4b0" fill-opacity="1"/>
+<circle cx="409.4" cy="328.5" r="1.5" fill="#8ba4b0" fill-opacity="1"/>
+<circle cx="423.8" cy="328.3" r="1.5" fill="#8ba4b0" fill-opacity="1"/>
+<circle cx="438.3" cy="329.3" r="1.5" fill="#8ba4b0" fill-opacity="1"/>
+<circle cx="452.8" cy="330.3" r="1.5" fill="#8ba4b0" fill-opacity="1"/>
+<circle cx="467.3" cy="330.9" r="1.5" fill="#8ba4b0" fill-opacity="1"/>
+<circle cx="481.7" cy="330.7" r="1.5" fill="#8ba4b0" fill-opacity="1"/>
+<circle cx="496.2" cy="330.6" r="1.5" fill="#8ba4b0" fill-opacity="1"/>
+<circle cx="510.7" cy="330.6" r="1.5" fill="#8ba4b0" fill-opacity="1"/>
+<circle cx="525.2" cy="331.1" r="1.5" fill="#8ba4b0" fill-opacity="1"/>
+<circle cx="539.6" cy="330.8" r="1.5" fill="#8ba4b0" fill-opacity="1"/>
+<circle cx="554.1" cy="330.7" r="1.5" fill="#8ba4b0" fill-opacity="1"/>
+<circle cx="568.6" cy="331.1" r="1.5" fill="#8ba4b0" fill-opacity="1"/>
+<circle cx="583.1" cy="332.4" r="1.5" fill="#8ba4b0" fill-opacity="1"/>
+<circle cx="597.5" cy="332.8" r="1.5" fill="#8ba4b0" fill-opacity="1"/>
+<circle cx="612.0" cy="334.4" r="1.5" fill="#8ba4b0" fill-opacity="1"/>
+<text x="621.0" y="335.4" font-size="11.5" font-weight="700" fill="#8ba4b0">Región Oriental</text>
+<text x="621.0" y="349.4" font-size="10" font-family="'Roboto Mono', ui-monospace, monospace" fill="#7a8382">3,4 M ha</text>
+<path d="M 62.0 119.5 L 76.5 120.2 L 90.9 120.8 L 105.4 121.2 L 119.9 121.8 L 134.4 122.0 L 148.8 122.9 L 163.3 123.8 L 177.8 124.0 L 192.3 125.1 L 206.7 126.6 L 221.2 127.4 L 235.7 127.8 L 250.2 128.2 L 264.6 129.2 L 279.1 130.0 L 293.6 130.9 L 308.1 131.7 L 322.5 133.2 L 337.0 134.3 L 351.5 136.3 L 365.9 137.8 L 380.4 139.2 L 394.9 141.6 L 409.4 143.9 L 423.8 146.1 L 438.3 149.9 L 452.8 151.9 L 467.3 155.1 L 481.7 157.2 L 496.2 162.9 L 510.7 166.1 L 525.2 168.2 L 539.6 170.4 L 554.1 173.8 L 568.6 175.7 L 583.1 178.3 L 597.5 179.6 L 612.0 181.3" fill="none" stroke="#87a987" stroke-opacity="1" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="62.0" cy="119.5" r="1.5" fill="#87a987" fill-opacity="1"/>
+<circle cx="76.5" cy="120.2" r="1.5" fill="#87a987" fill-opacity="1"/>
+<circle cx="90.9" cy="120.8" r="1.5" fill="#87a987" fill-opacity="1"/>
+<circle cx="105.4" cy="121.2" r="1.5" fill="#87a987" fill-opacity="1"/>
+<circle cx="119.9" cy="121.8" r="1.5" fill="#87a987" fill-opacity="1"/>
+<circle cx="134.4" cy="122.0" r="1.5" fill="#87a987" fill-opacity="1"/>
+<circle cx="148.8" cy="122.9" r="1.5" fill="#87a987" fill-opacity="1"/>
+<circle cx="163.3" cy="123.8" r="1.5" fill="#87a987" fill-opacity="1"/>
+<circle cx="177.8" cy="124.0" r="1.5" fill="#87a987" fill-opacity="1"/>
+<circle cx="192.3" cy="125.1" r="1.5" fill="#87a987" fill-opacity="1"/>
+<circle cx="206.7" cy="126.6" r="1.5" fill="#87a987" fill-opacity="1"/>
+<circle cx="221.2" cy="127.4" r="1.5" fill="#87a987" fill-opacity="1"/>
+<circle cx="235.7" cy="127.8" r="1.5" fill="#87a987" fill-opacity="1"/>
+<circle cx="250.2" cy="128.2" r="1.5" fill="#87a987" fill-opacity="1"/>
+<circle cx="264.6" cy="129.2" r="1.5" fill="#87a987" fill-opacity="1"/>
+<circle cx="279.1" cy="130.0" r="1.5" fill="#87a987" fill-opacity="1"/>
+<circle cx="293.6" cy="130.9" r="1.5" fill="#87a987" fill-opacity="1"/>
+<circle cx="308.1" cy="131.7" r="1.5" fill="#87a987" fill-opacity="1"/>
+<circle cx="322.5" cy="133.2" r="1.5" fill="#87a987" fill-opacity="1"/>
+<circle cx="337.0" cy="134.3" r="1.5" fill="#87a987" fill-opacity="1"/>
+<circle cx="351.5" cy="136.3" r="1.5" fill="#87a987" fill-opacity="1"/>
+<circle cx="365.9" cy="137.8" r="1.5" fill="#87a987" fill-opacity="1"/>
+<circle cx="380.4" cy="139.2" r="1.5" fill="#87a987" fill-opacity="1"/>
+<circle cx="394.9" cy="141.6" r="1.5" fill="#87a987" fill-opacity="1"/>
+<circle cx="409.4" cy="143.9" r="1.5" fill="#87a987" fill-opacity="1"/>
+<circle cx="423.8" cy="146.1" r="1.5" fill="#87a987" fill-opacity="1"/>
+<circle cx="438.3" cy="149.9" r="1.5" fill="#87a987" fill-opacity="1"/>
+<circle cx="452.8" cy="151.9" r="1.5" fill="#87a987" fill-opacity="1"/>
+<circle cx="467.3" cy="155.1" r="1.5" fill="#87a987" fill-opacity="1"/>
+<circle cx="481.7" cy="157.2" r="1.5" fill="#87a987" fill-opacity="1"/>
+<circle cx="496.2" cy="162.9" r="1.5" fill="#87a987" fill-opacity="1"/>
+<circle cx="510.7" cy="166.1" r="1.5" fill="#87a987" fill-opacity="1"/>
+<circle cx="525.2" cy="168.2" r="1.5" fill="#87a987" fill-opacity="1"/>
+<circle cx="539.6" cy="170.4" r="1.5" fill="#87a987" fill-opacity="1"/>
+<circle cx="554.1" cy="173.8" r="1.5" fill="#87a987" fill-opacity="1"/>
+<circle cx="568.6" cy="175.7" r="1.5" fill="#87a987" fill-opacity="1"/>
+<circle cx="583.1" cy="178.3" r="1.5" fill="#87a987" fill-opacity="1"/>
+<circle cx="597.5" cy="179.6" r="1.5" fill="#87a987" fill-opacity="1"/>
+<circle cx="612.0" cy="181.3" r="1.5" fill="#87a987" fill-opacity="1"/>
+<text x="621.0" y="182.3" font-size="11.5" font-weight="700" fill="#87a987">Chaco</text>
+<text x="621.0" y="196.3" font-size="10" font-family="'Roboto Mono', ui-monospace, monospace" fill="#7a8382">17,4 M ha</text>
+</svg>
+      <figcaption><strong>Figura 1.</strong> Vegetación arbórea natural (MapBiomas Paraguay, Colección 2: clases 1.1 + 1.2 + 1.3) en millones de hectáreas. La franja marca el tramo anterior a 2000, estructuralmente invisible para la serie Hansen. Fuente: elaboración propia sobre <em>Statistics-Paraguay-Col2-V1.xlsx</em>.</figcaption>
+    </figure>
+
+    <figure class="mb-fig" id="mb-antropico">
+      <h4>Áreas antrópicas del Chaco, 1985–2023</h4>
+      <p class="chart-block-subtitle">ÁREAS APILADAS · MILLONES DE HECTÁREAS · PASTURA, AGRICULTURA Y PLANTACIÓN FORESTAL</p>
+<svg class="chart-svg" viewBox="0 0 720 380" role="img" aria-labelledby="mbFig2T mbFig2D" preserveAspectRatio="xMidYMid meet" font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
+<title id="mbFig2T">Áreas antrópicas en el Chaco, 1985-2023</title>
+<desc id="mbFig2D">Superficie acumulada de pastura (3.1), agricultura (3.2) y plantación forestal (3.3) de MapBiomas Paraguay en la Región Occidental, en millones de hectáreas.</desc>
+<line x1="62" y1="322.0" x2="602" y2="322.0" stroke="#c5c9c5" stroke-opacity="0.28" stroke-width="1"/>
+<text x="53" y="325.5" text-anchor="end" font-size="10.5" font-family="'Roboto Mono', ui-monospace, monospace" fill="#a6a69c">0</text>
+<line x1="62" y1="283.7" x2="602" y2="283.7" stroke="#c5c9c5" stroke-opacity="0.10" stroke-width="1"/>
+<text x="53" y="287.2" text-anchor="end" font-size="10.5" font-family="'Roboto Mono', ui-monospace, monospace" fill="#a6a69c">1</text>
+<line x1="62" y1="245.4" x2="602" y2="245.4" stroke="#c5c9c5" stroke-opacity="0.10" stroke-width="1"/>
+<text x="53" y="248.9" text-anchor="end" font-size="10.5" font-family="'Roboto Mono', ui-monospace, monospace" fill="#a6a69c">2</text>
+<line x1="62" y1="207.1" x2="602" y2="207.1" stroke="#c5c9c5" stroke-opacity="0.10" stroke-width="1"/>
+<text x="53" y="210.6" text-anchor="end" font-size="10.5" font-family="'Roboto Mono', ui-monospace, monospace" fill="#a6a69c">3</text>
+<line x1="62" y1="168.9" x2="602" y2="168.9" stroke="#c5c9c5" stroke-opacity="0.10" stroke-width="1"/>
+<text x="53" y="172.4" text-anchor="end" font-size="10.5" font-family="'Roboto Mono', ui-monospace, monospace" fill="#a6a69c">4</text>
+<line x1="62" y1="130.6" x2="602" y2="130.6" stroke="#c5c9c5" stroke-opacity="0.10" stroke-width="1"/>
+<text x="53" y="134.1" text-anchor="end" font-size="10.5" font-family="'Roboto Mono', ui-monospace, monospace" fill="#a6a69c">5</text>
+<line x1="62" y1="92.3" x2="602" y2="92.3" stroke="#c5c9c5" stroke-opacity="0.10" stroke-width="1"/>
+<text x="53" y="95.8" text-anchor="end" font-size="10.5" font-family="'Roboto Mono', ui-monospace, monospace" fill="#a6a69c">6</text>
+<line x1="62" y1="54.0" x2="602" y2="54.0" stroke="#c5c9c5" stroke-opacity="0.10" stroke-width="1"/>
+<text x="53" y="57.5" text-anchor="end" font-size="10.5" font-family="'Roboto Mono', ui-monospace, monospace" fill="#a6a69c">7</text>
+<text transform="translate(15 188) rotate(-90)" text-anchor="middle" font-size="10" font-family="'Roboto Mono', ui-monospace, monospace" fill="#7a8382">millones de ha</text>
+<path d="M 62.0 292.9 L 76.2 289.3 L 90.4 287.8 L 104.6 286.8 L 118.8 284.7 L 133.1 282.7 L 147.3 279.3 L 161.5 277.8 L 175.7 276.7 L 189.9 272.0 L 204.1 269.1 L 218.3 267.7 L 232.5 266.2 L 246.7 264.4 L 260.9 262.5 L 275.2 257.7 L 289.4 254.4 L 303.6 251.6 L 317.8 246.7 L 332.0 243.0 L 346.2 234.8 L 360.4 229.3 L 374.6 223.7 L 388.8 215.3 L 403.1 207.4 L 417.3 199.4 L 431.5 187.6 L 445.7 180.7 L 459.9 170.4 L 474.1 163.0 L 488.3 142.5 L 502.5 130.2 L 516.7 123.0 L 530.9 116.2 L 545.2 104.1 L 559.4 96.1 L 573.6 87.1 L 587.8 83.1 L 602.0 77.6 L 602.0 322.0 L 587.8 322.0 L 573.6 322.0 L 559.4 322.0 L 545.2 322.0 L 530.9 322.0 L 516.7 322.0 L 502.5 322.0 L 488.3 322.0 L 474.1 322.0 L 459.9 322.0 L 445.7 322.0 L 431.5 322.0 L 417.3 322.0 L 403.1 322.0 L 388.8 322.0 L 374.6 322.0 L 360.4 322.0 L 346.2 322.0 L 332.0 322.0 L 317.8 322.0 L 303.6 322.0 L 289.4 322.0 L 275.2 322.0 L 260.9 322.0 L 246.7 322.0 L 232.5 322.0 L 218.3 322.0 L 204.1 322.0 L 189.9 322.0 L 175.7 322.0 L 161.5 322.0 L 147.3 322.0 L 133.1 322.0 L 118.8 322.0 L 104.6 322.0 L 90.4 322.0 L 76.2 322.0 L 62.0 322.0 Z" fill="#8ba4b0"/>
+<path d="M 62.0 292.9 L 76.2 289.3 L 90.4 287.8 L 104.6 286.8 L 118.8 284.7 L 133.1 282.7 L 147.3 279.3 L 161.5 277.8 L 175.7 276.7 L 189.9 272.0 L 204.1 269.1 L 218.3 267.7 L 232.5 266.2 L 246.7 264.4 L 260.9 262.5 L 275.2 257.7 L 289.4 254.4 L 303.6 251.6 L 317.8 246.7 L 332.0 243.0 L 346.2 234.8 L 360.4 229.3 L 374.6 223.7 L 388.8 215.3 L 403.1 207.4 L 417.3 199.4 L 431.5 187.6 L 445.7 180.7 L 459.9 170.4 L 474.1 163.0 L 488.3 142.5 L 502.5 130.2 L 516.7 123.0 L 530.9 116.2 L 545.2 104.1 L 559.4 96.1 L 573.6 87.1 L 587.8 83.1 L 602.0 77.6 L 602.0 98.4 L 587.8 97.8 L 573.6 101.5 L 559.4 106.9 L 545.2 110.4 L 530.9 122.4 L 516.7 128.3 L 502.5 135.8 L 488.3 145.9 L 474.1 163.1 L 459.9 170.4 L 445.7 180.8 L 431.5 187.6 L 417.3 199.4 L 403.1 207.5 L 388.8 215.3 L 374.6 223.7 L 360.4 229.3 L 346.2 234.8 L 332.0 243.0 L 317.8 246.7 L 303.6 251.6 L 289.4 254.4 L 275.2 257.7 L 260.9 262.5 L 246.7 264.4 L 232.5 266.2 L 218.3 267.7 L 204.1 269.1 L 189.9 272.4 L 175.7 277.3 L 161.5 278.4 L 147.3 280.2 L 133.1 283.3 L 118.8 285.4 L 104.6 287.4 L 90.4 288.4 L 76.2 289.7 L 62.0 293.3 Z" fill="#c4746e"/>
+<path d="M 62.0 293.3 L 76.2 289.7 L 90.4 288.4 L 104.6 287.4 L 118.8 285.4 L 133.1 283.3 L 147.3 280.2 L 161.5 278.4 L 175.7 277.3 L 189.9 272.4 L 204.1 269.1 L 218.3 267.7 L 232.5 266.2 L 246.7 264.4 L 260.9 262.5 L 275.2 257.7 L 289.4 254.4 L 303.6 251.6 L 317.8 246.7 L 332.0 243.0 L 346.2 234.8 L 360.4 229.3 L 374.6 223.7 L 388.8 215.3 L 403.1 207.5 L 417.3 199.4 L 431.5 187.6 L 445.7 180.8 L 459.9 170.4 L 474.1 163.1 L 488.3 145.9 L 502.5 135.8 L 516.7 128.3 L 530.9 122.4 L 545.2 110.4 L 559.4 106.9 L 573.6 101.5 L 587.8 97.8 L 602.0 98.4 L 602.0 322.0 L 587.8 322.0 L 573.6 322.0 L 559.4 322.0 L 545.2 322.0 L 530.9 322.0 L 516.7 322.0 L 502.5 322.0 L 488.3 322.0 L 474.1 322.0 L 459.9 322.0 L 445.7 322.0 L 431.5 322.0 L 417.3 322.0 L 403.1 322.0 L 388.8 322.0 L 374.6 322.0 L 360.4 322.0 L 346.2 322.0 L 332.0 322.0 L 317.8 322.0 L 303.6 322.0 L 289.4 322.0 L 275.2 322.0 L 260.9 322.0 L 246.7 322.0 L 232.5 322.0 L 218.3 322.0 L 204.1 322.0 L 189.9 322.0 L 175.7 322.0 L 161.5 322.0 L 147.3 322.0 L 133.1 322.0 L 118.8 322.0 L 104.6 322.0 L 90.4 322.0 L 76.2 322.0 L 62.0 322.0 Z" fill="#c4b28a"/>
+<path d="M 62.0 292.9 L 76.2 289.3 L 90.4 287.8 L 104.6 286.8 L 118.8 284.7 L 133.1 282.7 L 147.3 279.3 L 161.5 277.8 L 175.7 276.7 L 189.9 272.0 L 204.1 269.1 L 218.3 267.7 L 232.5 266.2 L 246.7 264.4 L 260.9 262.5 L 275.2 257.7 L 289.4 254.4 L 303.6 251.6 L 317.8 246.7 L 332.0 243.0 L 346.2 234.8 L 360.4 229.3 L 374.6 223.7 L 388.8 215.3 L 403.1 207.4 L 417.3 199.4 L 431.5 187.6 L 445.7 180.7 L 459.9 170.4 L 474.1 163.0 L 488.3 142.5 L 502.5 130.2 L 516.7 123.0 L 530.9 116.2 L 545.2 104.1 L 559.4 96.1 L 573.6 87.1 L 587.8 83.1 L 602.0 77.6" fill="none" stroke="#c5c9c5" stroke-opacity="0.4" stroke-width="1.3"/>
+<text x="62.0" y="340" text-anchor="middle" font-size="10.5" font-family="'Roboto Mono', ui-monospace, monospace" fill="#a6a69c">1985</text>
+<text x="133.1" y="340" text-anchor="middle" font-size="10.5" font-family="'Roboto Mono', ui-monospace, monospace" fill="#a6a69c">1990</text>
+<text x="204.1" y="340" text-anchor="middle" font-size="10.5" font-family="'Roboto Mono', ui-monospace, monospace" fill="#a6a69c">1995</text>
+<text x="275.2" y="340" text-anchor="middle" font-size="10.5" font-family="'Roboto Mono', ui-monospace, monospace" fill="#a6a69c">2000</text>
+<text x="346.2" y="340" text-anchor="middle" font-size="10.5" font-family="'Roboto Mono', ui-monospace, monospace" fill="#a6a69c">2005</text>
+<text x="417.3" y="340" text-anchor="middle" font-size="10.5" font-family="'Roboto Mono', ui-monospace, monospace" fill="#a6a69c">2010</text>
+<text x="488.3" y="340" text-anchor="middle" font-size="10.5" font-family="'Roboto Mono', ui-monospace, monospace" fill="#a6a69c">2015</text>
+<text x="559.4" y="340" text-anchor="middle" font-size="10.5" font-family="'Roboto Mono', ui-monospace, monospace" fill="#a6a69c">2020</text>
+<text x="602.0" y="340" text-anchor="middle" font-size="10.5" font-family="'Roboto Mono', ui-monospace, monospace" fill="#a6a69c">2023</text>
+<rect x="66.0" y="18" width="11" height="11" rx="2" fill="#c4b28a"/>
+<text x="82.0" y="27" font-size="11.5" fill="#a6a69c">Pastura</text>
+<rect x="136.9" y="18" width="11" height="11" rx="2" fill="#c4746e"/>
+<text x="152.9" y="27" font-size="11.5" fill="#a6a69c">Agricultura</text>
+<rect x="234.6" y="18" width="11" height="11" rx="2" fill="#8ba4b0"/>
+<text x="250.6" y="27" font-size="11.5" fill="#a6a69c">Plantación forestal</text>
+<text x="189.9" y="266.5" font-size="12" font-weight="700" fill="#241f14" opacity="0.9">Pastura</text>
+<text x="611.0" y="80.6" font-size="11" font-family="'Roboto Mono', ui-monospace, monospace" fill="#a6a69c">6,4 M ha</text>
+<text x="611.0" y="94.6" font-size="10" font-family="'Roboto Mono', ui-monospace, monospace" fill="#7a8382">en 2023</text>
+</svg>
+      <figcaption><strong>Figura 2.</strong> Áreas antrópicas de la Región Occidental (Chaco) en millones de hectáreas. La conversión es, por amplio margen, un proceso de ganaderización, con un componente agrícola que crece desde 2015. Fuente: elaboración propia.</figcaption>
+    </figure>
+
+    <div class="table-wrap">
+
+      <table class="cell-table">
+
+        <caption>
+          Vegetación arbórea natural según MapBiomas Paraguay (Colección 2:
+          1.1 + 1.2 + 1.3), en hectáreas
+        </caption>
+
+        <thead>
+          <tr>
+            <th scope="col">Unidad territorial</th>
+            <th scope="col">1985</th>
+            <th scope="col">2000</th>
+            <th scope="col">2023</th>
+            <th scope="col">Pérdida 1985–2023</th>
+            <th scope="col">%</th>
+            <th scope="col">Pérdida 2000–2023</th>
+            <th scope="col">%</th>
+            <th scope="col">Pre-2001 (1985–2000)</th>
+            <th scope="col">%</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr><td>Chaco (Región Occidental)</td><td class="num">23.096.820</td><td class="num">22.129.861</td><td class="num">17.438.907</td><td class="num">5.657.913</td><td class="num hot">24,5 %</td><td class="num">4.690.954</td><td class="num">21,2 %</td><td class="num">966.959</td><td class="num">4,19 %</td></tr>
+          <tr><td>Boquerón</td><td class="num">8.362.836</td><td class="num">7.894.920</td><td class="num">5.221.734</td><td class="num">3.141.102</td><td class="num hot">37,6 %</td><td class="num">2.673.186</td><td class="num">33,9 %</td><td class="num">467.916</td><td class="num">5,60 %</td></tr>
+          <tr><td>Alto Paraguay</td><td class="num">7.780.139</td><td class="num">7.579.557</td><td class="num">6.042.262</td><td class="num">1.737.877</td><td class="num hot">22,3 %</td><td class="num">1.537.295</td><td class="num">20,3 %</td><td class="num">200.582</td><td class="num">2,58 %</td></tr>
+          <tr><td>Presidente Hayes</td><td class="num">6.953.383</td><td class="num">6.654.923</td><td class="num">6.174.450</td><td class="num">778.933</td><td class="num hot">11,2 %</td><td class="num">480.473</td><td class="num">7,2 %</td><td class="num">298.460</td><td class="num">4,29 %</td></tr>
+          <tr><td>Región Oriental</td><td class="num">6.469.596</td><td class="num">4.605.414</td><td class="num">3.436.799</td><td class="num">3.032.797</td><td class="num hot">46,9 %</td><td class="num">1.168.615</td><td class="num">25,4 %</td><td class="num">1.864.182</td><td class="num">28,8 %</td></tr>
+          <tr><td>Paraguay</td><td class="num">29.566.415</td><td class="num">26.735.274</td><td class="num">20.875.705</td><td class="num">8.690.710</td><td class="num hot">29,4 %</td><td class="num">5.859.569</td><td class="num">21,9 %</td><td class="num">2.831.141</td><td class="num">9,6 %</td></tr>
+        </tbody>
+
+      </table>
+
+    </div>
+
+    <footer class="colophon">
+      <span>MapBiomas Paraguay · Colección 2 · Statistics-Paraguay-Col2-V1.xlsx</span>
+      <span>Cifras · data/mapbiomas_woody_anual.csv</span>
+    </footer>
+
+  </section>
+
+  <!-- ============================================================
+       PLACA 05 · EXPLORADOR TERRITORIAL
+       ============================================================ -->
+
+  <section class="plate" aria-labelledby="plate05Title">
+
+    <header class="plate-marg">
+      <span class="plate-no">Placa 05 · Explorador territorial</span>
       <span class="plate-meta">17 departamentos + Asunción · selección por clic o teclado</span>
     </header>
 
-    <h2 id="plate04Title">
+    <h2 id="plate05Title">
       Paraguay, departamento por departamento
     </h2>
 
@@ -874,6 +1225,16 @@
 
     </div>
 
+    <a
+      id="departmentDownload"
+      class="stamp explorer-download"
+      href="#"
+      download
+      hidden
+    >
+      Descargar imagen (alta resolución)
+    </a>
+
     <footer class="colophon">
       <span>Geometría · data/py.json</span>
       <span>Estadísticas · data/paraguay_deforestacion.json</span>
@@ -882,17 +1243,17 @@
   </section>
 
   <!-- ============================================================
-       PLACA 05 · FUENTES Y MÉTODO
+       PLACA 06 · FUENTES Y MÉTODO
        ============================================================ -->
 
-  <section class="plate" aria-labelledby="plate05Title">
+  <section class="plate" aria-labelledby="plate06Title">
 
     <header class="plate-marg">
-      <span class="plate-no">Placa 05 · Fuentes y método</span>
+      <span class="plate-no">Placa 06 · Fuentes y método</span>
       <span class="plate-meta">Hansen GFC 2025 v1.13 · Earth Engine</span>
     </header>
 
-    <h2 id="plate05Title" class="sr-only">
+    <h2 id="plate06Title" class="sr-only">
       Datos y metodología
     </h2>
 
@@ -972,13 +1333,13 @@
   </section>
 
   <!-- ============================================================
-       PLACA 06 · UN INFORME COMPLEMENTARIO (ANEXO PLANET 2016–2026)
+       PLACA 07 · UN INFORME COMPLEMENTARIO (ANEXO PLANET 2016–2026)
        ============================================================ -->
 
-  <section class="plate" aria-labelledby="plate06Title">
+  <section class="plate" aria-labelledby="plate07Title">
 
     <header class="plate-marg">
-      <span class="plate-no">Placa 06 · Un informe complementario</span>
+      <span class="plate-no">Placa 07 · Un informe complementario</span>
       <span class="plate-meta">Planet AI · publicado 2026-09-05 · Hansen v1.11 · Landsat 8/9 · CHIRPS · PlanetScope</span>
     </header>
 
@@ -986,9 +1347,13 @@
 
       <figure class="anexo-frame">
         <img
-          src="images/informe/planet.png"
-          alt="Portada del informe complementario: logo de Planet Labs sobre un mapa satelital"
-          loading="lazy"
+          src="images/informe/planet_cover.webp"
+          alt="Portada del informe complementario: logotipo de Planet sobre una imagen satelital de la costa"
+          width="1847"
+          height="436"
+          loading="eager"
+          fetchpriority="high"
+          decoding="async"
         >
         <figcaption>
           <span class="anexo-tag">Portada · informe Planet</span>
@@ -997,7 +1362,7 @@
 
     </div>
 
-    <h2 id="plate06Title">
+    <h2 id="plate07Title">
       Un informe complementario, con sus propios límites
     </h2>
 
@@ -1103,17 +1468,17 @@
   </section>
 
   <!-- ============================================================
-       PLACA 07 · LA PÉRDIDA SIGUE AVANZANDO
+       PLACA 08 · LA PÉRDIDA SIGUE AVANZANDO
        ============================================================ -->
 
-  <section class="plate" aria-labelledby="plate07Title">
+  <section class="plate" aria-labelledby="plate08Title">
 
     <header class="plate-marg">
-      <span class="plate-no">Placa 07 · La pérdida no se detuvo</span>
+      <span class="plate-no">Placa 08 · La pérdida no se detuvo</span>
       <span class="plate-meta">Serie Hansen acumulada · 2016–2023</span>
     </header>
 
-    <h2 id="plate07Title">
+    <h2 id="plate08Title">
       Ocho años, ninguna reversión
     </h2>
 
@@ -1132,9 +1497,12 @@
 
       <figure class="anexo-frame">
         <img
-          src="images/informe/fig1_cumulative_loss.png"
+          src="images/informe/fig1_cumulative_loss.webp"
           alt="Gráfico de líneas de pérdida forestal acumulada como porcentaje del bosque del año 2000, 2016 a 2023, para el AOI completo, Paraguay, Argentina, Bolivia y Brasil: Paraguay y el AOI suben de unos 24% a 33%; Argentina de 7% a 9%; Bolivia salta entre 2018 y 2019 hasta unos 9% en 2023; Brasil de 2% a 4%."
+          width="1080"
+          height="690"
           loading="lazy"
+          decoding="async"
         >
         <figcaption>
           <span class="anexo-tag">Figura 1 · informe Planet</span>
@@ -1153,9 +1521,12 @@
 
       <figure class="anexo-frame">
         <img
-          src="images/informe/fig2_annual_rate.png"
+          src="images/informe/fig2_annual_rate.webp"
           alt="Gráfico de barras de la tasa anual de pérdida forestal en km2 por año de 2016 a 2023 para el AOI y la subárea de Paraguay: fluctúa entre unos 1.300 y 2.600 km2 por año sin descenso sostenido."
+          width="1080"
+          height="660"
           loading="lazy"
+          decoding="async"
         >
         <figcaption>
           <span class="anexo-tag">Figura 2 · informe Planet</span>
@@ -1169,9 +1540,12 @@
 
       <figure class="anexo-frame">
         <img
-          src="images/informe/fig3_country_compare.png"
+          src="images/informe/fig3_country_compare.webp"
           alt="Gráfico de barras comparando la pérdida forestal acumulada al 2023 por jurisdicción: Paraguay 33,1%, Bolivia 9,2%, Argentina 8,8%, Brasil 4,3%."
+          width="960"
+          height="630"
           loading="lazy"
+          decoding="async"
         >
         <figcaption>
           <span class="anexo-tag">Figura 3 · informe Planet</span>
@@ -1190,7 +1564,7 @@
 
       <strong>Lectura.</strong> El informe no cierra la serie:
       propone usar las celdas de bosque conservado que bordean el
-      corredor de focos (Placa 08) como indicador temprano, en lugar
+      corredor de focos (Placa 09) como indicador temprano, en lugar
       de medir solo lo que ya se desmontó.
 
     </p>
@@ -1203,17 +1577,17 @@
   </section>
 
   <!-- ============================================================
-       PLACA 08 · DÓNDE GOLPEA LA FRONTERA
+       PLACA 09 · DÓNDE GOLPEA LA FRONTERA
        ============================================================ -->
 
-  <section class="plate" aria-labelledby="plate08Title">
+  <section class="plate" aria-labelledby="plate09Title">
 
     <header class="plate-marg">
-      <span class="plate-no">Placa 08 · Dónde golpea la frontera</span>
+      <span class="plate-no">Placa 09 · Dónde golpea la frontera</span>
       <span class="plate-meta">Celdas de 0,25° · ≈ 27 × 27 km · 263 celdas relevadas</span>
     </header>
 
-    <h2 id="plate08Title">
+    <h2 id="plate09Title">
       Un corredor de focos, no un desmonte disperso
     </h2>
 
@@ -1289,9 +1663,12 @@
 
       <figure class="anexo-frame">
         <img
-          src="images/informe/fig6_histogram.png"
+          src="images/informe/fig6_histogram.webp"
           alt="Histograma de pérdida forestal acumulada al 2023 como porcentaje del bosque del año 2000 en 263 celdas de 0,25 grados: distribución asimétrica positiva con mediana cercana al 33% y cola larga de celdas con más de 60% perdido."
+          width="1050"
+          height="630"
           loading="lazy"
+          decoding="async"
         >
         <figcaption>
           <span class="anexo-tag">Figura 6 · informe Planet</span>
@@ -1305,9 +1682,12 @@
 
       <figure class="anexo-frame">
         <img
-          src="images/informe/fig9_fragmentation.png"
+          src="images/informe/fig9_fragmentation.webp"
           alt="Gráfico de barras apiladas comparando la composición del paisaje en 2016 y 2023: en 2016, 29% del bosque en celdas intactas, 51% en moderadas y 20% en fuertemente deforestadas; en 2023, 18% intactas, 40% moderadas y 42% fuertemente deforestadas."
+          width="900"
+          height="690"
           loading="lazy"
+          decoding="async"
         >
         <figcaption>
           <span class="anexo-tag">Figura 9 · informe Planet</span>
@@ -1326,9 +1706,12 @@
       <figure class="photo-evidence">
         <div class="photo-evidence-frame">
           <img
-            src="images/informe/hotspotA_2017.png"
+            src="images/informe/hotspotA_2017.webp"
             alt="Imagen PlanetScope de 3 metros del foco A (21,025 S, 60,175 O) en agosto de 2017: alrededor de media escena convertida en una grilla geométrica de pasturas separadas por cortinas forestales."
+            width="800"
+            height="450"
             loading="lazy"
+            decoding="async"
           >
         </div>
         <figcaption>
@@ -1339,9 +1722,12 @@
       <figure class="photo-evidence">
         <div class="photo-evidence-frame">
           <img
-            src="images/informe/hotspotA_2026.png"
+            src="images/informe/hotspotA_2026.webp"
             alt="Imagen PlanetScope del mismo sitio en agosto de 2026: la grilla de desmonte se expandió y un corte de desmonte fresco avanza sobre un bloque de bosque que aún estaba intacto."
+            width="800"
+            height="450"
             loading="lazy"
+            decoding="async"
           >
         </div>
         <figcaption>
@@ -1352,9 +1738,12 @@
       <figure class="photo-evidence">
         <div class="photo-evidence-frame">
           <img
-            src="images/informe/hotspotB_2017.png"
+            src="images/informe/hotspotB_2017.webp"
             alt="Imagen PlanetScope del foco B (20,775 S, 60,675 O) en agosto de 2017: grilla tipo damero de ranchos que cubre unos 60-65% del cuadro, con bosque restante al sur."
+            width="800"
+            height="450"
             loading="lazy"
+            decoding="async"
           >
         </div>
         <figcaption>
@@ -1365,10 +1754,13 @@
       <figure class="photo-evidence">
         <div class="photo-evidence-frame">
           <img
-            src="images/informe/hotspotB_2024.png"
+            src="images/informe/hotspotB_2024.webp"
             alt="Imagen PlanetScope del mismo sitio en agosto de 2024: el damero de desmonte cubre ya la gran mayoría del cuadro y el bosque quedó reducido a franjas delgadas."
-          loading="lazy"
-        >
+            width="800"
+            height="450"
+            loading="lazy"
+            decoding="async"
+          >
         <figcaption>
           Foco B · mismo sitio — ago 2024
         </figcaption>
@@ -1403,17 +1795,17 @@
   </section>
 
   <!-- ============================================================
-       PLACA 09 · ESTRÉS, CLIMA Y BOSQUE QUE NO VUELVE
+       PLACA 10 · ESTRÉS, CLIMA Y BOSQUE QUE NO VUELVE
        ============================================================ -->
 
-  <section class="plate" aria-labelledby="plate09Title">
+  <section class="plate" aria-labelledby="plate10Title">
 
     <header class="plate-marg">
-      <span class="plate-no">Placa 09 · Estrés, clima y regeneración</span>
+      <span class="plate-no">Placa 10 · Estrés, clima y regeneración</span>
       <span class="plate-meta">Landsat estación seca (jul–ago) · CHIRPS · muestra n = 212 px</span>
     </header>
 
-    <h2 id="plate09Title">
+    <h2 id="plate10Title">
       El verde que engaña: sequía, no recuperación
     </h2>
 
@@ -1438,9 +1830,12 @@
 
       <figure class="anexo-frame">
         <img
-          src="images/informe/fig4_ndvi_precip.png"
+          src="images/informe/fig4_ndvi_precip.webp"
           alt="Gráfico combinado de líneas y barras: NDVI de estación seca para el AOI y la subárea de Argentina entre 2016 y 2026 superpuesto con barras de precipitación de 12 meses; los valles de NDVI en 2020, 2022 y 2024 coinciden con años de baja lluvia (597, 580 y 572 mm) y suben en 2026 con lluvia casi normal."
+          width="1140"
+          height="690"
           loading="lazy"
+          decoding="async"
         >
         <figcaption>
           <span class="anexo-tag">Figura 4 · informe Planet</span>
@@ -1456,9 +1851,12 @@
 
       <figure class="anexo-frame">
         <img
-          src="images/informe/fig5_bsi.png"
+          src="images/informe/fig5_bsi.webp"
           alt="Gráfico de líneas del índice de suelo desnudo (BSI) medio de estación seca para AOI y Argentina de 2016 a 2026: el AOI sube de 0,02 en 2016 a un pico de 0,10 en 2022 y baja a -0,01 en 2026; Argentina permanece más bajo, incluso negativo desde 2020."
+          width="1080"
+          height="630"
           loading="lazy"
+          decoding="async"
         >
         <figcaption>
           <span class="anexo-tag">Figura 5 · informe Planet</span>
@@ -1478,9 +1876,12 @@
 
       <figure class="anexo-frame">
         <img
-          src="images/informe/fig7_boxplot.png"
+          src="images/informe/fig7_boxplot.webp"
           alt="Boxplot comparando NDVI 2024 de dos grupos de píxeles: bosque estable con mediana cerca de 0,62 y píxeles con pérdida Hansen con mediana cerca de 0,35, sobre una muestra de 212 puntos."
+          width="990"
+          height="660"
           loading="lazy"
+          decoding="async"
         >
         <figcaption>
           <span class="anexo-tag">Figura 7 · informe Planet</span>
@@ -1494,9 +1895,12 @@
 
       <figure class="anexo-frame">
         <img
-          src="images/informe/fig8_recovery_scatter.png"
+          src="images/informe/fig8_recovery_scatter.webp"
           alt="Gráfico de dispersión de años transcurridos desde la pérdida detectada por Hansen versus NDVI 2024 en 202 píxeles, con línea de regresión casi plana y coeficiente de correlación r igual a -0,03."
+          width="1020"
+          height="690"
           loading="lazy"
+          decoding="async"
         >
         <figcaption>
           <span class="anexo-tag">Figura 8 · informe Planet</span>
@@ -1520,9 +1924,12 @@
       <figure class="photo-evidence">
         <div class="photo-evidence-frame">
           <img
-            src="images/informe/control_2017.png"
+            src="images/informe/control_2017.webp"
             alt="Imagen PlanetScope cerca del Parque Nacional Defensores del Chaco (20,275 S, 61,675 O) en agosto de 2017: dosel de bosque seco nativo continuo, sin desmonte visible."
+            width="800"
+            height="450"
             loading="lazy"
+            decoding="async"
           >
         </div>
         <figcaption>
@@ -1533,9 +1940,12 @@
       <figure class="photo-evidence">
         <div class="photo-evidence-frame">
           <img
-            src="images/informe/control_2024.png"
+            src="images/informe/control_2024.webp"
             alt="Imagen PlanetScope del mismo sitio protegido en agosto de 2024: dosel continuo de bosque nativo, sin desmonte visible, visualmente idéntica a 2017."
+            width="800"
+            height="450"
             loading="lazy"
+            decoding="async"
           >
         </div>
         <figcaption>
@@ -1546,9 +1956,12 @@
       <figure class="photo-evidence">
         <div class="photo-evidence-frame">
           <img
-            src="images/informe/argentina_2017.png"
+            src="images/informe/argentina_2017.webp"
             alt="Imagen PlanetScope del lado argentino (22,555 S, 62,2595 O) en agosto de 2017: llanura aluvial entrelazada del río Bermejo con bosque nativo del Chaco y caminos rurales dispersos, sin grillas grandes de desmonte."
+            width="800"
+            height="450"
             loading="lazy"
+            decoding="async"
           >
         </div>
         <figcaption>
@@ -1559,9 +1972,12 @@
       <figure class="photo-evidence">
         <div class="photo-evidence-frame">
           <img
-            src="images/informe/argentina_2024.png"
+            src="images/informe/argentina_2024.webp"
             alt="Imagen PlanetScope del mismo sitio argentino en agosto de 2024: algo más de fragmentación con un corte rectilíneo nuevo arriba a la derecha, pero sin grillas comparables a los focos paraguayos."
+            width="800"
+            height="450"
             loading="lazy"
+            decoding="async"
           >
         </div>
         <figcaption>
@@ -1608,17 +2024,17 @@
   </section>
 
   <!-- ============================================================
-       PLACA 10 · GOBERNANZA Y LO QUE QUEDA EN JUEGO
+       PLACA 11 · GOBERNANZA Y LO QUE QUEDA EN JUEGO
        ============================================================ -->
 
-  <section class="plate" aria-labelledby="plate10Title">
+  <section class="plate" aria-labelledby="plate11Title">
 
     <header class="plate-marg">
-      <span class="plate-no">Placa 10 · Gobernanza y lo que queda en juego</span>
+      <span class="plate-no">Placa 11 · Gobernanza y lo que queda en juego</span>
       <span class="plate-meta">Síntesis de literatura citada · §11–§12 del informe</span>
     </header>
 
-    <h2 id="plate10Title">
+    <h2 id="plate11Title">
       Una ley que protege, una máquina que no alcanza
     </h2>
 
@@ -1755,7 +2171,7 @@
   </footer>
 
   <!-- JavaScript -->
-  <script src="assets/js/main.js?v=8"></script>
+  <script src="assets/js/main.js?v=11"></script>
 
 </body>
 

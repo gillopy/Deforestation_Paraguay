@@ -17,6 +17,13 @@ data/*.tif
 data/*.tiff
 data/*.gpkg
 
+# Base fuente de MapBiomas (35 MB, se descarga; ver mapbiomas_stats_export.py)
+data/Statistics-Paraguay-Col2-V1.xlsx
+
+# Documentos de postulación (personales, no forman parte del sitio)
+BASES-Premio-MapBiomas_2026-1.pdf
+Formulario.md
+
 # Variables de entorno y secretos
 .env
 .env.*

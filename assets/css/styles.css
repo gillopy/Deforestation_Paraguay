@@ -269,6 +269,7 @@
       .masthead-evidence {
         display: block;
         position: relative;
+        aspect-ratio: 470 / 480;
         background:
           linear-gradient(var(--plate-grid) 1px, transparent 1px),
           linear-gradient(90deg, var(--plate-grid) 1px, transparent 1px),
@@ -1048,7 +1049,46 @@
 
 
     /* ============================================================
-       PLACA 04 · EXPLORADOR TERRITORIAL
+       MAPBIOMAS · SERIE LARGA (PLACA 04)
+       ============================================================ */
+
+    .mb-fig {
+      background: var(--plate);
+      border: 1px solid var(--plate-edge);
+      border-radius: var(--radius-card);
+      padding: 18px 18px 14px;
+      margin: 0 0 24px;
+      overflow: hidden;
+    }
+
+    .mb-fig h4 {
+      font-family: var(--sans);
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--plate-text);
+    }
+
+    .mb-fig figcaption {
+      margin-top: 16px;
+      padding-top: 12px;
+      border-top: 1px solid var(--rule);
+      font-family: var(--sans);
+      font-size: 0.78rem;
+      line-height: 1.6;
+      color: var(--muted);
+    }
+
+    .mb-fig figcaption strong {
+      color: var(--plate-text);
+    }
+
+    .mb-fig em {
+      color: var(--ink-2);
+      font-style: italic;
+    }
+
+        /* ============================================================
+       PLACA 05 · EXPLORADOR TERRITORIAL
        ============================================================ */
 
     .explorer-layout {
@@ -1172,6 +1212,15 @@
       overflow: hidden;
     }
 
+    .explorer-download {
+      display: inline-block;
+      margin-top: 28px;
+    }
+
+    .explorer-download[hidden] {
+      display: none;
+    }
+
     #departmentImage {
       width: 100%;
       max-height: 760px;
@@ -1195,7 +1244,7 @@
 
 
     /* ============================================================
-       PLACA 05 · FUENTES (metodología)
+       PLACA 06 · FUENTES (metodología)
        ============================================================ */
 
     .methodology-inner {
@@ -1547,7 +1596,7 @@
        negras de evidencia que el resto del atlas (--plate).
        ============================================================ */
 
-    /* desde la Placa 06 el texto se centra y se ensancha para lectura */
+    /* desde la Placa 07 el texto se centra y se ensancha para lectura */
     .article-clip {
       max-width: var(--measure-wide);
       margin-inline: auto;

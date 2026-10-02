@@ -100,12 +100,7 @@
         -23.8741,
         -59.3042,
         -20.0651
-      ],
-      "images": {
-        "cover": "images/boqueron_cover.png",
-        "loss": "images/boqueron_loss.png",
-        "combined": "images/boqueron_combined.png"
-      }
+      ]
     },
     {
       "name": "Presidente Hayes",
@@ -145,12 +140,7 @@
         -25.2898,
         -57.0907,
         -22.083
-      ],
-      "images": {
-        "cover": "images/presidente_hayes_cover.png",
-        "loss": "images/presidente_hayes_loss.png",
-        "combined": "images/presidente_hayes_combined.png"
-      }
+      ]
     },
     {
       "name": "Central",
@@ -190,12 +180,7 @@
         -26.0111,
         -57.1618,
         -25.107
-      ],
-      "images": {
-        "cover": "images/central_cover.png",
-        "loss": "images/central_loss.png",
-        "combined": "images/central_combined.png"
-      }
+      ]
     },
     {
       "name": "Asunción",
@@ -235,12 +220,7 @@
         -25.4034,
         -57.5392,
         -25.2344
-      ],
-      "images": {
-        "cover": "images/asuncion_cover.png",
-        "loss": "images/asuncion_loss.png",
-        "combined": "images/asuncion_combined.png"
-      }
+      ]
     },
     {
       "name": "Alto Paraná",
@@ -280,12 +260,7 @@
         -26.2389,
         -54.3584,
         -24.4675
-      ],
-      "images": {
-        "cover": "images/alto_parana_cover.png",
-        "loss": "images/alto_parana_loss.png",
-        "combined": "images/alto_parana_combined.png"
-      }
+      ]
     },
     {
       "name": "Itapúa",
@@ -325,12 +300,7 @@
         -27.5868,
         -54.6637,
         -26.0776
-      ],
-      "images": {
-        "cover": "images/itapua_cover.png",
-        "loss": "images/itapua_loss.png",
-        "combined": "images/itapua_combined.png"
-      }
+      ]
     },
     {
       "name": "Ñeembucú",
@@ -370,12 +340,7 @@
         -27.4292,
         -57.1959,
         -25.8066
-      ],
-      "images": {
-        "cover": "images/neembucu_cover.png",
-        "loss": "images/neembucu_loss.png",
-        "combined": "images/neembucu_combined.png"
-      }
+      ]
     },
     {
       "name": "Misiones",
@@ -415,12 +380,7 @@
         -27.5067,
         -56.532,
         -26.4028
-      ],
-      "images": {
-        "cover": "images/misiones_cover.png",
-        "loss": "images/misiones_loss.png",
-        "combined": "images/misiones_combined.png"
-      }
+      ]
     },
     {
       "name": "Alto Paraguay",
@@ -460,12 +420,7 @@
         -22.423,
         -57.816,
         -19.2867
-      ],
-      "images": {
-        "cover": "images/alto_paraguay_cover.png",
-        "loss": "images/alto_paraguay_loss.png",
-        "combined": "images/alto_paraguay_combined.png"
-      }
+      ]
     },
     {
       "name": "Concepción",
@@ -505,12 +460,7 @@
         -23.5048,
         -56.1274,
         -22.081
-      ],
-      "images": {
-        "cover": "images/concepcion_cover.png",
-        "loss": "images/concepcion_loss.png",
-        "combined": "images/concepcion_combined.png"
-      }
+      ]
     },
     {
       "name": "Amambay",
@@ -550,12 +500,7 @@
         -23.8651,
         -55.5139,
         -22.0745
-      ],
-      "images": {
-        "cover": "images/amambay_cover.png",
-        "loss": "images/amambay_loss.png",
-        "combined": "images/amambay_combined.png"
-      }
+      ]
     },
     {
       "name": "Canindeyú",
@@ -595,12 +540,7 @@
         -24.7827,
         -54.2453,
         -23.5304
-      ],
-      "images": {
-        "cover": "images/canindeyu_cover.png",
-        "loss": "images/canindeyu_loss.png",
-        "combined": "images/canindeyu_combined.png"
-      }
+      ]
     },
     {
       "name": "San Pedro",
@@ -640,12 +580,7 @@
         -25.0389,
         -55.7508,
         -23.3074
-      ],
-      "images": {
-        "cover": "images/san_pedro_cover.png",
-        "loss": "images/san_pedro_loss.png",
-        "combined": "images/san_pedro_combined.png"
-      }
+      ]
     },
     {
       "name": "Caaguazú",
@@ -685,12 +620,7 @@
         -25.7104,
         -54.9494,
         -24.5022
-      ],
-      "images": {
-        "cover": "images/caaguazu_cover.png",
-        "loss": "images/caaguazu_loss.png",
-        "combined": "images/caaguazu_combined.png"
-      }
+      ]
     },
     {
       "name": "Cordillera",
@@ -730,12 +660,7 @@
         -25.6627,
         -56.4945,
         -24.9153
-      ],
-      "images": {
-        "cover": "images/cordillera_cover.png",
-        "loss": "images/cordillera_loss.png",
-        "combined": "images/cordillera_combined.png"
-      }
+      ]
     },
     {
       "name": "Caazapá",
@@ -775,12 +700,7 @@
         -26.776,
         -55.2264,
         -25.5463
-      ],
-      "images": {
-        "cover": "images/caazapa_cover.png",
-        "loss": "images/caazapa_loss.png",
-        "combined": "images/caazapa_combined.png"
-      }
+      ]
     },
     {
       "name": "Paraguarí",
@@ -820,12 +740,7 @@
         -26.6232,
         -56.5865,
         -25.4253
-      ],
-      "images": {
-        "cover": "images/paraguari_cover.png",
-        "loss": "images/paraguari_loss.png",
-        "combined": "images/paraguari_combined.png"
-      }
+      ]
     },
     {
       "name": "Guairá",
@@ -865,12 +780,7 @@
         -26.1788,
         -55.6246,
         -25.5778
-      ],
-      "images": {
-        "cover": "images/guaira_cover.png",
-        "loss": "images/guaira_loss.png",
-        "combined": "images/guaira_combined.png"
-      }
+      ]
     }
   ],
   "note": "Estadísticas calculadas sobre UMD/hansen/global_forest_change_2025_v1_13 vía Google Earth Engine."

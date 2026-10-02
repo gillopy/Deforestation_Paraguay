@@ -6,28 +6,38 @@
 
       jsonPath: "data/paraguay_deforestacion.json",
 
-      imagePath: "images/",
-
       /*
-
-        Nombres EXACTOS de los mapas utilizados en el scrollytelling.
-
-        El encodeURI permite trabajar correctamente con caracteres
-        como "ó" en "Boquerón".
-
+        Rutas de imágenes:
+          imagePath    -> base del scrollytelling (WebP optimizado)
+          mapPath      -> mapas del explorador que sirve el sitio (WebP)
+          downloadPath -> PNG original en alta resolución (botón descargar)
       */
 
+      imagePath: "images/",
+
+      mapPath: "images/mapas/",
+
+      downloadPath: "images/downloads/",
+
+      /*
+ 
+        Rutas RELATIVAS a imagePath de los mapas usados en el
+        scrollytelling. Son versiones WebP optimizadas del PNG
+        original en alta resolución (ver optimize_images.py).
+ 
+      */
+ 
       storyImages: {
-
+ 
         1:
-          "map_export_Alto_Paraguay_Boquerón_combined_forest_change_year_2_high_res.png",
-
+           "scrolly/alto_paraguay_boqueron_year_2002.webp",
+ 
         2:
-          "map_export_Alto_Paraguay_Boquerón_combined_forest_change_year_10_high_res.png",
-
+           "scrolly/alto_paraguay_boqueron_year_2010.webp",
+ 
         3:
-          "map_export_Alto_Paraguay_Boquerón_combined_forest_change_year_25_high_res.png"
-
+           "scrolly/alto_paraguay_boqueron_year_2025.webp"
+ 
       },
 
       storyLabels: {
@@ -71,6 +81,9 @@
 
     const departmentCaption =
       document.getElementById("departmentCaption");
+
+    const departmentDownload =
+      document.getElementById("departmentDownload");
 
     const departmentMapSvg =
       document.getElementById("departmentMap");
@@ -218,6 +231,21 @@
         encodeURI(CONFIG.imagePath + filename);
 
       updateRail(step);
+
+      /*
+        Si el src no cambia (p. ej. la imagen inicial ya está puesta
+        en el HTML), no animar ni reinstalar nada: evita un
+        is-swapping espurio en la primera carga.
+      */
+
+      if (storyImage.getAttribute("src") === newSrc) {
+
+        imageYear.textContent =
+          CONFIG.storyLabels[step];
+
+        return;
+
+      }
 
       if (REDUCED_MOTION) {
 
@@ -604,8 +632,7 @@
         selectedLayer;
 
       const relativePath =
-        item.data?.images?.[selectedLayer] ||
-        `${CONFIG.imagePath}${item.slug}_${selectedLayer}.png`;
+        `${CONFIG.mapPath}${item.slug}_${selectedLayer}.webp`;
 
       departmentImage.style.opacity =
         "0";
@@ -637,6 +664,29 @@
             `No se encontró la imagen de ${item.name}.`;
 
         };
+
+        /*
+          Botón de descarga: PNG original en alta resolución de la
+          MISMA capa y departamento que se está mostrando.
+        */
+
+        if (departmentDownload) {
+
+          const downloadName =
+            `${item.slug}_${selectedLayer}.png`;
+
+          departmentDownload.href =
+            encodeURI(CONFIG.downloadPath + downloadName);
+
+          departmentDownload.setAttribute(
+            "download", downloadName);
+
+          departmentDownload.textContent =
+            `Descargar imagen · ${item.name} · ${selectedLayerLabel} (PNG)`;
+
+          departmentDownload.hidden = false;
+
+        }
 
       }, 120);
 
@@ -1449,7 +1499,7 @@
 
 
     /* ============================================================
-       MAPA DE SITIOS DEL INFORME (Placa 08 · datos del §6)
+       MAPA DE SITIOS DEL INFORME (Placa 09 · datos del §6)
        ============================================================ */
 
     /*
@@ -1777,7 +1827,7 @@
 
 
     /*
-      Mapa de sitios del informe (Placa 08): listener propio,
+      Mapa de sitios del informe (Placa 09): listener propio,
       sin interferir con la inicialización existente.
     */
 
