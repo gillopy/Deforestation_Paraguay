@@ -26,7 +26,7 @@
   <script defer src="https://unpkg.com/scrollama"></script>
 
   <!-- Estilos -->
-  <link rel="stylesheet" href="assets/css/styles.css?v=24">
+  <link rel="stylesheet" href="assets/css/styles.css?v=27">
 
   <!-- ============================================================
        PROCEDENCIA Y CRITERIOS DE CIFRAS · revisión editorial 2026-09
@@ -1227,12 +1227,22 @@
 
     <a
       id="departmentDownload"
-      class="stamp explorer-download"
+      class="download-btn"
       href="#"
       download
       hidden
     >
-      Descargar imagen (alta resolución)
+      <span class="download-btn__icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 3v12"/>
+          <path d="M7 11l5 5 5-5"/>
+          <path d="M5 20h14"/>
+        </svg>
+      </span>
+      <span class="download-btn__text">
+        <span class="download-btn__label">Descargar imagen</span>
+        <span class="download-btn__meta" id="departmentDownloadMeta">Alta resolución · PNG</span>
+      </span>
     </a>
 
     <footer class="colophon">
@@ -2171,7 +2181,7 @@
   </footer>
 
   <!-- JavaScript -->
-  <script src="assets/js/main.js?v=11"></script>
+  <script src="assets/js/main.js?v=12"></script>
 
 </body>
 

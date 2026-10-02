@@ -681,8 +681,15 @@
           departmentDownload.setAttribute(
             "download", downloadName);
 
-          departmentDownload.textContent =
-            `Descargar imagen · ${item.name} · ${selectedLayerLabel} (PNG)`;
+          const metaEl =
+            document.getElementById("departmentDownloadMeta");
+
+          if (metaEl) {
+
+            metaEl.textContent =
+              `${item.name} · ${selectedLayerLabel} · PNG`;
+
+          }
 
           departmentDownload.hidden = false;
 
