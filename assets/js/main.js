@@ -916,6 +916,7 @@
             departmentsCatalog.find(dept => dept.slug === slug);
 
           const pct = Number(match?.data?.loss_pct);
+          const lossHa = Number(match?.data?.loss_total_ha);
 
           const fill =
             Number.isFinite(pct)
@@ -942,7 +943,7 @@
           path.setAttribute(
             "aria-label",
             Number.isFinite(pct)
-              ? `${name}, ${formatPct(pct)} de pérdida forestal`
+              ? `${name}, ${formatHa(lossHa)} (${formatPct(pct)}) de pérdida forestal`
               : name
           );
 
@@ -954,7 +955,7 @@
 
           title.textContent =
             Number.isFinite(pct)
-              ? `${name} · ${formatPct(pct)} de pérdida forestal`
+              ? `${name} · ${formatHa(lossHa)} (${formatPct(pct)}) de pérdida forestal`
               : name;
 
           path.appendChild(title);
@@ -980,7 +981,7 @@
 
             mapHint.textContent =
               Number.isFinite(pct)
-                ? `${name} · ${formatPct(pct)} de pérdida forestal desde 2001`
+                ? `${name} · ${formatHa(lossHa)} (${formatPct(pct)}) de pérdida desde 2001`
                 : name;
 
           });
