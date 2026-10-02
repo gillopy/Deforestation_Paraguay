@@ -1178,6 +1178,26 @@
           Pasá el cursor o hacé clic sobre un departamento.
         </p>
 
+        <a
+          id="departmentDownload"
+          class="download-btn download-btn--map"
+          href="#"
+          download
+          hidden
+        >
+          <span class="download-btn__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3v12"/>
+              <path d="M7 11l5 5 5-5"/>
+              <path d="M5 20h14"/>
+            </svg>
+          </span>
+          <span class="download-btn__text">
+            <span class="download-btn__label">Descargar imagen</span>
+            <span class="download-btn__meta" id="departmentDownloadMeta">Alta resolución · PNG</span>
+          </span>
+        </a>
+
       </div>
 
       <div class="explorer-panel">
@@ -1224,26 +1244,6 @@
       </div>
 
     </div>
-
-    <a
-      id="departmentDownload"
-      class="download-btn"
-      href="#"
-      download
-      hidden
-    >
-      <span class="download-btn__icon" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M12 3v12"/>
-          <path d="M7 11l5 5 5-5"/>
-          <path d="M5 20h14"/>
-        </svg>
-      </span>
-      <span class="download-btn__text">
-        <span class="download-btn__label">Descargar imagen</span>
-        <span class="download-btn__meta" id="departmentDownloadMeta">Alta resolución · PNG</span>
-      </span>
-    </a>
 
     <footer class="colophon">
       <span>Geometría · data/py.json</span>

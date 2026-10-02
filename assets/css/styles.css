@@ -260,55 +260,63 @@
       font-variant-numeric: tabular-nums;
     }
 
-    /* placa de evidencia que asoma en la portada (solo ≥1040px) */
+    /* placa de evidencia que asoma en la portada */
     .masthead-evidence {
-      display: none;
+      display: block;
+      position: relative;
+      width: 100%;
+      max-width: 620px;
+      margin: 0 auto;
+      background:
+        linear-gradient(var(--plate-grid) 1px, transparent 1px),
+        linear-gradient(90deg, var(--plate-grid) 1px, transparent 1px),
+        var(--plate);
+      background-size: 44px 44px;
+      border: 1px solid var(--plate-edge);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow-plate);
+      padding: 14px 14px 0;
+      overflow: hidden;
+    }
+
+    .masthead-evidence img {
+      width: 100%;
+      height: auto;
+      max-height: 420px;
+      object-fit: contain;
+      object-position: center;
+      background: transparent;
+      border: 1px solid rgba(197, 201, 197, 0.12);
+      border-radius: calc(var(--radius-card) - 4px);
+      display: block;
+    }
+
+    .evidence-tag {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 10px 2px;
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--plate-muted);
+    }
+
+    .evidence-tag strong {
+      color: var(--chart-line);
+      font-weight: 500;
     }
 
     @media (min-width: 1040px) {
 
       .masthead-evidence {
-        display: block;
-        position: relative;
-        background:
-          linear-gradient(var(--plate-grid) 1px, transparent 1px),
-          linear-gradient(90deg, var(--plate-grid) 1px, transparent 1px),
-          var(--plate);
-        background-size: 44px 44px;
-        border: 1px solid var(--plate-edge);
-        border-radius: var(--radius-card);
-        box-shadow: var(--shadow-plate);
-        padding: 14px 14px 0;
-        overflow: hidden;
+        max-width: none;
+        margin: 0;
       }
 
       .masthead-evidence img {
-        width: 100%;
-        height: auto;
         max-height: 360px;
-        object-fit: contain;
-        object-position: center;
-        background: transparent;
-        border: 1px solid rgba(197, 201, 197, 0.12);
-        border-radius: calc(var(--radius-card) - 4px);
-        display: block;
-      }
-
-      .evidence-tag {
-        display: flex;
-        justify-content: space-between;
-        gap: 12px;
-        padding: 10px 2px;
-        font-family: var(--mono);
-        font-size: 10px;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-        color: var(--plate-muted);
-      }
-
-      .evidence-tag strong {
-        color: var(--chart-line);
-        font-weight: 500;
       }
     }
 
@@ -1095,7 +1103,7 @@
       display: grid;
       grid-template-columns: minmax(280px, 400px) minmax(0, 1fr);
       gap: 28px;
-      align-items: start;
+      align-items: stretch;
     }
 
     .explorer-map {
@@ -1104,6 +1112,8 @@
       border-radius: var(--radius-card);
       padding: 16px;
       overflow: hidden;
+      display: flex;
+      flex-direction: column;
     }
 
     #departmentMap {
@@ -1274,6 +1284,11 @@
 
     .download-btn[hidden] {
       display: none;
+    }
+
+    .download-btn--map {
+      margin: auto auto 6px;
+      align-self: center;
     }
 
     #departmentImage {
